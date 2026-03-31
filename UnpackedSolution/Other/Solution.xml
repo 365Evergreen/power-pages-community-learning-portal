@@ -87,7 +87,6 @@
       <RootComponent type="300" schemaName="ppdev_workshopmanagementhub_7e894" behavior="0" />
       <RootComponent type="62" schemaName="ppdev_ProgramCoordinatod233ac90" behavior="0" />
       <RootComponent type="80" schemaName="ppdev_ProgramCoordinatoeda8373a" behavior="0" />
-      <RootComponent type="1" schemaName="ppdev_sparoute" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
