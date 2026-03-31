@@ -83,6 +83,7 @@
       <RootComponent type="1" schemaName="ppdev_communitytrainer" behavior="0" />
       <RootComponent type="1" schemaName="ppdev_communitytrainingenrolment" behavior="0" />
       <RootComponent type="1" schemaName="ppdev_communityworkshop" behavior="0" />
+      <RootComponent type="29" id="{9d07487f-222d-f111-88b4-000d3a7a02f6}" behavior="0" />
       <RootComponent type="300" schemaName="ppdev_workshopmanagementhub_7e894" behavior="0" />
       <RootComponent type="62" schemaName="ppdev_ProgramCoordinatod233ac90" behavior="0" />
       <RootComponent type="80" schemaName="ppdev_ProgramCoordinatoeda8373a" behavior="0" />
