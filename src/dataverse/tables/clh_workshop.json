@@ -1,0 +1,183 @@
+{
+  "name": "clh_workshop",
+  "displayName": "Workshop",
+  "pluralDisplayName": "Workshops",
+  "description": "Workshops and training programs offered by trainers through the Community Learning Hub.",
+  "ownershipType": "UserOwned",
+  "primaryNameAttribute": "clh_name",
+  "attributes": [
+    {
+      "name": "clh_workshopid",
+      "displayName": "Workshop",
+      "type": "Uniqueidentifier",
+      "isPrimaryId": true,
+      "requiredLevel": "SystemRequired"
+    },
+    {
+      "name": "clh_name",
+      "displayName": "Workshop Title",
+      "type": "String",
+      "maxLength": 300,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Title of the workshop or training program."
+    },
+    {
+      "name": "clh_description",
+      "displayName": "Description",
+      "type": "Memo",
+      "maxLength": 8000,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Detailed description of the workshop content and objectives."
+    },
+    {
+      "name": "clh_shortdescription",
+      "displayName": "Short Description",
+      "type": "Memo",
+      "maxLength": 500,
+      "requiredLevel": "None",
+      "description": "Brief summary used in workshop listings."
+    },
+    {
+      "name": "clh_trainer",
+      "displayName": "Trainer",
+      "type": "Lookup",
+      "targetTable": "clh_trainer",
+      "requiredLevel": "ApplicationRequired",
+      "description": "The trainer delivering this workshop."
+    },
+    {
+      "name": "clh_category",
+      "displayName": "Category",
+      "type": "Picklist",
+      "requiredLevel": "ApplicationRequired",
+      "options": [
+        { "value": 100000000, "label": "Digital Skills" },
+        { "value": 100000001, "label": "Financial Literacy" },
+        { "value": 100000002, "label": "Health & Wellbeing" },
+        { "value": 100000003, "label": "Employment & Careers" },
+        { "value": 100000004, "label": "Community Development" },
+        { "value": 100000005, "label": "Language & Literacy" },
+        { "value": 100000006, "label": "Arts & Culture" },
+        { "value": 100000007, "label": "Environment & Sustainability" },
+        { "value": 100000008, "label": "Other" }
+      ],
+      "description": "Category that best describes the workshop topic."
+    },
+    {
+      "name": "clh_deliveryformat",
+      "displayName": "Delivery Format",
+      "type": "Picklist",
+      "requiredLevel": "ApplicationRequired",
+      "options": [
+        { "value": 100000000, "label": "In-Person" },
+        { "value": 100000001, "label": "Online (Live)" },
+        { "value": 100000002, "label": "Hybrid" },
+        { "value": 100000003, "label": "Self-Paced Online" }
+      ],
+      "description": "How the workshop is delivered."
+    },
+    {
+      "name": "clh_startdate",
+      "displayName": "Start Date & Time",
+      "type": "DateTime",
+      "requiredLevel": "ApplicationRequired",
+      "description": "Date and time the workshop begins."
+    },
+    {
+      "name": "clh_enddate",
+      "displayName": "End Date & Time",
+      "type": "DateTime",
+      "requiredLevel": "ApplicationRequired",
+      "description": "Date and time the workshop ends."
+    },
+    {
+      "name": "clh_location",
+      "displayName": "Location",
+      "type": "String",
+      "maxLength": 500,
+      "requiredLevel": "None",
+      "description": "Physical address or online meeting link for the workshop."
+    },
+    {
+      "name": "clh_maxparticipants",
+      "displayName": "Maximum Participants",
+      "type": "Integer",
+      "minValue": 1,
+      "maxValue": 10000,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Maximum number of participants allowed."
+    },
+    {
+      "name": "clh_currentenrollments",
+      "displayName": "Current Enrollments",
+      "type": "Integer",
+      "minValue": 0,
+      "maxValue": 10000,
+      "defaultValue": 0,
+      "requiredLevel": "None",
+      "description": "Number of confirmed enrollments. Automatically updated by Power Automate."
+    },
+    {
+      "name": "clh_status",
+      "displayName": "Status",
+      "type": "Picklist",
+      "requiredLevel": "ApplicationRequired",
+      "options": [
+        { "value": 100000000, "label": "Draft" },
+        { "value": 100000001, "label": "Published" },
+        { "value": 100000002, "label": "Full" },
+        { "value": 100000003, "label": "Cancelled" },
+        { "value": 100000004, "label": "Completed" }
+      ],
+      "defaultValue": 100000000,
+      "description": "Current status of the workshop."
+    },
+    {
+      "name": "clh_cost",
+      "displayName": "Cost",
+      "type": "Money",
+      "requiredLevel": "None",
+      "description": "Cost to attend. Leave blank or set to 0 for free workshops."
+    },
+    {
+      "name": "clh_isfree",
+      "displayName": "Is Free",
+      "type": "Boolean",
+      "defaultValue": true,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Indicates whether this workshop is free to attend."
+    },
+    {
+      "name": "clh_accessibilitynotes",
+      "displayName": "Accessibility Information",
+      "type": "Memo",
+      "maxLength": 2000,
+      "requiredLevel": "None",
+      "description": "Notes about physical or digital accessibility features of this workshop."
+    },
+    {
+      "name": "clh_prerequisites",
+      "displayName": "Prerequisites",
+      "type": "Memo",
+      "maxLength": 2000,
+      "requiredLevel": "None",
+      "description": "Any prerequisites or prior knowledge required."
+    },
+    {
+      "name": "clh_imageurl",
+      "displayName": "Image URL",
+      "type": "String",
+      "maxLength": 500,
+      "requiredLevel": "None",
+      "description": "URL of the workshop banner or thumbnail image."
+    },
+    {
+      "name": "clh_publishtoportal",
+      "displayName": "Publish to Portal",
+      "type": "Boolean",
+      "defaultValue": false,
+      "requiredLevel": "ApplicationRequired",
+      "description": "When true, the workshop is visible on the public-facing Power Pages portal."
+    }
+  ]
+}

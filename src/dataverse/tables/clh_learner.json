@@ -1,0 +1,96 @@
+{
+  "name": "clh_learner",
+  "displayName": "Learner",
+  "pluralDisplayName": "Learners",
+  "description": "Community members who register for and attend workshops and training programs.",
+  "ownershipType": "UserOwned",
+  "primaryNameAttribute": "clh_name",
+  "attributes": [
+    {
+      "name": "clh_learnerid",
+      "displayName": "Learner",
+      "type": "Uniqueidentifier",
+      "isPrimaryId": true,
+      "requiredLevel": "SystemRequired"
+    },
+    {
+      "name": "clh_name",
+      "displayName": "Full Name",
+      "type": "String",
+      "maxLength": 200,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Full name of the learner."
+    },
+    {
+      "name": "clh_email",
+      "displayName": "Email Address",
+      "type": "String",
+      "format": "Email",
+      "maxLength": 200,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Email address used to send confirmations and reminders."
+    },
+    {
+      "name": "clh_phone",
+      "displayName": "Phone Number",
+      "type": "String",
+      "format": "Phone",
+      "maxLength": 50,
+      "requiredLevel": "None",
+      "description": "Contact phone number."
+    },
+    {
+      "name": "clh_preferredcontactmethod",
+      "displayName": "Preferred Contact Method",
+      "type": "Picklist",
+      "requiredLevel": "None",
+      "options": [
+        { "value": 100000000, "label": "Email" },
+        { "value": 100000001, "label": "Phone" },
+        { "value": 100000002, "label": "SMS" }
+      ],
+      "defaultValue": 100000000,
+      "description": "Learner's preferred way to be contacted."
+    },
+    {
+      "name": "clh_accessibilityrequirements",
+      "displayName": "Accessibility Requirements",
+      "type": "Memo",
+      "maxLength": 2000,
+      "requiredLevel": "None",
+      "description": "Any accessibility needs or accommodations required for participation."
+    },
+    {
+      "name": "clh_learninggoals",
+      "displayName": "Learning Goals",
+      "type": "Memo",
+      "maxLength": 2000,
+      "requiredLevel": "None",
+      "description": "What the learner hopes to gain from attending workshops."
+    },
+    {
+      "name": "clh_languagepreference",
+      "displayName": "Language Preference",
+      "type": "String",
+      "maxLength": 100,
+      "requiredLevel": "None",
+      "description": "Learner's preferred language for instruction."
+    },
+    {
+      "name": "clh_marketingoptout",
+      "displayName": "Marketing Opt-Out",
+      "type": "Boolean",
+      "defaultValue": false,
+      "requiredLevel": "None",
+      "description": "When true, the learner has opted out of marketing communications."
+    },
+    {
+      "name": "clh_portalcontact",
+      "displayName": "Portal Contact",
+      "type": "Lookup",
+      "targetTable": "contact",
+      "requiredLevel": "None",
+      "description": "Link to the authenticated portal contact record, if the learner has a portal account."
+    }
+  ]
+}

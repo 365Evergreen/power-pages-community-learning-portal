@@ -1,0 +1,186 @@
+<!-- Hero Section -->
+<section class="clh-hero">
+  <div class="clh-hero__content">
+    <h1 class="clh-hero__title">Welcome to the Community Learning Hub</h1>
+    <p class="clh-hero__subtitle">
+      Connecting passionate non-profit trainers with eager learners through accessible
+      workshops and training programs tailored to your community's needs.
+    </p>
+    <div class="clh-hero__actions">
+      <a href="/workshops" class="clh-btn clh-btn--primary">Browse Workshops</a>
+      <a href="/about" class="clh-btn clh-btn--secondary">Learn More</a>
+    </div>
+  </div>
+  <div class="clh-hero__image" aria-hidden="true"></div>
+</section>
+
+<!-- Key Statistics -->
+<section class="clh-stats" aria-label="Hub statistics">
+  <div class="clh-container">
+    <div class="clh-stats__grid">
+      <div class="clh-stats__item">
+        <span class="clh-stats__number">
+          {% assign workshop_count = site.clh_workshops | where: "clh_status", "100000001" | where: "clh_publishtoportal", true | size %}
+          {{ workshop_count }}
+        </span>
+        <span class="clh-stats__label">Active Workshops</span>
+      </div>
+      <div class="clh-stats__item">
+        <span class="clh-stats__number">
+          {% assign trainer_count = site.clh_trainers | where: "clh_isactive", true | where: "clh_publishtoportal", true | size %}
+          {{ trainer_count }}
+        </span>
+        <span class="clh-stats__label">Expert Trainers</span>
+      </div>
+      <div class="clh-stats__item">
+        <span class="clh-stats__number">Community-Led</span>
+        <span class="clh-stats__label">Non-Profit Focused</span>
+      </div>
+      <div class="clh-stats__item">
+        <span class="clh-stats__number">Free to Join</span>
+        <span class="clh-stats__label">Most Workshops</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Workshops -->
+<section class="clh-section" aria-labelledby="featured-workshops-heading">
+  <div class="clh-container">
+    <h2 id="featured-workshops-heading" class="clh-section__title">Upcoming Workshops</h2>
+    <p class="clh-section__subtitle">Discover our latest offerings and secure your place today.</p>
+
+    {% fetchxml workshopQuery %}
+    <fetch top="6" distinct="false">
+      <entity name="clh_workshop">
+        <attribute name="clh_workshopid" />
+        <attribute name="clh_name" />
+        <attribute name="clh_shortdescription" />
+        <attribute name="clh_startdate" />
+        <attribute name="clh_deliveryformat" />
+        <attribute name="clh_category" />
+        <attribute name="clh_imageurl" />
+        <attribute name="clh_isfree" />
+        <attribute name="clh_maxparticipants" />
+        <attribute name="clh_currentenrollments" />
+        <link-entity name="clh_trainer" from="clh_trainerid" to="clh_trainer" alias="trainer">
+          <attribute name="clh_name" alias="trainername" />
+        </link-entity>
+        <filter>
+          <condition attribute="clh_publishtoportal" operator="eq" value="true" />
+          <condition attribute="clh_status" operator="eq" value="100000001" />
+          <condition attribute="clh_startdate" operator="on-or-after" value="{{ 'now' | date: '%Y-%m-%d' }}" />
+        </filter>
+        <order attribute="clh_startdate" descending="false" />
+      </entity>
+    </fetch>
+    {% endfetchxml %}
+
+    {% if workshopQuery.results.entities.size > 0 %}
+    <div class="clh-workshop-grid" role="list">
+      {% for workshop in workshopQuery.results.entities %}
+      <article class="clh-workshop-card" role="listitem">
+        {% if workshop.clh_imageurl %}
+        <div class="clh-workshop-card__image">
+          <img src="{{ workshop.clh_imageurl | escape }}" alt="{{ workshop.clh_name | escape }} workshop banner" loading="lazy" />
+        </div>
+        {% else %}
+        <div class="clh-workshop-card__image clh-workshop-card__image--placeholder" aria-hidden="true">
+          <span class="clh-icon clh-icon--workshop"></span>
+        </div>
+        {% endif %}
+        <div class="clh-workshop-card__body">
+          <div class="clh-workshop-card__meta">
+            <span class="clh-badge clh-badge--category">{{ workshop.clh_category_label }}</span>
+            {% if workshop.clh_isfree %}
+            <span class="clh-badge clh-badge--free">Free</span>
+            {% endif %}
+            <span class="clh-badge clh-badge--format">{{ workshop.clh_deliveryformat_label }}</span>
+          </div>
+          <h3 class="clh-workshop-card__title">
+            <a href="/workshops/{{ workshop.clh_workshopid }}">{{ workshop.clh_name }}</a>
+          </h3>
+          <p class="clh-workshop-card__trainer">By {{ workshop.trainername }}</p>
+          <p class="clh-workshop-card__description">{{ workshop.clh_shortdescription }}</p>
+          <div class="clh-workshop-card__footer">
+            <div class="clh-workshop-card__date">
+              <span class="clh-icon clh-icon--calendar" aria-hidden="true"></span>
+              <time datetime="{{ workshop.clh_startdate | date: '%Y-%m-%dT%H:%M' }}">
+                {{ workshop.clh_startdate | date: '%d %B %Y' }}
+              </time>
+            </div>
+            {% assign spots_left = workshop.clh_maxparticipants | minus: workshop.clh_currentenrollments %}
+            {% if spots_left <= 5 and spots_left > 0 %}
+            <span class="clh-workshop-card__spots clh-workshop-card__spots--low" role="status">
+              {{ spots_left }} spot{% if spots_left != 1 %}s{% endif %} left
+            </span>
+            {% elsif spots_left <= 0 %}
+            <span class="clh-workshop-card__spots clh-workshop-card__spots--full" role="status">Full</span>
+            {% endif %}
+          </div>
+          <a href="/enroll?workshopId={{ workshop.clh_workshopid }}" class="clh-btn clh-btn--primary clh-workshop-card__cta"
+            {% if spots_left <= 0 %}aria-disabled="true"{% endif %}>
+            {% if spots_left <= 0 %}Join Waitlist{% else %}Enrol Now{% endif %}
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="clh-section__cta">
+      <a href="/workshops" class="clh-btn clh-btn--outline">View All Workshops</a>
+    </div>
+    {% else %}
+    <div class="clh-empty-state">
+      <p>No upcoming workshops at the moment. Check back soon!</p>
+      <a href="/about" class="clh-btn clh-btn--secondary">Contact Us</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="clh-section clh-section--alt" aria-labelledby="how-it-works-heading">
+  <div class="clh-container">
+    <h2 id="how-it-works-heading" class="clh-section__title">How It Works</h2>
+    <div class="clh-steps">
+      <div class="clh-step">
+        <div class="clh-step__icon" aria-hidden="true">
+          <span class="clh-icon clh-icon--search"></span>
+        </div>
+        <h3 class="clh-step__title">1. Browse Workshops</h3>
+        <p class="clh-step__description">
+          Explore our catalogue of free and low-cost workshops delivered by qualified non-profit trainers
+          across a range of topics.
+        </p>
+      </div>
+      <div class="clh-step">
+        <div class="clh-step__icon" aria-hidden="true">
+          <span class="clh-icon clh-icon--form"></span>
+        </div>
+        <h3 class="clh-step__title">2. Enrol Online</h3>
+        <p class="clh-step__description">
+          Register in minutes—no account needed. Simply provide your name and email and we'll handle the rest.
+          We accommodate diverse accessibility needs.
+        </p>
+      </div>
+      <div class="clh-step">
+        <div class="clh-step__icon" aria-hidden="true">
+          <span class="clh-icon clh-icon--email"></span>
+        </div>
+        <h3 class="clh-step__title">3. Receive Confirmation</h3>
+        <p class="clh-step__description">
+          Get an instant confirmation email with all the details you need, plus a reminder closer to the date.
+        </p>
+      </div>
+      <div class="clh-step">
+        <div class="clh-step__icon" aria-hidden="true">
+          <span class="clh-icon clh-icon--learn"></span>
+        </div>
+        <h3 class="clh-step__title">4. Learn &amp; Grow</h3>
+        <p class="clh-step__description">
+          Attend your workshop, connect with trainers and fellow learners, and build new skills for your community.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

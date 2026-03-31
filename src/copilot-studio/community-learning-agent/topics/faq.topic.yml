@@ -1,0 +1,93 @@
+id: faq
+name: Frequently Asked Questions
+description: >
+  Answers common questions about the Community Learning Hub that don't fit
+  other specific topics.
+triggerPhrases:
+  - FAQ
+  - frequently asked questions
+  - how does it work
+  - what is the community learning hub
+  - tell me more
+  - what do you offer
+  - is it free
+  - do I need an account
+nodes:
+  - id: faq-menu
+    type: question
+    questionType: choice
+    content: "What would you like to know?"
+    variable: faqChoice
+    choices:
+      - label: "What is the Community Learning Hub?"
+        value: what-is
+      - label: "Is it free to join?"
+        value: cost
+      - label: "Do I need an account to enrol?"
+        value: account
+      - label: "How will I receive my confirmation?"
+        value: confirmation
+      - label: "Can I attend multiple workshops?"
+        value: multiple
+      - label: "Something else"
+        value: other
+
+    conditions:
+      - expression: "faqChoice == 'what-is'"
+        nodes:
+          - id: answer-what-is
+            type: message
+            content: >
+              The Community Learning Hub is a non-profit initiative that connects
+              **community members** with **qualified non-profit trainers** through
+              accessible, inclusive workshops and training programs.
+
+              We cover a wide range of topics — from digital skills and financial literacy
+              to health, employment, arts, and more. Most of our workshops are free or
+              low-cost, and they're designed to be accessible to everyone.
+
+      - expression: "faqChoice == 'cost'"
+        nodes:
+          - id: answer-cost
+            type: message
+            content: >
+              **Most workshops are completely free!**
+              Any workshops with a cost will display the price clearly on the listing page.
+              You will never be asked for payment details during the enrolment process for free workshops.
+
+      - expression: "faqChoice == 'account'"
+        nodes:
+          - id: answer-account
+            type: message
+            content: >
+              **No account needed!** You can enrol in any workshop as an anonymous visitor —
+              just provide your name and email address. We'll send your confirmation and reminders
+              to the email you provide.
+
+              If you'd like to track your enrolments in one place, you can optionally create
+              a free portal account.
+
+      - expression: "faqChoice == 'confirmation'"
+        nodes:
+          - id: answer-confirmation
+            type: message
+            content: >
+              As soon as you submit your enrolment form, our system automatically sends a
+              **confirmation email** to the address you provided. This email includes:
+              - Workshop name, date, time and location
+              - Your unique confirmation code
+              - Trainer details
+
+              You'll also receive a **reminder email** a day or two before the workshop starts.
+              Be sure to check your spam/junk folder if you don't see it within a few minutes.
+
+      - expression: "faqChoice == 'multiple'"
+        nodes:
+          - id: answer-multiple
+            type: message
+            content: >
+              Absolutely! You're welcome to enrol in as many workshops as you like.
+              Simply find each workshop and submit a separate enrolment form for each one.
+
+      - expression: "faqChoice == 'other'"
+        redirectTo: escalate-to-human

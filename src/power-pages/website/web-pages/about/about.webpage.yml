@@ -1,0 +1,10 @@
+id: about
+name: About
+title: About Us | Community Learning Hub
+partialUrl: /about
+pageTemplate: Full Width
+publishingState: Published
+displayOrder: 4
+navigation:
+  displayInNavigation: true
+  navigationLabel: About

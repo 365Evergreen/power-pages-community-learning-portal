@@ -1,0 +1,11 @@
+id: community-learning-hub
+name: Community Learning Hub
+primaryDomainName: communitylearninghub.powerappsportals.com
+defaultLanguage: en-US
+languages:
+  - en-US
+authenticationType: AzureADB2C
+allowAnonymousAccess: true
+description: >
+  Community Learning Hub connects non-profit trainers with eager learners
+  through accessible workshops and training programs.

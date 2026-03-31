@@ -1,0 +1,117 @@
+- id: workshop-category
+  name: Workshop Category
+  description: Categories of workshops offered by the Community Learning Hub.
+  type: ClosedList
+  values:
+    - id: digital-skills
+      canonicalValue: Digital Skills
+      synonyms:
+        - tech
+        - technology
+        - computer skills
+        - IT
+        - coding
+        - internet
+        - devices
+    - id: financial-literacy
+      canonicalValue: Financial Literacy
+      synonyms:
+        - money
+        - finance
+        - budgeting
+        - savings
+        - debt
+        - banking
+    - id: health-wellbeing
+      canonicalValue: Health & Wellbeing
+      synonyms:
+        - health
+        - wellbeing
+        - mental health
+        - fitness
+        - nutrition
+        - wellness
+    - id: employment-careers
+      canonicalValue: Employment & Careers
+      synonyms:
+        - jobs
+        - career
+        - employment
+        - resume
+        - CV
+        - interview
+        - work
+    - id: community-development
+      canonicalValue: Community Development
+      synonyms:
+        - community
+        - volunteering
+        - civic
+        - social
+        - neighbourhood
+    - id: language-literacy
+      canonicalValue: Language & Literacy
+      synonyms:
+        - English
+        - reading
+        - writing
+        - language
+        - ESL
+        - ESOL
+        - literacy
+    - id: arts-culture
+      canonicalValue: Arts & Culture
+      synonyms:
+        - art
+        - arts
+        - culture
+        - music
+        - creative
+        - crafts
+    - id: environment-sustainability
+      canonicalValue: Environment & Sustainability
+      synonyms:
+        - environment
+        - sustainability
+        - green
+        - climate
+        - recycling
+        - nature
+
+- id: delivery-format
+  name: Delivery Format
+  description: How a workshop is delivered.
+  type: ClosedList
+  values:
+    - id: in-person
+      canonicalValue: In-Person
+      synonyms:
+        - face to face
+        - in person
+        - physical
+        - onsite
+        - local
+    - id: online-live
+      canonicalValue: Online (Live)
+      synonyms:
+        - online
+        - virtual
+        - remote
+        - live stream
+        - webinar
+        - Teams
+        - Zoom
+    - id: hybrid
+      canonicalValue: Hybrid
+      synonyms:
+        - hybrid
+        - blended
+        - mixed
+    - id: self-paced
+      canonicalValue: Self-Paced Online
+      synonyms:
+        - self-paced
+        - on demand
+        - asynchronous
+        - e-learning
+        - flexible

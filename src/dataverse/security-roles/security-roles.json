@@ -1,0 +1,110 @@
+[
+  {
+    "name": "CLH Portal Anonymous",
+    "description": "Read-only access to published workshops and trainer profiles for anonymous portal visitors. Allows creating enrollment records for unauthenticated enrolment.",
+    "privileges": [
+      {
+        "table": "clh_workshop",
+        "create": false,
+        "read": true,
+        "write": false,
+        "delete": false,
+        "filter": "clh_publishtoportal eq true and clh_status eq 100000001"
+      },
+      {
+        "table": "clh_trainer",
+        "create": false,
+        "read": true,
+        "write": false,
+        "delete": false,
+        "filter": "clh_publishtoportal eq true and clh_isactive eq true"
+      },
+      {
+        "table": "clh_enrollment",
+        "create": true,
+        "read": false,
+        "write": false,
+        "delete": false,
+        "note": "Anonymous users can submit enrollments but cannot read others' records."
+      }
+    ]
+  },
+  {
+    "name": "CLH Portal Learner",
+    "description": "Authenticated portal learners can view their own enrollments and update their learner profile.",
+    "privileges": [
+      {
+        "table": "clh_workshop",
+        "create": false,
+        "read": true,
+        "write": false,
+        "delete": false,
+        "filter": "clh_publishtoportal eq true"
+      },
+      {
+        "table": "clh_trainer",
+        "create": false,
+        "read": true,
+        "write": false,
+        "delete": false,
+        "filter": "clh_publishtoportal eq true and clh_isactive eq true"
+      },
+      {
+        "table": "clh_learner",
+        "create": true,
+        "read": true,
+        "write": true,
+        "delete": false,
+        "scope": "Self",
+        "note": "Learners can create and edit their own profile only."
+      },
+      {
+        "table": "clh_enrollment",
+        "create": true,
+        "read": true,
+        "write": false,
+        "delete": false,
+        "scope": "Self",
+        "note": "Learners can view and create their own enrollments."
+      }
+    ]
+  },
+  {
+    "name": "CLH Administrator",
+    "description": "Full access for Community Learning Hub staff to manage all tables.",
+    "privileges": [
+      {
+        "table": "clh_workshop",
+        "create": true,
+        "read": true,
+        "write": true,
+        "delete": true,
+        "scope": "Organization"
+      },
+      {
+        "table": "clh_trainer",
+        "create": true,
+        "read": true,
+        "write": true,
+        "delete": true,
+        "scope": "Organization"
+      },
+      {
+        "table": "clh_learner",
+        "create": true,
+        "read": true,
+        "write": true,
+        "delete": true,
+        "scope": "Organization"
+      },
+      {
+        "table": "clh_enrollment",
+        "create": true,
+        "read": true,
+        "write": true,
+        "delete": true,
+        "scope": "Organization"
+      }
+    ]
+  }
+]
