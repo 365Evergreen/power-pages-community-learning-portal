@@ -1,0 +1,10 @@
+id: home
+name: Home
+title: Community Learning Hub
+partialUrl: /
+pageTemplate: Home
+publishingState: Published
+displayOrder: 1
+navigation:
+  displayInNavigation: true
+  navigationLabel: Home

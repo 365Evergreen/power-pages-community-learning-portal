@@ -1,0 +1,142 @@
+{
+  "name": "clh_enrollment",
+  "displayName": "Enrollment",
+  "pluralDisplayName": "Enrollments",
+  "description": "Records linking learners to the workshops they have enrolled in.",
+  "ownershipType": "UserOwned",
+  "primaryNameAttribute": "clh_name",
+  "attributes": [
+    {
+      "name": "clh_enrollmentid",
+      "displayName": "Enrollment",
+      "type": "Uniqueidentifier",
+      "isPrimaryId": true,
+      "requiredLevel": "SystemRequired"
+    },
+    {
+      "name": "clh_name",
+      "displayName": "Enrollment Reference",
+      "type": "String",
+      "maxLength": 100,
+      "requiredLevel": "None",
+      "description": "Auto-generated enrollment reference number."
+    },
+    {
+      "name": "clh_workshop",
+      "displayName": "Workshop",
+      "type": "Lookup",
+      "targetTable": "clh_workshop",
+      "requiredLevel": "ApplicationRequired",
+      "description": "The workshop this enrollment is for."
+    },
+    {
+      "name": "clh_learner",
+      "displayName": "Learner",
+      "type": "Lookup",
+      "targetTable": "clh_learner",
+      "requiredLevel": "None",
+      "description": "The learner record, if the participant is a registered learner."
+    },
+    {
+      "name": "clh_anonymousname",
+      "displayName": "Participant Name (Anonymous)",
+      "type": "String",
+      "maxLength": 200,
+      "requiredLevel": "None",
+      "description": "Full name provided by an anonymous (unauthenticated) participant at enrolment."
+    },
+    {
+      "name": "clh_anonymousemail",
+      "displayName": "Participant Email (Anonymous)",
+      "type": "String",
+      "format": "Email",
+      "maxLength": 200,
+      "requiredLevel": "None",
+      "description": "Email provided by an anonymous participant. Used to send confirmation and reminders."
+    },
+    {
+      "name": "clh_anonymousphone",
+      "displayName": "Participant Phone (Anonymous)",
+      "type": "String",
+      "format": "Phone",
+      "maxLength": 50,
+      "requiredLevel": "None",
+      "description": "Phone number provided by an anonymous participant."
+    },
+    {
+      "name": "clh_enrollmentdate",
+      "displayName": "Enrollment Date",
+      "type": "DateTime",
+      "requiredLevel": "ApplicationRequired",
+      "description": "Date and time the enrollment was submitted."
+    },
+    {
+      "name": "clh_status",
+      "displayName": "Status",
+      "type": "Picklist",
+      "requiredLevel": "ApplicationRequired",
+      "options": [
+        { "value": 100000000, "label": "Pending" },
+        { "value": 100000001, "label": "Confirmed" },
+        { "value": 100000002, "label": "Waitlisted" },
+        { "value": 100000003, "label": "Cancelled" },
+        { "value": 100000004, "label": "Attended" },
+        { "value": 100000005, "label": "No Show" }
+      ],
+      "defaultValue": 100000000,
+      "description": "Current status of the enrollment."
+    },
+    {
+      "name": "clh_accessibilityrequirements",
+      "displayName": "Accessibility Requirements",
+      "type": "Memo",
+      "maxLength": 2000,
+      "requiredLevel": "None",
+      "description": "Accessibility needs submitted with this enrollment."
+    },
+    {
+      "name": "clh_notes",
+      "displayName": "Additional Notes",
+      "type": "Memo",
+      "maxLength": 2000,
+      "requiredLevel": "None",
+      "description": "Any additional information or special requests from the participant."
+    },
+    {
+      "name": "clh_confirmationsentat",
+      "displayName": "Confirmation Sent At",
+      "type": "DateTime",
+      "requiredLevel": "None",
+      "description": "Timestamp when the confirmation email was sent. Populated by Power Automate."
+    },
+    {
+      "name": "clh_confirmationcode",
+      "displayName": "Confirmation Code",
+      "type": "String",
+      "maxLength": 50,
+      "requiredLevel": "None",
+      "description": "Unique confirmation code for the enrollment."
+    },
+    {
+      "name": "clh_remindersent",
+      "displayName": "Reminder Sent",
+      "type": "Boolean",
+      "defaultValue": false,
+      "requiredLevel": "None",
+      "description": "Indicates whether a reminder has been sent for this enrollment."
+    },
+    {
+      "name": "clh_source",
+      "displayName": "Enrollment Source",
+      "type": "Picklist",
+      "requiredLevel": "None",
+      "options": [
+        { "value": 100000000, "label": "Portal (Anonymous)" },
+        { "value": 100000001, "label": "Portal (Authenticated)" },
+        { "value": 100000002, "label": "Manual (Staff)" },
+        { "value": 100000003, "label": "API" }
+      ],
+      "description": "How the enrollment was submitted."
+    }
+  ]
+}

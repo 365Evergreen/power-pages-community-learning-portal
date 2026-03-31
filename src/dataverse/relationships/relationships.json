@@ -1,0 +1,40 @@
+{
+  "relationships": [
+    {
+      "name": "clh_trainer_workshop",
+      "type": "OneToMany",
+      "referencedTable": "clh_trainer",
+      "referencingTable": "clh_workshop",
+      "referencingAttribute": "clh_trainer",
+      "cascadeDelete": "Restrict",
+      "description": "One trainer can deliver many workshops."
+    },
+    {
+      "name": "clh_workshop_enrollment",
+      "type": "OneToMany",
+      "referencedTable": "clh_workshop",
+      "referencingTable": "clh_enrollment",
+      "referencingAttribute": "clh_workshop",
+      "cascadeDelete": "Cascade",
+      "description": "One workshop can have many enrollments."
+    },
+    {
+      "name": "clh_learner_enrollment",
+      "type": "OneToMany",
+      "referencedTable": "clh_learner",
+      "referencingTable": "clh_enrollment",
+      "referencingAttribute": "clh_learner",
+      "cascadeDelete": "Restrict",
+      "description": "One learner can have many enrollments across different workshops."
+    },
+    {
+      "name": "clh_learner_contact",
+      "type": "ManyToOne",
+      "referencedTable": "contact",
+      "referencingTable": "clh_learner",
+      "referencingAttribute": "clh_portalcontact",
+      "cascadeDelete": "RemoveLink",
+      "description": "Links a learner to a Dataverse contact record for authenticated portal users."
+    }
+  ]
+}

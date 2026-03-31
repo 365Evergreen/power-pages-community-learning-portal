@@ -1,0 +1,59 @@
+- id: tp-workshop-anonymous-read
+  name: Workshop – Anonymous Read
+  tableName: clh_workshop
+  access: Read
+  scope: Global
+  webRole: CLH Portal Anonymous
+  filter: "clh_publishtoportal eq true and clh_status eq 100000001"
+  description: >
+    Allows anonymous portal visitors to read published, active workshops.
+
+- id: tp-trainer-anonymous-read
+  name: Trainer – Anonymous Read
+  tableName: clh_trainer
+  access: Read
+  scope: Global
+  webRole: CLH Portal Anonymous
+  filter: "clh_publishtoportal eq true and clh_isactive eq true"
+  description: >
+    Allows anonymous portal visitors to read published trainer profiles.
+
+- id: tp-enrollment-anonymous-create
+  name: Enrollment – Anonymous Create
+  tableName: clh_enrollment
+  access: Create
+  scope: Global
+  webRole: CLH Portal Anonymous
+  description: >
+    Allows anonymous portal visitors to submit new enrollment records.
+    No read access is granted to prevent data exposure.
+
+- id: tp-workshop-learner-read
+  name: Workshop – Authenticated Learner Read
+  tableName: clh_workshop
+  access: Read
+  scope: Global
+  webRole: CLH Portal Learner
+  filter: "clh_publishtoportal eq true"
+  description: >
+    Allows authenticated learners to read all published workshops
+    regardless of status (so they can view past workshops they attended).
+
+- id: tp-enrollment-learner-self
+  name: Enrollment – Authenticated Learner Self
+  tableName: clh_enrollment
+  access: Read, Create
+  scope: Contact
+  webRole: CLH Portal Learner
+  description: >
+    Allows authenticated learners to read and create their own enrollments.
+    Scoped to Contact so they can only see their own records.
+
+- id: tp-learner-self
+  name: Learner – Authenticated Self
+  tableName: clh_learner
+  access: Read, Write, Create
+  scope: Contact
+  webRole: CLH Portal Learner
+  description: >
+    Allows authenticated learners to manage their own learner profile record.

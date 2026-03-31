@@ -1,0 +1,42 @@
+id: community-learning-agent
+name: Community Learning Assistant
+description: >
+  An AI-powered virtual assistant embedded on the Community Learning Hub Power Pages portal.
+  Helps anonymous and authenticated visitors discover workshops, get enrolment help,
+  answer FAQs, and connect with the right trainer or topic.
+version: "1.0.0"
+language: en-US
+icon: 🎓
+greeting: >
+  Hi! I'm your Community Learning Hub assistant. I can help you:
+  - Find workshops and training programs
+  - Answer questions about enrolment
+  - Tell you about our trainers
+  - Help with accessibility needs
+
+  What would you like to know?
+fallbackMessage: >
+  I'm sorry, I didn't quite understand that. Could you try rephrasing?
+  You can also browse our workshops at /workshops or contact us directly.
+escalationMessage: >
+  I'll connect you with a member of our team. Please email us at
+  hello@communitylearninghub.org and we'll get back to you as soon as possible.
+channels:
+  - powerPages
+authentication: anonymous
+dataverse:
+  tables:
+    - clh_workshop
+    - clh_trainer
+topics:
+  - find-workshops
+  - enrolment-help
+  - accessibility-info
+  - trainer-info
+  - faq
+  - escalate-to-human
+  - greeting
+  - goodbye
+entities:
+  - workshop-category
+  - delivery-format

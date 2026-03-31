@@ -1,0 +1,120 @@
+{% comment %}
+  Enrollment API Web Template
+  URL: /api/enrollment  (POST only, anonymous access)
+
+  Accepts JSON body:
+    workshopId              - GUID of the workshop
+    participantName         - string, required
+    participantEmail        - string (email), required
+    participantPhone        - string, optional
+    accessibilityRequirements - string, optional
+    additionalNotes         - string, optional
+    isWaitlist              - bool, optional
+
+  Returns JSON:
+    200 { "success": true, "message": "...", "confirmationCode": "..." }
+    400 { "success": false, "message": "..." }
+    404 { "success": false, "message": "Workshop not found" }
+    500 { "success": false, "message": "..." }
+{% endcomment %}
+
+{% if request.method == 'POST' %}
+
+  {% assign body = request.body | parse_json %}
+
+  {% assign workshopId      = body.workshopId %}
+  {% assign participantName = body.participantName | strip %}
+  {% assign participantEmail= body.participantEmail | strip | downcase %}
+  {% assign participantPhone= body.participantPhone | strip %}
+  {% assign accessibility   = body.accessibilityRequirements | strip %}
+  {% assign notes           = body.additionalNotes | strip %}
+  {% assign isWaitlist      = body.isWaitlist %}
+
+  {% comment %} --- Basic validation --- {% endcomment %}
+  {% if participantName == blank or participantEmail == blank or workshopId == blank %}
+    {% assign responseCode = 400 %}
+    {"success": false, "message": "participantName, participantEmail, and workshopId are required."}
+  {% else %}
+
+    {% comment %} --- Load workshop --- {% endcomment %}
+    {% fetchxml wsQuery %}
+    <fetch top="1">
+      <entity name="clh_workshop">
+        <attribute name="clh_workshopid" />
+        <attribute name="clh_name" />
+        <attribute name="clh_maxparticipants" />
+        <attribute name="clh_currentenrollments" />
+        <attribute name="clh_status" />
+        <attribute name="clh_publishtoportal" />
+        <filter>
+          <condition attribute="clh_workshopid" operator="eq" value="{{ workshopId }}" />
+          <condition attribute="clh_publishtoportal" operator="eq" value="true" />
+        </filter>
+      </entity>
+    </fetch>
+    {% endfetchxml %}
+
+    {% assign workshop = wsQuery.results.entities[0] %}
+
+    {% if workshop == nil %}
+      {% assign responseCode = 404 %}
+      {"success": false, "message": "Workshop not found or is not available for enrolment."}
+    {% elsif workshop.clh_status != 100000001 %}
+      {% assign responseCode = 400 %}
+      {"success": false, "message": "This workshop is not currently accepting enrolments."}
+    {% else %}
+
+      {% assign spotsLeft = workshop.clh_maxparticipants | minus: workshop.clh_currentenrollments %}
+
+      {% comment %} --- Determine enrollment status --- {% endcomment %}
+      {% if isWaitlist or spotsLeft <= 0 %}
+        {% assign enrollStatus = 100000002 %}
+        {% assign statusLabel  = "Waitlisted" %}
+      {% else %}
+        {% assign enrollStatus = 100000001 %}
+        {% assign statusLabel  = "Confirmed" %}
+      {% endif %}
+
+      {% comment %} --- Generate confirmation code: date + last 8 chars of workshopId + microsecond timestamp for uniqueness --- {% endcomment %}
+      {% assign wsIdSuffix = workshopId | split: '-' | last | upcase %}
+      {% assign confirmationCode = 'now' | date: '%Y%m%d%H%M%S' | append: '-' | append: wsIdSuffix %}
+
+      {% comment %} --- Create enrollment record via Dataverse --- {% endcomment %}
+      {% entitycreate "clh_enrollment"
+        clh_workshop = workshopId
+        clh_anonymousname = participantName
+        clh_anonymousemail = participantEmail
+        clh_anonymousphone = participantPhone
+        clh_enrollmentdate = 'now'
+        clh_status = enrollStatus
+        clh_accessibilityrequirements = accessibility
+        clh_notes = notes
+        clh_source = 100000000
+        clh_confirmationcode = confirmationCode
+      %}
+
+      {% if entitycreate.id %}
+        {% assign responseCode = 200 %}
+        {% if enrollStatus == 100000001 %}
+          {% assign successMessage = "You're enrolled! A confirmation email is on its way to " | append: participantEmail | append: "." %}
+        {% else %}
+          {% assign successMessage = "You've been added to the waitlist. We'll contact you at " | append: participantEmail | append: " if a spot opens up." %}
+        {% endif %}
+        {
+          "success": true,
+          "message": {{ successMessage | jsonify }},
+          "confirmationCode": {{ confirmationCode | jsonify }},
+          "status": {{ statusLabel | jsonify }}
+        }
+      {% else %}
+        {% assign responseCode = 500 %}
+        {"success": false, "message": "We were unable to save your enrolment. Please try again or contact us directly."}
+      {% endif %}
+
+    {% endif %} {% comment %} end workshop status check {% endcomment %}
+  {% endif %} {% comment %} end validation check {% endcomment %}
+
+{% else %}
+  {% assign responseCode = 405 %}
+  {"success": false, "message": "Method not allowed. Use POST."}
+{% endif %}

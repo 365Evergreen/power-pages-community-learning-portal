@@ -1,0 +1,11 @@
+id: enroll
+name: Enrol in a Workshop
+title: Enrol | Community Learning Hub
+partialUrl: /enroll
+pageTemplate: Full Width
+publishingState: Published
+displayOrder: 3
+navigation:
+  displayInNavigation: false
+  navigationLabel: Enrol
+allowAnonymousAccess: true

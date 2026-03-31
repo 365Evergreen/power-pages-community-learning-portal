@@ -1,0 +1,84 @@
+id: find-workshops
+name: Find Workshops
+description: >
+  Helps users discover workshops by topic, category, format, date, or keyword.
+  Queries Dataverse for published workshops and returns a friendly summary.
+triggerPhrases:
+  - find workshops
+  - show me workshops
+  - what workshops are available
+  - I want to learn about
+  - are there any classes
+  - training programs
+  - upcoming events
+  - workshops near me
+  - free workshops
+  - online workshops
+nodes:
+  - id: ask-topic
+    type: message
+    content: >
+      Great! What topic or area are you interested in? For example:
+      - Digital Skills
+      - Financial Literacy
+      - Health & Wellbeing
+      - Employment & Careers
+      - Community Development
+      - Language & Literacy
+      Or just type a keyword and I'll search for you.
+
+  - id: capture-topic
+    type: question
+    variable: workshopTopic
+    questionType: text
+
+  - id: search-workshops
+    type: action
+    actionId: SearchWorkshopsByKeyword
+    inputs:
+      keyword: "{workshopTopic}"
+    outputs:
+      results: workshopResults
+
+  - id: show-results
+    type: condition
+    conditions:
+      - expression: "workshopResults.count > 0"
+        nodes:
+          - id: display-results
+            type: message
+            content: >
+              I found {workshopResults.count} workshop(s) related to "{workshopTopic}":
+              {workshopResults.summary}
+
+              Would you like to enrol in one of these, or would you like to refine your search?
+      - expression: "workshopResults.count == 0"
+        nodes:
+          - id: no-results
+            type: message
+            content: >
+              I couldn't find any workshops matching "{workshopTopic}" right now.
+              New workshops are added regularly—you can browse all upcoming workshops at
+              [our workshops page](/workshops).
+
+              Would you like to search for something else or get notified when new workshops are added?
+
+  - id: offer-enrolment
+    type: question
+    questionType: choice
+    variable: nextStep
+    choices:
+      - label: "Enrol in a workshop"
+        value: enrol
+      - label: "Search for something else"
+        value: search-again
+      - label: "Browse all workshops"
+        value: browse
+    conditions:
+      - expression: "nextStep == 'enrol'"
+        redirectTo: enrolment-help
+      - expression: "nextStep == 'search-again'"
+        redirectTo: find-workshops
+      - expression: "nextStep == 'browse'"
+        type: message
+        content: "You can browse all workshops at [/workshops](/workshops). Is there anything else I can help with?"

@@ -1,0 +1,81 @@
+id: enrolment-help
+name: Enrolment Help
+description: >
+  Guides users through the enrolment process, answers questions about how to enrol,
+  what information is needed, and whether they need an account.
+triggerPhrases:
+  - how do I enrol
+  - how to register
+  - sign up for a workshop
+  - I want to join
+  - enrolment process
+  - do I need an account
+  - can I register without an account
+  - how do I book
+nodes:
+  - id: intro
+    type: message
+    content: >
+      Enrolling in a workshop is easy and you **don't need an account**! Here's how:
+
+      1. **Browse** our [workshops](/workshops) and pick one that interests you.
+      2. Click **Enrol Now** on the workshop page.
+      3. Fill in your **name and email address** (and any accessibility needs).
+      4. Submit the form — you'll receive a **confirmation email** instantly.
+
+      Would you like help with anything specific about enrolment?
+
+  - id: ask-specific-question
+    type: question
+    questionType: choice
+    variable: enrolQuestion
+    choices:
+      - label: "Do I need to pay?"
+        value: cost
+      - label: "What if the workshop is full?"
+        value: full
+      - label: "Can I cancel my enrolment?"
+        value: cancel
+      - label: "I need accessibility support"
+        value: accessibility
+      - label: "No, that's all I needed"
+        value: done
+
+    conditions:
+      - expression: "enrolQuestion == 'cost'"
+        nodes:
+          - id: answer-cost
+            type: message
+            content: >
+              Most of our workshops are **completely free**! Any workshops with a cost will
+              clearly display the price on the workshop listing. You'll never be charged
+              without knowing in advance.
+
+      - expression: "enrolQuestion == 'full'"
+        nodes:
+          - id: answer-full
+            type: message
+            content: >
+              If a workshop is full, you can join the **waitlist**. Simply click
+              "Join Waitlist" on the workshop page. If a spot opens up, we'll email
+              you straight away to confirm your place.
+
+      - expression: "enrolQuestion == 'cancel'"
+        nodes:
+          - id: answer-cancel
+            type: message
+            content: >
+              If you need to cancel your enrolment, please reply to your confirmation email
+              or contact us at hello@communitylearninghub.org. We appreciate as much notice
+              as possible so we can offer your spot to someone on the waitlist.
+
+      - expression: "enrolQuestion == 'accessibility'"
+        redirectTo: accessibility-info
+
+      - expression: "enrolQuestion == 'done'"
+        nodes:
+          - id: done-message
+            type: message
+            content: >
+              Great! You're all set. Head over to [Workshops](/workshops) to find your
+              perfect program. Is there anything else I can help with?

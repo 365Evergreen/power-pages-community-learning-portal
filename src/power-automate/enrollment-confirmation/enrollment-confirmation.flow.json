@@ -1,0 +1,216 @@
+{
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "metadata": {
+    "name": "CLH – Enrollment Confirmation",
+    "description": "Triggered when a new clh_enrollment record is created. Sends a confirmation email to the participant (anonymous or learner) and updates the workshop's enrollment count.",
+    "trigger": "Dataverse – When a row is added",
+    "table": "clh_enrollments",
+    "environment": "Power Platform",
+    "version": "1.0.0"
+  },
+  "definition": {
+    "contentVersion": "1.0.0.0",
+    "triggers": {
+      "When_a_new_enrollment_is_created": {
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "connectionName": "shared_commondataserviceforapps",
+            "operationId": "SubscribeWebhookTrigger",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+          },
+          "parameters": {
+            "subscriptionRequest/message": 1,
+            "subscriptionRequest/entityname": "clh_enrollment",
+            "subscriptionRequest/scope": 4
+          }
+        }
+      }
+    },
+    "actions": {
+      "Get_Workshop_Details": {
+        "runAfter": {},
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "connectionName": "shared_commondataserviceforapps",
+            "operationId": "GetItem"
+          },
+          "parameters": {
+            "entityName": "clh_workshops",
+            "recordId": "@triggerOutputs()?['body/_clh_workshop_value']",
+            "$expand": "clh_trainer($select=clh_name,clh_email)"
+          }
+        }
+      },
+      "Get_Learner_Email": {
+        "runAfter": {
+          "Get_Workshop_Details": ["Succeeded"]
+        },
+        "type": "If",
+        "expression": {
+          "not": {
+            "equals": ["@triggerOutputs()?['body/_clh_learner_value']", null]
+          }
+        },
+        "actions": {
+          "Fetch_Learner_Record": {
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "shared_commondataserviceforapps",
+                "operationId": "GetItem"
+              },
+              "parameters": {
+                "entityName": "clh_learners",
+                "recordId": "@triggerOutputs()?['body/_clh_learner_value']",
+                "$select": "clh_name,clh_email"
+              }
+            }
+          }
+        },
+        "else": {
+          "actions": {
+            "Set_Learner_Details_Empty": {
+              "type": "Compose",
+              "inputs": {
+                "clh_name": "",
+                "clh_email": ""
+              }
+            }
+          }
+        }
+      },
+      "Determine_Participant_Email": {
+        "runAfter": {
+          "Get_Learner_Email": ["Succeeded"]
+        },
+        "type": "Compose",
+        "inputs": {
+          "participantEmail": "@if(empty(triggerOutputs()?['body/clh_anonymousemail']), coalesce(outputs('Fetch_Learner_Record')?['body/clh_email'], ''), triggerOutputs()?['body/clh_anonymousemail'])",
+          "participantName": "@if(empty(triggerOutputs()?['body/clh_anonymousname']), coalesce(outputs('Fetch_Learner_Record')?['body/clh_name'], ''), triggerOutputs()?['body/clh_anonymousname'])",
+          "workshopName": "@outputs('Get_Workshop_Details')?['body/clh_name']",
+          "workshopStart": "@outputs('Get_Workshop_Details')?['body/clh_startdate']",
+          "workshopLocation": "@outputs('Get_Workshop_Details')?['body/clh_location']",
+          "workshopFormat": "@outputs('Get_Workshop_Details')?['body/clh_deliveryformatname']",
+          "trainerName": "@outputs('Get_Workshop_Details')?['body/clh_trainer/clh_name']",
+          "confirmationCode": "@triggerOutputs()?['body/clh_confirmationcode']",
+          "isWaitlisted": "@equals(triggerOutputs()?['body/clh_status'], 100000002)"
+        }
+      },
+      "Condition_Has_Email": {
+        "runAfter": {
+          "Determine_Participant_Email": ["Succeeded"]
+        },
+        "type": "If",
+        "expression": {
+          "and": [
+            {
+              "not": {
+                "equals": ["@outputs('Determine_Participant_Email')?['participantEmail']", ""]
+              }
+            }
+          ]
+        },
+        "actions": {
+          "Send_Confirmation_Email": {
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "shared_office365",
+                "operationId": "SendEmailV2"
+              },
+              "parameters": {
+                "emailMessage/To": "@outputs('Determine_Participant_Email')?['participantEmail']",
+                "emailMessage/Subject": "@if(outputs('Determine_Participant_Email')?['isWaitlisted'], concat('Waitlist Confirmation – ', outputs('Determine_Participant_Email')?['workshopName']), concat('Enrolment Confirmed – ', outputs('Determine_Participant_Email')?['workshopName']))",
+                "emailMessage/Body": "<html><body style=\"font-family: Segoe UI, sans-serif; color: #1a1a1a; max-width: 600px; margin: 0 auto;\">\n  <div style=\"background: #1b5e99; padding: 24px 32px;\">\n    <h1 style=\"color: #fff; margin: 0; font-size: 22px;\">Community Learning Hub</h1>\n  </div>\n  <div style=\"padding: 32px;\">\n    <p>Dear @{outputs('Determine_Participant_Email')?['participantName']},</p>\n    @{if(outputs('Determine_Participant_Email')?['isWaitlisted'],\n      '<p>Thank you for your interest! You have been added to the <strong>waitlist</strong> for the workshop below. We will contact you if a spot becomes available.</p>',\n      '<p>Great news! Your enrolment has been <strong>confirmed</strong> for the workshop below.</p>'\n    )}\n    <div style=\"background: #f4f7fb; border-radius: 8px; padding: 20px; margin: 20px 0;\">\n      <h2 style=\"margin-top: 0; color: #1b5e99;\">@{outputs('Determine_Participant_Email')?['workshopName']}</h2>\n      <p><strong>Date &amp; Time:</strong> @{formatDateTime(outputs('Determine_Participant_Email')?['workshopStart'], 'dddd, d MMMM yyyy \\a\\t h:mm tt')}</p>\n      <p><strong>Format:</strong> @{outputs('Determine_Participant_Email')?['workshopFormat']}</p>\n      @{if(empty(outputs('Determine_Participant_Email')?['workshopLocation']), '', concat('<p><strong>Location:</strong> ', outputs('Determine_Participant_Email')?['workshopLocation'], '</p>'))}\n      <p><strong>Trainer:</strong> @{outputs('Determine_Participant_Email')?['trainerName']}</p>\n    </div>\n    <p><strong>Your confirmation code:</strong> <code>@{outputs('Determine_Participant_Email')?['confirmationCode']}</code></p>\n    <p>If you have any questions or need to cancel, please reply to this email.</p>\n    <p style=\"margin-top: 32px;\">Warm regards,<br/><strong>The Community Learning Hub Team</strong></p>\n  </div>\n  <div style=\"background: #f4f7fb; padding: 16px 32px; font-size: 12px; color: #555;\">\n    <p>This email was sent because you enrolled through the Community Learning Hub portal. If this was not you, please contact us immediately.</p>\n  </div>\n</body></html>"
+              }
+            }
+          },
+          "Update_Confirmation_Sent_Timestamp": {
+            "runAfter": {
+              "Send_Confirmation_Email": ["Succeeded"]
+            },
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "shared_commondataserviceforapps",
+                "operationId": "UpdateRecord"
+              },
+              "parameters": {
+                "entityName": "clh_enrollments",
+                "recordId": "@triggerOutputs()?['body/clh_enrollmentid']",
+                "item/clh_confirmationsentat": "@utcNow()"
+              }
+            }
+          }
+        }
+      },
+      "Increment_Workshop_Enrollment_Count": {
+        "runAfter": {
+          "Condition_Has_Email": ["Succeeded", "Skipped"]
+        },
+        "type": "If",
+        "expression": {
+          "equals": ["@triggerOutputs()?['body/clh_status']", 100000001]
+        },
+        "actions": {
+          "Update_Workshop_Enrollment_Count": {
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "shared_commondataserviceforapps",
+                "operationId": "UpdateRecord"
+              },
+              "parameters": {
+                "entityName": "clh_workshops",
+                "recordId": "@triggerOutputs()?['body/_clh_workshop_value']",
+                "item/clh_currentenrollments": "@add(outputs('Get_Workshop_Details')?['body/clh_currentenrollments'], 1)"
+              }
+            }
+          },
+          "Check_If_Workshop_Is_Now_Full": {
+            "runAfter": {
+              "Update_Workshop_Enrollment_Count": ["Succeeded"]
+            },
+            "type": "If",
+            "expression": {
+              "greaterOrEquals": [
+                "@add(outputs('Get_Workshop_Details')?['body/clh_currentenrollments'], 1)",
+                "@outputs('Get_Workshop_Details')?['body/clh_maxparticipants']"
+              ]
+            },
+            "actions": {
+              "Mark_Workshop_As_Full": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord"
+                  },
+                  "parameters": {
+                    "entityName": "clh_workshops",
+                    "recordId": "@triggerOutputs()?['body/_clh_workshop_value']",
+                    "item/clh_status": 100000002
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "connections": {
+    "shared_commondataserviceforapps": {
+      "connectionId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps/connections/shared_commondataserviceforapps",
+      "connectionName": "shared_commondataserviceforapps",
+      "id": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    },
+    "shared_office365": {
+      "connectionId": "/providers/Microsoft.PowerApps/apis/shared_office365/connections/shared_office365",
+      "connectionName": "shared_office365",
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365"
+    }
+  }
+}
