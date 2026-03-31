@@ -979,6 +979,36 @@
       <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
       <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
       <IsSolutionAware>0</IsSolutionAware>
+      <EntityRelationships>
+        <EntityRelationship Name="contact_ppdev_userpermission">
+          <EntityRelationshipType>ManyToOne</EntityRelationshipType>
+          <IsCustomizable>1</IsCustomizable>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsHierarchical>0</IsHierarchical>
+          <Entity1LogicalName>contact</Entity1LogicalName>
+          <Entity2LogicalName>ppdev_userpermission</Entity2LogicalName>
+          <Entity1IntersectAttribute>contactid</Entity1IntersectAttribute>
+          <IntersectEntityName></IntersectEntityName>
+          <Entity2IntersectAttribute>ppdev_contactid</Entity2IntersectAttribute>
+          <Entity1NavigationPropertyName>contact_ppdev_userpermission</Entity1NavigationPropertyName>
+          <Entity2NavigationPropertyName>ppdev_contactid</Entity2NavigationPropertyName>
+          <IsCustomRelationship>1</IsCustomRelationship>
+          <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+          <CascadeAssign>NoCascade</CascadeAssign>
+          <CascadeDelete>RemoveLink</CascadeDelete>
+          <CascadeReparent>NoCascade</CascadeReparent>
+          <CascadeShare>NoCascade</CascadeShare>
+          <CascadeUnshare>NoCascade</CascadeUnshare>
+          <CascadeRollupView>NoCascade</CascadeRollupView>
+          <IsManaged>0</IsManaged>
+          <EntityRelationshipRoles>
+            <EntityRelationshipRole>
+              <NavPropName>contact_ppdev_userpermission</NavPropName>
+              <RoleType>2</RoleType>
+            </EntityRelationshipRole>
+          </EntityRelationshipRoles>
+        </EntityRelationship>
+      </EntityRelationships>
     </entity>
   </EntityInfo>
   <FormXml />

@@ -86,9 +86,9 @@
       <RootComponent type="1" schemaName="ppdev_sparoute" behavior="0" />
       <RootComponent type="1" schemaName="ppdev_userpermission" behavior="0" />
       <RootComponent type="20" id="{e2487593-332d-f111-88b3-002248e43912}" behavior="0" />
-      <RootComponent type="20" schemaName="Read-Only User" behavior="0" />
-      <RootComponent type="20" schemaName="Editor" behavior="0" />
-      <RootComponent type="20" schemaName="Administrator" behavior="0" />
+      <RootComponent type="20" id="{a1b2c3d4-e5f6-7890-abcd-ef1234567801}" behavior="0" />
+      <RootComponent type="20" id="{a1b2c3d4-e5f6-7890-abcd-ef1234567802}" behavior="0" />
+      <RootComponent type="20" id="{a1b2c3d4-e5f6-7890-abcd-ef1234567803}" behavior="0" />
       <RootComponent type="29" id="{9d07487f-222d-f111-88b4-000d3a7a02f6}" behavior="0" />
       <RootComponent type="300" schemaName="ppdev_workshopmanagementhub_7e894" behavior="0" />
       <RootComponent type="62" schemaName="ppdev_ProgramCoordinatod233ac90" behavior="0" />
