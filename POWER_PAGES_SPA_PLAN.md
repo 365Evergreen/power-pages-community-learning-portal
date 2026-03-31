@@ -188,6 +188,151 @@ Content-Type: application/json
 
 ---
 
+## Admin-Managed Routing (No Code Deployments)
+
+The SPA router can be driven by external configuration that admins control, so adding, removing, or restricting routes never requires a code change or redeployment. The SPA fetches the route manifest at bootstrap, builds its router dynamically, and maps each route to a **component key** from a fixed internal registry.
+
+```
+Bootstrap sequence
+──────────────────
+1. SPA loads (bundle.js)
+2. Fetch route manifest from config source
+3. Build router from manifest entries
+4. Each entry maps  path → componentKey → registered component
+5. Render — unknown componentKeys render a "Coming Soon" fallback
+```
+
+---
+
+### Option 1 — Dataverse Route Configuration Table ✅ Recommended
+
+Add a custom table `ppdev_sparoute` to the solution. Admins manage it in the Model-Driven App (Program Coordinator Console) or Power Pages portal table editor. The SPA reads it via the Web API before rendering.
+
+**Table: `ppdev_sparoute`**
+
+| Column | Type | Purpose |
+|---|---|---|
+| `ppdev_name` | Text (PK display) | Human-readable label, e.g. "Workshop Catalog" |
+| `ppdev_path` | Text | Hash path, e.g. `#/workshops` |
+| `ppdev_componentkey` | Text | Maps to a registered SPA component, e.g. `WorkshopList` |
+| `ppdev_requiresauth` | Yes/No | If true, redirect to login when anonymous |
+| `ppdev_requiredroles` | Text | Comma-separated portal roles, e.g. `Trainer,Admin` (blank = any auth user) |
+| `ppdev_navlabel` | Text | Label shown in navigation menu (blank = hidden from nav) |
+| `ppdev_navorder` | Integer | Sort order in the nav menu |
+| `ppdev_isenabled` | Yes/No | Toggle a route on/off without deleting it |
+| `ppdev_redirectto` | Text | Optional: redirect this path to another path (for aliases/renames) |
+
+**SPA bootstrap call (anonymous read):**
+```js
+GET /_api/ppdev_sparoutes
+  ?$select=ppdev_path,ppdev_componentkey,ppdev_requiresauth,
+           ppdev_requiredroles,ppdev_navlabel,ppdev_navorder,
+           ppdev_isenabled,ppdev_redirectto
+  &$filter=ppdev_isenabled eq true
+  &$orderby=ppdev_navorder asc
+```
+
+**SPA component registry (the only part that needs a code change when a brand-new view is built):**
+```js
+const COMPONENT_REGISTRY = {
+  WorkshopList:    () => import('./views/WorkshopList'),
+  WorkshopDetail:  () => import('./views/WorkshopDetail'),
+  TrainerList:     () => import('./views/TrainerList'),
+  TrainerDetail:   () => import('./views/TrainerDetail'),
+  MyEnrolments:    () => import('./views/MyEnrolments'),
+  EnrolForm:       () => import('./views/EnrolForm'),
+  FeedbackForm:    () => import('./views/FeedbackForm'),
+  Profile:         () => import('./views/Profile'),
+  ComingSoon:      () => import('./views/ComingSoon'), // fallback
+};
+```
+
+**Admin workflow:** Open the Program Coordinator Console → SPA Routes table → add a row, set the component key to an existing registry entry, toggle enabled. No deployment needed.
+
+**Pros:** Full Power Platform native; version-controlled with the solution; role-aware; manageable via Model-Driven App, Canvas App, or Power Pages table editor.  
+**Cons:** Requires one Web API call per page load (mitigate with `sessionStorage` caching with a short TTL).
+
+---
+
+### Option 2 — Power Pages Site Settings (JSON blob)
+
+Power Pages has a built-in **Site Settings** table (`adx_sitesetting`) — name/value pairs editable in the Power Pages admin centre or Portals Management App. Store the entire route manifest as a single JSON value.
+
+**Site setting name:** `SPA/RouteManifest`  
+**Value (JSON string):**
+```json
+[
+  { "path": "#/workshops", "component": "WorkshopList", "navLabel": "Workshops", "navOrder": 1, "requiresAuth": false },
+  { "path": "#/my-enrolments", "component": "MyEnrolments", "navLabel": "My Enrolments", "navOrder": 2, "requiresAuth": true }
+]
+```
+
+**SPA reads it via:**
+```js
+GET /_api/adx_sitesettings
+  ?$select=adx_value
+  &$filter=adx_name eq 'SPA/RouteManifest'
+```
+
+**Pros:** Zero extra tables; works immediately; editable in the Power Pages admin centre.  
+**Cons:** Single unstructured text field — easy to break with a JSON typo; no per-row validation; harder to audit changes; not included in solution exports by default.
+
+---
+
+### Option 3 — Power Pages Web File (`routes.json`)
+
+Upload a `routes.json` file as a **Web File** in Power Pages (under Content → Web Files). The SPA fetches it as a static asset.
+
+```
+/routes.json  (Power Pages Web File, MIME: application/json)
+```
+
+```json
+{
+  "routes": [
+    { "path": "#/workshops", "component": "WorkshopList", "auth": false, "nav": { "label": "Workshops", "order": 1 } },
+    { "path": "#/trainers",  "component": "TrainerList",  "auth": false, "nav": { "label": "Trainers",  "order": 2 } }
+  ]
+}
+```
+
+**SPA reads it via:**
+```js
+const manifest = await fetch('/routes.json').then(r => r.json());
+```
+
+**Pros:** Trivially simple; fully cacheable by the browser and CDN; no API calls needed; admins edit and re-upload via the Power Pages studio.  
+**Cons:** No per-role access control in the file itself; requires a manual upload step to update (not a form-based edit); no change history unless stored in source control.
+
+---
+
+### Option 4 — Environment Variables (Power Platform)
+
+Store the route manifest JSON in a **Power Platform Environment Variable** (text type). Surfaced to the SPA via a lightweight Power Automate HTTP-triggered flow or a custom API plugin that returns the variable value.
+
+**Pros:** Managed at the environment level; survives solution imports; editable by environment admins.  
+**Cons:** Requires a flow/API endpoint as the delivery mechanism — adds a layer of indirection; latency on first call; overkill for most scenarios.
+
+---
+
+### Comparison
+
+| Option | Admin UX | Role-level control | In solution export | Best for |
+|---|---|---|---|---|
+| **Dataverse table** ✅ | Model-Driven App form | ✅ Yes (per-row) | ✅ Yes | Full-featured, long-term |
+| Site Settings | Power Pages admin centre | ❌ JSON only | ❌ No | Quick prototype |
+| Web File (routes.json) | Upload in Pages studio | ❌ JSON only | ✅ As web file | Static / simple sites |
+| Environment Variable | Power Platform admin | ❌ JSON only | ✅ Yes | Environment-level config |
+
+---
+
+### Recommended approach: Dataverse table + Web File fallback
+
+1. **Primary:** `ppdev_sparoute` Dataverse table — full admin control, role-aware, ships in the solution.  
+2. **Fallback:** If the Web API call fails (e.g. table permissions not yet configured), the SPA falls back to `/routes.json` (a Web File with the default manifest), ensuring the site still renders.
+
+---
+
 ## Power Pages Configuration Required
 
 1. **Table Permissions**
