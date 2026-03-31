@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import CardGrid from '../components/CardGrid'
+import Hero from '../components/Hero'
+
+const HERO_IMAGE =
+  'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80'
 
 export default function Home() {
   const [workshops, setWorkshops] = useState([])
@@ -33,14 +37,21 @@ export default function Home() {
   }, [])
 
   return (
-    <main style={{ padding: 20 }}>
-      <h1>Welcome to the Power Pages SPA</h1>
-      <p>This is the starter Home page for the community learning portal SPA.</p>
+    <>
+      <Hero
+        eyebrow="Community Learning Hub"
+        title="Grow your skills with people who care"
+        subtitle="Discover hands-on workshops, connect with expert trainers, and join a community that learns together."
+        imageUrl={HERO_IMAGE}
+      />
+      <main>
+        <h2>Upcoming Workshops</h2>
 
-      {loading && <p>Loading workshops…</p>}
-      {error && <p style={{ color: 'crimson' }}>Error: {error}</p>}
+        {loading && <p>Loading workshops…</p>}
+        {error && <p style={{ color: 'crimson' }}>Error: {error}</p>}
 
-      {!loading && !error && <CardGrid records={workshops} />}
-    </main>
+        {!loading && !error && <CardGrid records={workshops} />}
+      </main>
+    </>
   )
 }
