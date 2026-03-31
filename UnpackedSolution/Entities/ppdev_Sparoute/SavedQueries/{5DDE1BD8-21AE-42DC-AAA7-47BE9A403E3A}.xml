@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5DDE1BD8-21AE-42DC-AAA7-47BE9A403E3A}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ppdev_name" select="1" icon="1" preview="1">
+        <row name="result" id="ppdev_sparouteid">
+          <cell name="ppdev_name" width="200" />
+          <cell name="ppdev_path" width="200" />
+          <cell name="ppdev_componentkey" width="150" />
+          <cell name="ppdev_requiresauth" width="100" />
+          <cell name="ppdev_isenabled" width="100" />
+          <cell name="ppdev_navlabel" width="150" />
+          <cell name="ppdev_navorder" width="80" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ppdev_sparoute">
+          <attribute name="ppdev_sparouteid" />
+          <attribute name="ppdev_name" />
+          <attribute name="ppdev_path" />
+          <attribute name="ppdev_componentkey" />
+          <attribute name="ppdev_requiresauth" />
+          <attribute name="ppdev_isenabled" />
+          <attribute name="ppdev_navlabel" />
+          <attribute name="ppdev_navorder" />
+          <order attribute="ppdev_navorder" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active SPA Routes" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

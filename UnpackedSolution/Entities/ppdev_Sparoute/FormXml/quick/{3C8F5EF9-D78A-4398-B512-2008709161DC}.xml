@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3C8F5EF9-D78A-4398-B512-2008709161DC}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{C2EE619B-5B83-43FE-9C34-73F3FC341EA3}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{F614B31E-8724-4FD1-AC7E-CF32B9CF69D5}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1A2B3C4D-5E6F-7890-ABCD-EF1234567891}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2B3C4D5E-6F7A-8901-BCDE-F12345678902}">
+                        <labels>
+                          <label description="Path" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_path" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_path" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3C4D5E6F-7A8B-9012-CDEF-123456789013}">
+                        <labels>
+                          <label description="Component Key" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_componentkey" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_componentkey" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4D5E6F7A-8B9C-0123-DEFA-234567890134}">
+                        <labels>
+                          <label description="Is Enabled" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_isenabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="ppdev_isenabled" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5E6F7A8B-9C0D-1234-EFAB-345678901245}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

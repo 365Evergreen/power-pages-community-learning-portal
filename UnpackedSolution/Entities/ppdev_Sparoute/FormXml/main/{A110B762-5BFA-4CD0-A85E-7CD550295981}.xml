@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{A110B762-5BFA-4CD0-A85E-7CD550295981}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{AC2F6D42-90FB-463E-8D17-ED455173B280}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{C564EBD1-B9E5-41E6-9874-E884707EA613}">
+                  <labels>
+                    <label description="Route Identity" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9EAB93D7-E2D3-49DC-93E8-FCDE09A1AD20}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{91CE2862-B605-4284-836D-C2984AF7BCED}">
+                        <labels>
+                          <label description="Path" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_path" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_path" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{12460691-793E-4291-93CC-F76DC68C06B4}">
+                        <labels>
+                          <label description="Component Key" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_componentkey" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_componentkey" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{C14991E4-FDC8-4D7B-A921-0A13896770FE}">
+                        <labels>
+                          <label description="Redirect To" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_redirectto" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_redirectto" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{7F3A2B1C-E4D5-4F6A-B8C9-1D2E3F4A5B6C}">
+                  <labels>
+                    <label description="Access Control" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{F671CF3C-8EA0-4D20-BC81-5441A075A12A}">
+                        <labels>
+                          <label description="Requires Auth" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_requiresauth" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="ppdev_requiresauth" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0155BD18-9219-4ECA-BD32-444D9E664F5B}">
+                        <labels>
+                          <label description="Required Roles" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_requiredroles" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_requiredroles" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{8A4B5C6D-7E8F-9A0B-1C2D-3E4F5A6B7C8D}">
+                  <labels>
+                    <label description="Navigation" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{961A187B-D1BE-4C21-962E-7FA7CEB878BB}">
+                        <labels>
+                          <label description="Nav Label" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_navlabel" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_navlabel" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6451BFBB-8E51-4508-971D-A2F9339CAB92}">
+                        <labels>
+                          <label description="Nav Order" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_navorder" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="ppdev_navorder" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{A0914965-DB12-4EFE-9816-52EFCF462DB1}">
+                        <labels>
+                          <label description="Is Enabled" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_isenabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="ppdev_isenabled" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{9B5C6D7E-8F9A-0B1C-2D3E-4F5A6B7C8D9E}">
+                  <labels>
+                    <label description="Ownership" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6111511E-686B-4156-9B53-14E7C0257898}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
