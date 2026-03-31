@@ -493,7 +493,7 @@
           <Name>ppdev_userpermissionid</Name>
           <LogicalName>ppdev_userpermissionid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
-          <DisplayMask>ValidForReadApi</DisplayMask>
+          <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>
           <ValidForReadApi>1</ValidForReadApi>
@@ -565,10 +565,10 @@
             <Description description="" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="ppdev_ContactId">
-          <Type>lookup</Type>
-          <Name>ppdev_contactid</Name>
-          <LogicalName>ppdev_contactid</LogicalName>
+        <attribute PhysicalName="ppdev_ContactRef">
+          <Type>nvarchar</Type>
+          <Name>ppdev_contactref</Name>
+          <LogicalName>ppdev_contactref</LogicalName>
           <RequiredLevel>none</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -591,17 +591,18 @@
           <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
           <IsDataSourceSecret>0</IsDataSourceSecret>
           <AutoNumberFormat></AutoNumberFormat>
-          <IsSearchable>0</IsSearchable>
-          <IsFilterable>0</IsFilterable>
-          <IsRetrievable>0</IsRetrievable>
+          <IsSearchable>1</IsSearchable>
+          <IsFilterable>1</IsFilterable>
+          <IsRetrievable>1</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <LookupStyle>single</LookupStyle>
-          <LookupTypes />
+          <Format>text</Format>
+          <MaxLength>100</MaxLength>
+          <Length>200</Length>
           <displaynames>
-            <displayname description="Contact" languagecode="1033" />
+            <displayname description="Contact ID" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="" languagecode="1033" />
+            <Description description="Stores the Contact record GUID for permission lookup." languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="ppdev_PermissionLevel">
@@ -979,36 +980,6 @@
       <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
       <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
       <IsSolutionAware>0</IsSolutionAware>
-      <EntityRelationships>
-        <EntityRelationship Name="contact_ppdev_userpermission">
-          <EntityRelationshipType>ManyToOne</EntityRelationshipType>
-          <IsCustomizable>1</IsCustomizable>
-          <IntroducedVersion>1.0</IntroducedVersion>
-          <IsHierarchical>0</IsHierarchical>
-          <Entity1LogicalName>contact</Entity1LogicalName>
-          <Entity2LogicalName>ppdev_userpermission</Entity2LogicalName>
-          <Entity1IntersectAttribute>contactid</Entity1IntersectAttribute>
-          <IntersectEntityName></IntersectEntityName>
-          <Entity2IntersectAttribute>ppdev_contactid</Entity2IntersectAttribute>
-          <Entity1NavigationPropertyName>contact_ppdev_userpermission</Entity1NavigationPropertyName>
-          <Entity2NavigationPropertyName>ppdev_contactid</Entity2NavigationPropertyName>
-          <IsCustomRelationship>1</IsCustomRelationship>
-          <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
-          <CascadeAssign>NoCascade</CascadeAssign>
-          <CascadeDelete>RemoveLink</CascadeDelete>
-          <CascadeReparent>NoCascade</CascadeReparent>
-          <CascadeShare>NoCascade</CascadeShare>
-          <CascadeUnshare>NoCascade</CascadeUnshare>
-          <CascadeRollupView>NoCascade</CascadeRollupView>
-          <IsManaged>0</IsManaged>
-          <EntityRelationshipRoles>
-            <EntityRelationshipRole>
-              <NavPropName>contact_ppdev_userpermission</NavPropName>
-              <RoleType>2</RoleType>
-            </EntityRelationshipRole>
-          </EntityRelationshipRoles>
-        </EntityRelationship>
-      </EntityRelationships>
     </entity>
   </EntityInfo>
   <FormXml />

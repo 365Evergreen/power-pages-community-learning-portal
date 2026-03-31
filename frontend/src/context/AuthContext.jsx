@@ -66,7 +66,7 @@ export function AuthProvider({ children }) {
           // Fetch from Dataverse Web API
           try {
             const url =
-              `/_api/ppdev_userpermissions?$filter=_ppdev_contactid_value eq '${resolvedUser.id}'&$select=ppdev_permissionlevel&$top=1`
+              `/_api/ppdev_userpermissions?$filter=ppdev_contactref eq '${resolvedUser.id}'&$select=ppdev_permissionlevel&$top=1`
             const r = await fetch(url, { credentials: 'include' })
             if (r.ok) {
               const data = await r.json()
