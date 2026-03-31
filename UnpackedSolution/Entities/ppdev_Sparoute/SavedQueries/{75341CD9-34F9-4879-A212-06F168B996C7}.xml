@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <savedquery>
     <IsCustomizable>1</IsCustomizable>
@@ -6,7 +6,7 @@
     <isquickfindquery>1</isquickfindquery>
     <isprivate>0</isprivate>
     <isdefault>1</isdefault>
-    <savedqueryid>{75341CD9-34F9-4879-A212-06F168B996C7}</savedqueryid>
+    <savedqueryid>{75341cd9-34f9-4879-a212-06f168b996c7}</savedqueryid>
     <layoutxml>
       <grid name="resultset" jump="ppdev_name" select="1" icon="1" preview="1">
         <row name="result" id="ppdev_sparouteid">

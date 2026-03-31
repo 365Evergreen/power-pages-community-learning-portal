@@ -1,0 +1,13 @@
+<powerpagecomponent powerpagecomponentid="3b9d7edd-ee24-4812-ad26-b88d3fa41c68">
+  <content>{
+  "value": "true"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>SiteCopilot/EnableNativeControlPVABots</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

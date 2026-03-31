@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="db793f85-28dc-43e3-90c9-727409d5c1dd">
+  <content>{"importsequencenumber":5}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Authentication/OpenAuth/Microsoft/ClientId</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

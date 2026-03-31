@@ -1,0 +1,70 @@
+<powerpagecomponent powerpagecomponentid="d7a8f387-aafa-4fc8-8114-d0c54f4147bd">
+  <content>{"copy":"&lt;div data-component-theme=\"portalThemeColor8\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: 300px; background-image:url('https://cdn.hubblecontent.osi.office.net/m365content/publish/0e0ebdd2-1ebd-4b17-b372-7259d68092a0/thumbnails/xxlarge.jpg'); background-size: cover; background-position: center;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 60px 0px; padding: 40px; background-color: rgba(255, 255, 255, 0.85); border-radius: 8px;\"&gt;\n &lt;h1 style=\"text-align: center;\"&gt;Training &amp; Workshop FAQs&lt;/h1&gt;\n &lt;p style=\"text-align: center; font-size: 18px;\"&gt;Answers to common questions about enrolling in community training sessions and workshops.&lt;/p&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;\"&gt;\n &lt;h3&gt;How do I register for a training session or workshop?&lt;/h3&gt;\n &lt;p&gt;You can browse available sessions on our website and select the one that fits your interests. Enrollment is completed by submitting your participant details and session preferences through our secure online platform.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;\"&gt;\n &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/0be5efd8-21a2-404f-8a8f-14e056079648/thumbnails/xxlarge.jpg\" alt=\"Participants engaged in a community workshop\" style=\"width: 100%; height: auto; border-radius: 6px;\"&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 2;\"&gt;\n &lt;h3&gt;Can trainers submit their own workshop offerings?&lt;/h3&gt;\n &lt;p&gt;Yes, community trainers can propose new workshops by contacting our nonprofit team. We review submissions to ensure alignment with community learning goals and provide support for scheduling and enrollment management.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 1;\"&gt;\n &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/983cecbe-2c43-4014-8a7c-030a1b87feff/thumbnails/xxlarge.jpg\" alt=\"Trainer leading a community workshop session\" style=\"width: 100%; height: auto; border-radius: 6px;\"&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;\"&gt;\n &lt;h3&gt;How is participant information used and protected?&lt;/h3&gt;\n &lt;p&gt;Participant details are used solely for enrollment, communication, and session planning purposes. We follow strict privacy policies to protect your information and do not share data with third parties without consent.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;\"&gt;\n &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/58140914-c1fc-4f36-b226-eb4e2725149d/thumbnails/xxlarge.jpg\" alt=\"Illustration of data security and privacy\" style=\"width: 100%; height: auto; border-radius: 6px;\"&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 2;\"&gt;\n &lt;h3&gt;What if I need to change or cancel my enrollment?&lt;/h3&gt;\n &lt;p&gt;You can update your session preferences or cancel your enrollment by contacting our support team at least 48 hours before the session start date. This helps us manage participant numbers and accommodate others.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 1;\"&gt;\n &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/45f78dbc-5940-4dd5-91d9-0ba524f1e836/thumbnails/xxlarge.jpg\" alt=\"Calendar showing workshop schedule\" style=\"width: 100%; height: auto; border-radius: 6px;\"&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;","enablerating":false,"enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":false,"sharedpageconfiguration":false,"isroot":false,"rootwebpageid":"3bbec58a-c871-438c-bef4-b6062a117e9f","pagetemplateid":"ab186c9d-1f56-4663-a166-c12fb392dd27","partialurl":"faq","publishingstateid":"18c9ace9-f280-41b6-897e-0b274144316b","parentpageid":"52fe0cd3-82e7-4784-a468-ccfd4b17ef00"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>FAQ</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>b17836b9-d0d2-4f3d-996b-f1575f9b0d53</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: 300px; background-image:url('https://cdn.hubblecontent.osi.office.net/m365content/publish/0e0ebdd2-1ebd-4b17-b372-7259d68092a0/thumbnails/xxlarge.jpg'); background-size: cover; background-position: center;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 60px 0px; padding: 40px; background-color: rgba(255, 255, 255, 0.85); border-radius: 8px;"&gt;
+ &lt;h1 style="text-align: center;"&gt;Training &amp; Workshop FAQs&lt;/h1&gt;
+ &lt;p style="text-align: center; font-size: 18px;"&gt;Answers to common questions about enrolling in community training sessions and workshops.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;"&gt;
+ &lt;h3&gt;How do I register for a training session or workshop?&lt;/h3&gt;
+ &lt;p&gt;You can browse available sessions on our website and select the one that fits your interests. Enrollment is completed by submitting your participant details and session preferences through our secure online platform.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;"&gt;
+ &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/0be5efd8-21a2-404f-8a8f-14e056079648/thumbnails/xxlarge.jpg" alt="Participants engaged in a community workshop" style="width: 100%; height: auto; border-radius: 6px;"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 2;"&gt;
+ &lt;h3&gt;Can trainers submit their own workshop offerings?&lt;/h3&gt;
+ &lt;p&gt;Yes, community trainers can propose new workshops by contacting our nonprofit team. We review submissions to ensure alignment with community learning goals and provide support for scheduling and enrollment management.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 1;"&gt;
+ &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/983cecbe-2c43-4014-8a7c-030a1b87feff/thumbnails/xxlarge.jpg" alt="Trainer leading a community workshop session" style="width: 100%; height: auto; border-radius: 6px;"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;"&gt;
+ &lt;h3&gt;How is participant information used and protected?&lt;/h3&gt;
+ &lt;p&gt;Participant details are used solely for enrollment, communication, and session planning purposes. We follow strict privacy policies to protect your information and do not share data with third parties without consent.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;"&gt;
+ &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/58140914-c1fc-4f36-b226-eb4e2725149d/thumbnails/xxlarge.jpg" alt="Illustration of data security and privacy" style="width: 100%; height: auto; border-radius: 6px;"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 2;"&gt;
+ &lt;h3&gt;What if I need to change or cancel my enrollment?&lt;/h3&gt;
+ &lt;p&gt;You can update your session preferences or cancel your enrollment by contacting our support team at least 48 hours before the session start date. This helps us manage participant numbers and accommodate others.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px; order: 1;"&gt;
+ &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/45f78dbc-5940-4dd5-91d9-0ba524f1e836/thumbnails/xxlarge.jpg" alt="Calendar showing workshop schedule" style="width: 100%; height: auto; border-radius: 6px;"&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;FAQ</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

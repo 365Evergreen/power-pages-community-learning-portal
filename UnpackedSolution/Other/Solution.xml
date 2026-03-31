@@ -83,6 +83,8 @@
       <RootComponent type="1" schemaName="ppdev_communitytrainer" behavior="0" />
       <RootComponent type="1" schemaName="ppdev_communitytrainingenrolment" behavior="0" />
       <RootComponent type="1" schemaName="ppdev_communityworkshop" behavior="0" />
+      <RootComponent type="1" schemaName="ppdev_sparoute" behavior="0" />
+      <RootComponent type="20" id="{e2487593-332d-f111-88b3-002248e43912}" behavior="0" />
       <RootComponent type="29" id="{9d07487f-222d-f111-88b4-000d3a7a02f6}" behavior="0" />
       <RootComponent type="300" schemaName="ppdev_workshopmanagementhub_7e894" behavior="0" />
       <RootComponent type="62" schemaName="ppdev_ProgramCoordinatod233ac90" behavior="0" />
@@ -98,18 +100,6 @@
           <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
         </Required>
         <Dependent type="80" schemaName="ppdev_ProgramCoordinatoeda8373a" displayName="Program Coordinator Console" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.16)" id.uniquename="AppChannel">
-          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
-        </Required>
-        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=ppdev_ProgramCoordinatoeda8373a,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="ppdev_ProgramCoordinatoeda8373a" id.settingdefinitionid.uniquename="AppChannel" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required type="SettingDefinition" displayName="IsAppGeneratedByPlanDesigner" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.16)" id.uniquename="IsAppGeneratedByPlanDesigner">
-          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
-        </Required>
-        <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=ppdev_ProgramCoordinatoeda8373a,settingdefinitionid.uniquename=IsAppGeneratedByPlanDesigner" id.parentappmoduleid.uniquename="ppdev_ProgramCoordinatoeda8373a" id.settingdefinitionid.uniquename="IsAppGeneratedByPlanDesigner" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

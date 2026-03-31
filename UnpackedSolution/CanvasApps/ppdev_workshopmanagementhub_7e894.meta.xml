@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>ppdev_workshopmanagementhub_7e894</Name>
-  <AppVersion>2026-03-31T11:38:06Z</AppVersion>
+  <AppVersion>2026-03-31T19:27:32Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.26034.7.0</CreatedByClientVersion>
   <MinClientVersion>3.26034.7.0</MinClientVersion>
@@ -10,12 +10,12 @@
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
   <DisplayName>Workshop Management Hub</DisplayName>
-  <Description xsi:nil="true"></Description>
-  <CommitMessage xsi:nil="true"></CommitMessage>
-  <Publisher xsi:nil="true"></Publisher>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
-  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"NotSpecified","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Community trainers":{"entitySetName":"ppdev_communitytrainers","logicalName":"ppdev_communitytrainer"},"Community learners":{"entitySetName":"ppdev_communitylearners","logicalName":"ppdev_communitylearner"},"Community workshops":{"entitySetName":"ppdev_communityworkshops","logicalName":"ppdev_communityworkshop"},"Community training enrolments":{"entitySetName":"ppdev_communitytrainingenrolments","logicalName":"ppdev_communitytrainingenrolment"},"Community member feedback":{"entitySetName":"ppdev_communitymemberfeedbacks","logicalName":"ppdev_communitymemberfeedback"}}}}</DatabaseReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified","environmentVariableName":""}},"dataSources":{"Community trainers":{"entitySetName":"ppdev_communitytrainers","logicalName":"ppdev_communitytrainer"},"Community learners":{"entitySetName":"ppdev_communitylearners","logicalName":"ppdev_communitylearner"},"Community workshops":{"entitySetName":"ppdev_communityworkshops","logicalName":"ppdev_communityworkshop"},"Community training enrolments":{"entitySetName":"ppdev_communitytrainingenrolments","logicalName":"ppdev_communitytrainingenrolment"},"Community member feedback":{"entitySetName":"ppdev_communitymemberfeedbacks","logicalName":"ppdev_communitymemberfeedback"}}}}</DatabaseReferences>
   <AppComponents>[]</AppComponents>
   <AppComponentDependencies>[]</AppComponentDependencies>
   <CanConsumeAppPass>1</CanConsumeAppPass>

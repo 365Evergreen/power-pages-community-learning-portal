@@ -1,0 +1,12 @@
+<powerpagecomponent powerpagecomponentid="d891c1b9-f687-4088-b4bb-fd3c1881428b">
+  <content>{"enablerating":false,"enabletracking":false,"excludefromsearch":true,"hiddenfromsitemap":true,"isroot":true,"pagetemplateid":"ab186c9d-1f56-4663-a166-c12fb392dd27","parentpageid":"52fe0cd3-82e7-4784-a468-ccfd4b17ef00","partialurl":"page-not-found","publishingstateid":"18c9ace9-f280-41b6-897e-0b274144316b","sharedpageconfiguration":false}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Page Not Found</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>Page Not Found</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

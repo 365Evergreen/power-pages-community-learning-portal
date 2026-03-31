@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="f3a5b55e-99a1-4928-9268-7f94c6bfa320">
+  <content>{"disablepagevalidation":false,"displayimageonly":false,"displayorder":6,"displaypagechildlinks":false,"openinnewwindow":false,"pageid":"6976bca1-d22c-439d-96dd-4399e37c3c91","publishingstateid":"18c9ace9-f280-41b6-897e-0b274144316b","robotsfollowlink":true,"weblinksetid":"371708ef-71fa-4a31-b920-728a61d2db01"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Enrollment</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

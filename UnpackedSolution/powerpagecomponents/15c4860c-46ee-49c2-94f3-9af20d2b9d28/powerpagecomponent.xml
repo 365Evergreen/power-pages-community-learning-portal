@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="15c4860c-46ee-49c2-94f3-9af20d2b9d28">
+  <content>{"description":"The amount of time the IP address will have to wait if Authentication/LoginThrottling/MaxInvaildAttemptsFromIPAddress occur within Authentication/LoginThrottling/MaxAttemptsTimeLimitTimeSpan amount of time. Default: 00:10:00 (10 mins)","value":"00:10:00"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Authentication/LoginThrottling/IpAddressTimeoutTimeSpan</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

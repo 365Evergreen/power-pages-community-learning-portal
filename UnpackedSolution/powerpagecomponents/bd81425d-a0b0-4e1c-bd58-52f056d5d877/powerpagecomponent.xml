@@ -1,0 +1,14 @@
+<powerpagecomponent powerpagecomponentid="bd81425d-a0b0-4e1c-bd58-52f056d5d877">
+  <content>{"display_name":"Logo alt text","value":"Contoso Limited\r\n"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Logo alt text</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>b17836b9-d0d2-4f3d-996b-f1575f9b0d53</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

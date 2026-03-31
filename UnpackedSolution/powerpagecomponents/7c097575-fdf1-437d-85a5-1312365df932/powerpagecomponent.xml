@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="7c097575-fdf1-437d-85a5-1312365df932">
+  <content>{"description":"A collection of search logical name filter options. Defining a value here will add dropdown filter options to site-wide search.\n\nThis value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: \"Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment\"."}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>search/filters</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,80 @@
+<powerpagecomponent powerpagecomponentid="c9705d2b-66a0-4698-be7c-1331feb69602">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div data-component-theme=\"portalThemeColor8\" class=\"row sectionBlockLayout\" style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 60vh; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(\"https://cdn.hubblecontent.osi.office.net/m365content/publish/15ce4022-a277-4eeb-8f2f-f9a5b1b1878f/thumbnails/xxlarge.jpg\"); background-position: center center; background-repeat: no-repeat; background-size: cover;'&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-12 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 180px 0px;\"&gt;\n      &lt;h1 style=\"text-align: center; color: white;\"&gt;Empowering Community Learning&lt;/h1&gt;\n      &lt;h4 style=\"text-align: center; color: white;\"&gt;Join workshops and training sessions designed for growth and connection&lt;/h4&gt;\n      &lt;button class=\"button1\" style=\"width: 200px; margin-left: auto; margin-right: auto;\"&gt;Explore Programs&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0px;\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-6 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n      &lt;h2&gt;About Our Hub&lt;/h2&gt;\n      &lt;p&gt;Community Learning Hub connects nonprofit trainers with eager learners through accessible workshops and training programs. We support participant enrollment and tailor sessions to meet diverse community needs.&lt;/p&gt;\n      &lt;button class=\"button1\" style=\"width: 180px;\"&gt;Learn More&lt;/button&gt;\n    &lt;/div&gt;\n    &lt;div class=\"col-md-6 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;&lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/84f1d8e1-b52b-4b17-9297-dae4c2e7aead/thumbnails/xxlarge.jpg\" alt=\"Community members collaborating in workshop\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0px;\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-4 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n      &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/722130b7-80b9-4770-ac5a-d098d7f03cc0/thumbnails/xxlarge.jpg\" alt=\"Trainer leading interactive session\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;\n      &lt;h3&gt;Expert Trainers&lt;/h3&gt;\n      &lt;p&gt;Our experienced trainers bring practical knowledge and passion to every session, fostering an engaging learning environment.&lt;/p&gt;\n    &lt;/div&gt;\n    &lt;div class=\"col-md-4 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n      &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/55e1abf8-d4fe-417b-afb8-b18691f1128d/thumbnails/xxlarge.jpg\" alt=\"Participants selecting workshop options\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;\n      &lt;h3&gt;Flexible Enrollment&lt;/h3&gt;\n      &lt;p&gt;Participants can easily enroll in workshops that fit their interests and schedules, with options to customize session preferences.&lt;/p&gt;\n    &lt;/div&gt;\n    &lt;div class=\"col-md-4 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n      &lt;img src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/3bbdaf90-e063-4c0d-9786-b9a691b74458/thumbnails/xxlarge.jpg\" alt=\"Community members sharing ideas in group\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;\n      &lt;h3&gt;Community Focus&lt;/h3&gt;\n      &lt;p&gt;We prioritize community engagement and collaboration to build skills that empower local growth and connection.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0px; background-color: rgb(249, 249, 249);\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-12 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n      &lt;h2&gt;Get Started Today&lt;/h2&gt;\n      &lt;p&gt;Discover upcoming workshops, meet trainers, and join a vibrant community of learners. Together, we create opportunities for growth and positive change.&lt;/p&gt;\n      &lt;button class=\"button1\" style=\"width: 200px;\"&gt;View Upcoming Sessions&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n",
+  "displayorder": 1,
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150005,
+  "hiddenfromsitemap": false,
+  "isroot": false,
+  "pagetemplateid": "ab186c9d-1f56-4663-a166-c12fb392dd27",
+  "partialurl": "/",
+  "publishingstateid": "18c9ace9-f280-41b6-897e-0b274144316b",
+  "rootwebpageid": "52fe0cd3-82e7-4784-a468-ccfd4b17ef00",
+  "sharedpageconfiguration": false,
+  "summary": "&lt;p&gt;This is a sample landing page for you to start creating your website.&lt;/p&gt;\r\n",
+  "title": "Home",
+  "parentpageid": null
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Home</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>b17836b9-d0d2-4f3d-996b-f1575f9b0d53</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Home&lt;div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 60vh; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://cdn.hubblecontent.osi.office.net/m365content/publish/15ce4022-a277-4eeb-8f2f-f9a5b1b1878f/thumbnails/xxlarge.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover;'&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-12 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 180px 0px;"&gt;
+      &lt;h1 style="text-align: center; color: white;"&gt;Empowering Community Learning&lt;/h1&gt;
+      &lt;h4 style="text-align: center; color: white;"&gt;Join workshops and training sessions designed for growth and connection&lt;/h4&gt;
+      &lt;button class="button1" style="width: 200px; margin-left: auto; margin-right: auto;"&gt;Explore Programs&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0px;"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-6 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+      &lt;h2&gt;About Our Hub&lt;/h2&gt;
+      &lt;p&gt;Community Learning Hub connects nonprofit trainers with eager learners through accessible workshops and training programs. We support participant enrollment and tailor sessions to meet diverse community needs.&lt;/p&gt;
+      &lt;button class="button1" style="width: 180px;"&gt;Learn More&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;&lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/84f1d8e1-b52b-4b17-9297-dae4c2e7aead/thumbnails/xxlarge.jpg" alt="Community members collaborating in workshop" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0px;"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-4 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+      &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/722130b7-80b9-4770-ac5a-d098d7f03cc0/thumbnails/xxlarge.jpg" alt="Trainer leading interactive session" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;
+      &lt;h3&gt;Expert Trainers&lt;/h3&gt;
+      &lt;p&gt;Our experienced trainers bring practical knowledge and passion to every session, fostering an engaging learning environment.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+      &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/55e1abf8-d4fe-417b-afb8-b18691f1128d/thumbnails/xxlarge.jpg" alt="Participants selecting workshop options" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;
+      &lt;h3&gt;Flexible Enrollment&lt;/h3&gt;
+      &lt;p&gt;Participants can easily enroll in workshops that fit their interests and schedules, with options to customize session preferences.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+      &lt;img src="https://cdn.hubblecontent.osi.office.net/m365content/publish/3bbdaf90-e063-4c0d-9786-b9a691b74458/thumbnails/xxlarge.jpg" alt="Community members sharing ideas in group" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;
+      &lt;h3&gt;Community Focus&lt;/h3&gt;
+      &lt;p&gt;We prioritize community engagement and collaboration to build skills that empower local growth and connection.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0px; background-color: rgb(249, 249, 249);"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-12 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+      &lt;h2&gt;Get Started Today&lt;/h2&gt;
+      &lt;p&gt;Discover upcoming workshops, meet trainers, and join a vibrant community of learners. Together, we create opportunities for growth and positive change.&lt;/p&gt;
+      &lt;button class="button1" style="width: 200px;"&gt;View Upcoming Sessions&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+Home</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

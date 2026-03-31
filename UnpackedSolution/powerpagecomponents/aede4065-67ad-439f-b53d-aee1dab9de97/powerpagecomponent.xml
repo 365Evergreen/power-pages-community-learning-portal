@@ -1,0 +1,69 @@
+<powerpagecomponent powerpagecomponentid="aede4065-67ad-439f-b53d-aee1dab9de97">
+  <content>{"copy":"&lt;div data-component-theme=\"portalThemeColor8\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: 400px; background-image:url('https://cdn.hubblecontent.osi.office.net/m365content/publish/0be5efd8-21a2-404f-8a8f-14e056079648/thumbnails/xxlarge.jpg'); background-size: cover; background-position: center; color: white; align-items: center;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-8 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 40px;\"&gt;\n &lt;h1&gt;Empowering Community Learning&lt;/h1&gt;\n &lt;p&gt;Join our nonprofit training programs and workshops designed to uplift community learners and trainers. Discover new skills, connect with peers, and grow together.&lt;/p&gt;\n &lt;button class=\"button1\" onclick=\"window.location.href='#enroll'\"&gt;Enroll Now&lt;/button&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n &lt;h2&gt;About Our Workshops&lt;/h2&gt;\n &lt;p&gt;Our workshops are tailored to meet the needs of community members eager to learn and share knowledge. We focus on practical skills and interactive sessions led by experienced trainers.&lt;/p&gt;\n &lt;p&gt;Participants can select sessions based on their interests and availability, ensuring a personalized learning experience.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n &lt;img style=\"width: 100%; height: auto; border-radius: 6px;\" alt=\"Community members participating in a workshop\" src=\"https://cdn.hubblecontent.msit.osi.office.net/m365content/publish/4e8976f8-b9c7-445e-80a5-755515796924/thumbnails/xxlarge.jpg\" /&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-4 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n &lt;img style=\"width: 100%; height: auto; border-radius: 6px;\" alt=\"Trainer guiding participants\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/70d371c6-07e7-4fe6-8e11-f474361e2a6f/thumbnails/xxlarge.jpg\" /&gt;\n &lt;h3&gt;Experienced Trainers&lt;/h3&gt;\n &lt;p&gt;Our trainers bring diverse expertise and a passion for community development, ensuring engaging and impactful learning experiences.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-4 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n &lt;img style=\"width: 100%; height: auto; border-radius: 6px;\" alt=\"Participants filling enrollment forms\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/506c17f7-e57b-4e82-85d7-a58725bb2573/thumbnails/xxlarge.jpg\" /&gt;\n &lt;h3&gt;Easy Enrollment&lt;/h3&gt;\n &lt;p&gt;Enroll quickly and securely. Provide your details and session preferences to join the workshops that suit you best.&lt;/p&gt;\n &lt;/div&gt;\n &lt;div class=\"col-md-4 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n &lt;img style=\"width: 100%; height: auto; border-radius: 6px;\" alt=\"Community discussion and collaboration\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/cb27ba27-7533-4a73-b9a6-1a8dc36657a9/thumbnails/xxlarge.jpg\" /&gt;\n &lt;h3&gt;Community Focus&lt;/h3&gt;\n &lt;p&gt;We foster a supportive environment where learners and trainers collaborate to build stronger community skills and connections.&lt;/p&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0;\"&gt;\n &lt;div class=\"container\"&gt;\n &lt;div class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; padding: 20px;\"&gt;\n &lt;h2&gt;Contact Us&lt;/h2&gt;\n &lt;p&gt;Have questions or need assistance with enrollment? Reach out to our team. We're here to support your learning journey.&lt;/p&gt;\n &lt;p&gt;Email: support@communitylearninghub.org&lt;/p&gt;\n &lt;p&gt;Phone: (555) 123-4567&lt;/p&gt;\n &lt;p&gt;Address: 123 Community Lane, Cityville, State&lt;/p&gt;\n &lt;button class=\"button1\" onclick=\"window.location.href='mailto:support@communitylearninghub.org'\"&gt;Send Email&lt;/button&gt;\n &lt;/div&gt;\n &lt;/div&gt;\n&lt;/div&gt;","enablerating":false,"enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":false,"sharedpageconfiguration":false,"isroot":false,"rootwebpageid":"1078184d-6588-4286-8c7e-acd4fd297432","pagetemplateid":"ab186c9d-1f56-4663-a166-c12fb392dd27","partialurl":"contact-us","publishingstateid":"18c9ace9-f280-41b6-897e-0b274144316b","parentpageid":"52fe0cd3-82e7-4784-a468-ccfd4b17ef00"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Contact Us</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>b17836b9-d0d2-4f3d-996b-f1575f9b0d53</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: 400px; background-image:url('https://cdn.hubblecontent.osi.office.net/m365content/publish/0be5efd8-21a2-404f-8a8f-14e056079648/thumbnails/xxlarge.jpg'); background-size: cover; background-position: center; color: white; align-items: center;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-8 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 40px;"&gt;
+ &lt;h1&gt;Empowering Community Learning&lt;/h1&gt;
+ &lt;p&gt;Join our nonprofit training programs and workshops designed to uplift community learners and trainers. Discover new skills, connect with peers, and grow together.&lt;/p&gt;
+ &lt;button class="button1" onclick="window.location.href='#enroll'"&gt;Enroll Now&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+ &lt;h2&gt;About Our Workshops&lt;/h2&gt;
+ &lt;p&gt;Our workshops are tailored to meet the needs of community members eager to learn and share knowledge. We focus on practical skills and interactive sessions led by experienced trainers.&lt;/p&gt;
+ &lt;p&gt;Participants can select sessions based on their interests and availability, ensuring a personalized learning experience.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+ &lt;img style="width: 100%; height: auto; border-radius: 6px;" alt="Community members participating in a workshop" src="https://cdn.hubblecontent.msit.osi.office.net/m365content/publish/4e8976f8-b9c7-445e-80a5-755515796924/thumbnails/xxlarge.jpg" /&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+ &lt;img style="width: 100%; height: auto; border-radius: 6px;" alt="Trainer guiding participants" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/70d371c6-07e7-4fe6-8e11-f474361e2a6f/thumbnails/xxlarge.jpg" /&gt;
+ &lt;h3&gt;Experienced Trainers&lt;/h3&gt;
+ &lt;p&gt;Our trainers bring diverse expertise and a passion for community development, ensuring engaging and impactful learning experiences.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+ &lt;img style="width: 100%; height: auto; border-radius: 6px;" alt="Participants filling enrollment forms" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/506c17f7-e57b-4e82-85d7-a58725bb2573/thumbnails/xxlarge.jpg" /&gt;
+ &lt;h3&gt;Easy Enrollment&lt;/h3&gt;
+ &lt;p&gt;Enroll quickly and securely. Provide your details and session preferences to join the workshops that suit you best.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+ &lt;img style="width: 100%; height: auto; border-radius: 6px;" alt="Community discussion and collaboration" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/cb27ba27-7533-4a73-b9a6-1a8dc36657a9/thumbnails/xxlarge.jpg" /&gt;
+ &lt;h3&gt;Community Focus&lt;/h3&gt;
+ &lt;p&gt;We foster a supportive environment where learners and trainers collaborate to build stronger community skills and connections.&lt;/p&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; min-height: auto; padding: 40px 0;"&gt;
+ &lt;div class="container"&gt;
+ &lt;div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 20px;"&gt;
+ &lt;h2&gt;Contact Us&lt;/h2&gt;
+ &lt;p&gt;Have questions or need assistance with enrollment? Reach out to our team. We're here to support your learning journey.&lt;/p&gt;
+ &lt;p&gt;Email: support@communitylearninghub.org&lt;/p&gt;
+ &lt;p&gt;Phone: (555) 123-4567&lt;/p&gt;
+ &lt;p&gt;Address: 123 Community Lane, Cityville, State&lt;/p&gt;
+ &lt;button class="button1" onclick="window.location.href='mailto:support@communitylearninghub.org'"&gt;Send Email&lt;/button&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;Contact Us</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

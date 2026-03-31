@@ -1,0 +1,12 @@
+<powerpagecomponent powerpagecomponentid="6d2d80aa-1880-47a4-8865-c10f25dcdabb">
+  <content>{"displayorder":5,"enablerating":false,"enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":false,"sharedpageconfiguration":false,"isroot":true,"feedbackpolicy":756150005,"pagetemplateid":"ab186c9d-1f56-4663-a166-c12fb392dd27","partialurl":"workshops","publishingstateid":"18c9ace9-f280-41b6-897e-0b274144316b","parentpageid":"52fe0cd3-82e7-4784-a468-ccfd4b17ef00"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Workshops</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>Workshops</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

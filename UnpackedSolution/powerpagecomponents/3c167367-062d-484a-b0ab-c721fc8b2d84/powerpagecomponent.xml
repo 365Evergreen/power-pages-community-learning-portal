@@ -1,0 +1,72 @@
+<powerpagecomponent powerpagecomponentid="3c167367-062d-484a-b0ab-c721fc8b2d84">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div data-component-theme=\"portalThemeColor8\" class=\"row sectionBlockLayout\" style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 300px; background-image: url(\"https://cdn.hubblecontent.osi.office.net/m365content/publish/0be5efd8-21a2-404f-8a8f-14e056079648/thumbnails/xxlarge.jpg\"); background-size: cover; background-position: center center; color: white; align-items: center;'&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-12 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 40px;\"&gt;\n      &lt;h1&gt;Empower Through Learning&lt;/h1&gt;\n      &lt;p&gt;Join our community-driven workshops designed to equip learners and trainers with essential skills. Enroll today and be part of the change.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;\"&gt;{% include 'entity_list' key: 'Active Community workshops' AISummaryTitle:'AI Insights' isAISummaryExpanded:'true' AISummaryChartTypes:'[1,2,3,4,5]' isAISummaryEnabled:'true' isNLSearchEnabled:'true' %}&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: auto;\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-6 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;\"&gt;\n      &lt;h2&gt;Upcoming Workshops&lt;/h2&gt;\n      &lt;p&gt;Explore a variety of workshops tailored for community learners and trainers. Topics range from digital literacy to leadership development. Select sessions that fit your interests and schedule.&lt;/p&gt;\n      &lt;button class=\"button1\"&gt;View Workshop Schedule&lt;/button&gt;\n    &lt;/div&gt;\n    &lt;div class=\"col-md-6 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;\"&gt;&lt;img alt=\"Participants engaging in a community workshop\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/55e1abf8-d4fe-417b-afb8-b18691f1128d/thumbnails/xxlarge.jpg\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor2\" class=\"row sectionBlockLayout\" style=\"padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: auto;\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"col-md-4 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 20px 0px; padding: 20px;\"&gt;\n      &lt;img alt=\"Trainer conducting workshop session\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/70d371c6-07e7-4fe6-8e11-f474361e2a6f/thumbnails/xxlarge.jpg\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;\n      &lt;h3&gt;For Trainers&lt;/h3&gt;\n      &lt;p&gt;Access resources and support to deliver impactful workshops. Manage your sessions and connect with participants effectively.&lt;/p&gt;\n      &lt;button class=\"button1\"&gt;Trainer Resources&lt;/button&gt;\n    &lt;/div&gt;\n    &lt;div class=\"col-md-4 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 20px 0px; padding: 20px;\"&gt;\n      &lt;img alt=\"Community learners attending workshop\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/2c49863f-c788-4b8a-8071-b5b8bcc44855/thumbnails/xxlarge.jpg\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;\n      &lt;h3&gt;For Participants&lt;/h3&gt;\n      &lt;p&gt;Enroll in workshops that match your interests and learning goals. Update your profile and session preferences easily.&lt;/p&gt;\n      &lt;button class=\"button1\"&gt;Participant Enrollment&lt;/button&gt;\n    &lt;/div&gt;\n    &lt;div class=\"col-md-4 columnBlockLayout\" style=\"min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 20px 0px; padding: 20px;\"&gt;\n      &lt;img alt=\"Community collaboration and learning\" src=\"https://cdn.hubblecontent.osi.office.net/m365content/publish/02add307-14b0-4f57-a52a-35382b22d2bc/thumbnails/xxlarge.jpg\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 6px;\" /&gt;\n      &lt;h3&gt;Community Impact&lt;/h3&gt;\n      &lt;p&gt;Discover how our workshops foster community growth and empowerment through shared knowledge and skills.&lt;/p&gt;\n      &lt;button class=\"button1\"&gt;Learn More&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "sharedpageconfiguration": false,
+  "isroot": false,
+  "rootwebpageid": "6d2d80aa-1880-47a4-8865-c10f25dcdabb",
+  "pagetemplateid": "ab186c9d-1f56-4663-a166-c12fb392dd27",
+  "partialurl": "workshops",
+  "publishingstateid": "18c9ace9-f280-41b6-897e-0b274144316b",
+  "parentpageid": "52fe0cd3-82e7-4784-a468-ccfd4b17ef00"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Workshops</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>b17836b9-d0d2-4f3d-996b-f1575f9b0d53</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 300px; background-image: url("https://cdn.hubblecontent.osi.office.net/m365content/publish/0be5efd8-21a2-404f-8a8f-14e056079648/thumbnails/xxlarge.jpg"); background-size: cover; background-position: center center; color: white; align-items: center;'&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-12 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 40px;"&gt;
+      &lt;h1&gt;Empower Through Learning&lt;/h1&gt;
+      &lt;p&gt;Join our community-driven workshops designed to equip learners and trainers with essential skills. Enroll today and be part of the change.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"&gt;{% include 'entity_list' key: 'Active Community workshops' AISummaryTitle:'AI Insights' isAISummaryExpanded:'true' AISummaryChartTypes:'[1,2,3,4,5]' isAISummaryEnabled:'true' isNLSearchEnabled:'true' %}&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: auto;"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-6 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;"&gt;
+      &lt;h2&gt;Upcoming Workshops&lt;/h2&gt;
+      &lt;p&gt;Explore a variety of workshops tailored for community learners and trainers. Topics range from digital literacy to leadership development. Select sessions that fit your interests and schedule.&lt;/p&gt;
+      &lt;button class="button1"&gt;View Workshop Schedule&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 30px 0px; padding: 30px;"&gt;&lt;img alt="Participants engaging in a community workshop" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/55e1abf8-d4fe-417b-afb8-b18691f1128d/thumbnails/xxlarge.jpg" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor2" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: auto;"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="col-md-4 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 20px 0px; padding: 20px;"&gt;
+      &lt;img alt="Trainer conducting workshop session" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/70d371c6-07e7-4fe6-8e11-f474361e2a6f/thumbnails/xxlarge.jpg" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;
+      &lt;h3&gt;For Trainers&lt;/h3&gt;
+      &lt;p&gt;Access resources and support to deliver impactful workshops. Manage your sessions and connect with participants effectively.&lt;/p&gt;
+      &lt;button class="button1"&gt;Trainer Resources&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 20px 0px; padding: 20px;"&gt;
+      &lt;img alt="Community learners attending workshop" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/2c49863f-c788-4b8a-8071-b5b8bcc44855/thumbnails/xxlarge.jpg" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;
+      &lt;h3&gt;For Participants&lt;/h3&gt;
+      &lt;p&gt;Enroll in workshops that match your interests and learning goals. Update your profile and session preferences easily.&lt;/p&gt;
+      &lt;button class="button1"&gt;Participant Enrollment&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-4 columnBlockLayout" style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; margin: 20px 0px; padding: 20px;"&gt;
+      &lt;img alt="Community collaboration and learning" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/02add307-14b0-4f57-a52a-35382b22d2bc/thumbnails/xxlarge.jpg" style="max-width: 100%; width: 100%; height: auto; border-radius: 6px;" /&gt;
+      &lt;h3&gt;Community Impact&lt;/h3&gt;
+      &lt;p&gt;Discover how our workshops foster community growth and empowerment through shared knowledge and skills.&lt;/p&gt;
+      &lt;button class="button1"&gt;Learn More&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+Workshops</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

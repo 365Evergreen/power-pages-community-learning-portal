@@ -5,6 +5,7 @@
   <EntityRelationship Name="business_unit_ppdev_communitytrainer" />
   <EntityRelationship Name="business_unit_ppdev_communitytrainingenrolment" />
   <EntityRelationship Name="business_unit_ppdev_communityworkshop" />
+  <EntityRelationship Name="business_unit_ppdev_sparoute" />
   <EntityRelationship Name="lk_ppdev_communitylearner_createdby" />
   <EntityRelationship Name="lk_ppdev_communitylearner_modifiedby" />
   <EntityRelationship Name="lk_ppdev_communitymemberfeedback_createdby" />
@@ -15,11 +16,14 @@
   <EntityRelationship Name="lk_ppdev_communitytrainingenrolment_modifiedby" />
   <EntityRelationship Name="lk_ppdev_communityworkshop_createdby" />
   <EntityRelationship Name="lk_ppdev_communityworkshop_modifiedby" />
+  <EntityRelationship Name="lk_ppdev_sparoute_createdby" />
+  <EntityRelationship Name="lk_ppdev_sparoute_modifiedby" />
   <EntityRelationship Name="owner_ppdev_communitylearner" />
   <EntityRelationship Name="owner_ppdev_communitymemberfeedback" />
   <EntityRelationship Name="owner_ppdev_communitytrainer" />
   <EntityRelationship Name="owner_ppdev_communitytrainingenrolment" />
   <EntityRelationship Name="owner_ppdev_communityworkshop" />
+  <EntityRelationship Name="owner_ppdev_sparoute" />
   <EntityRelationship Name="ppdev_communitymemberfeedback_ppdev_learner_ppdev_communitylearner" />
   <EntityRelationship Name="ppdev_communitymemberfeedback_ppdev_workshop_ppdev_communityworkshop" />
   <EntityRelationship Name="ppdev_communitytrainingenrolment_ppdev_learner_ppdev_communitylearner" />
@@ -30,9 +34,11 @@
   <EntityRelationship Name="team_ppdev_communitytrainer" />
   <EntityRelationship Name="team_ppdev_communitytrainingenrolment" />
   <EntityRelationship Name="team_ppdev_communityworkshop" />
+  <EntityRelationship Name="team_ppdev_sparoute" />
   <EntityRelationship Name="user_ppdev_communitylearner" />
   <EntityRelationship Name="user_ppdev_communitymemberfeedback" />
   <EntityRelationship Name="user_ppdev_communitytrainer" />
   <EntityRelationship Name="user_ppdev_communitytrainingenrolment" />
   <EntityRelationship Name="user_ppdev_communityworkshop" />
+  <EntityRelationship Name="user_ppdev_sparoute" />
 </EntityRelationships>

@@ -1,0 +1,10 @@
+<powerpagesites>
+  <powerpagesite powerpagesiteid="6bd7e950-b198-4aca-9d6c-989af327a096">
+    <content>{"defaultlanguage":"b17836b9-d0d2-4f3d-996b-f1575f9b0d53","footerwebtemplateid":"26099276-8aaf-44d4-a197-7c94bafdc149","headerwebtemplateid":"49a3318d-ddef-4d27-8e90-74565d7a3bb4","website_language":1033,"defaultbotconsumerid":"8d74166b-f42c-f111-88b3-002248e43912"}</content>
+    <datamodelversion>2.0</datamodelversion>
+    <iscustomizable>1</iscustomizable>
+    <name>Community learning hub</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </powerpagesite>
+</powerpagesites>

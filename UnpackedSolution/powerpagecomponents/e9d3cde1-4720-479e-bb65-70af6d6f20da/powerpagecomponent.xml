@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="e9d3cde1-4720-479e-bb65-70af6d6f20da">
+  <content>{"description":"A date/time value in GMT format to represent the effective date of the current published terms and conditions. If the terms agreement is enabled, portal users that have not accepted the terms after this date will be asked to accept them the next time they sign in. If the date is not provided, and the terms agreement is enabled, the terms will be presented every time portal users sign in."}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Authentication/Registration/TermsPublicationDate</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>6bd7e950-b198-4aca-9d6c-989af327a096</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>
