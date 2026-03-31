@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3aa9669b-a71b-4e56-9b8c-82b74befe0aa}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{00375165-0e7b-417c-b327-8b01fe87ab80}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{22eb0cf4-f7fa-4c1a-97fa-b2e5613756a2}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9208f05b-63e0-426d-98dc-836bf76b9a38}">
+                        <labels>
+                          <label description="Trainer Name" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_trainername" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_trainername" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2223b5fc-6ffc-461a-bf2d-2fc606302e13}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e59a2ba-4536-44d8-a44c-003301223fff}">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_email" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ppdev_email" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b2a31da0-fdcb-4d73-b481-d871237374d0}">
+                        <labels>
+                          <label description="Phone" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_phone" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="ppdev_phone" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

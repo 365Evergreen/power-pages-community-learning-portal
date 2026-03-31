@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{89aa0853-97de-4ae8-8155-9174305c32e8}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="89aa0853-97de-4ae8-8155-9174305c32e8" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="3a627f74-a347-4fc8-b4a7-fa3445731fbe" labelid="e86beab7-74f4-419b-bbb2-18c764cd9bb3">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="0e750e71-91be-444a-aaaf-0e8aa8601ccc" labelid="5dfddc61-3b60-4819-aa72-01e6a89d98c2">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_email" classid="ef469dc3-dcf2-41ff-8cfa-d53c3b457772" datafieldname="ppdev_email" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="ee669836-87c0-46c7-90b5-45ff01331710" labelid="0f182362-a81c-47ba-9a88-92be1d26dc12">
+                        <labels>
+                          <label description="Learner Name" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_learnername" classid="a9f805ba-b076-417b-b4f8-417e6aca8602" datafieldname="ppdev_learnername" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="ac757085-00ba-45e1-a2b3-90105185b3ef" labelid="6146f870-8b7e-441a-932a-5c473692afe8">
+                        <labels>
+                          <label description="Phone" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_phone" classid="7eccd5c8-06b1-4ad3-8d0d-1ee1d25f0ecd" datafieldname="ppdev_phone" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="aa244162-2d11-4ea9-830f-4996abdf6c6b" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="11da4842-710f-4970-b288-565d22383f59" showlabel="false" labelid="3c6d2624-7feb-40ec-93f3-d29ba991339d">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="0a3d976f-ea47-494f-ba8d-c3d9603dc05d" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="d340752b-c9c6-408a-aeff-726e70e49367" showlabel="false" labelid="8fc62a23-2bde-4c4f-8310-0c673d9cb969">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="abb7b08a-6cf2-4081-ade3-7585f6dc0f40" />
+        <Role Id="d4ca38ed-1050-4ee1-a894-6f9f91c46f97" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Community learner" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

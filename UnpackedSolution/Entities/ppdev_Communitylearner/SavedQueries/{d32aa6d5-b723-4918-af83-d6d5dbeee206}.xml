@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d32aa6d5-b723-4918-af83-d6d5dbeee206}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ppdev_learnername" select="1" icon="1" preview="1">
+        <row name="result" id="ppdev_communitylearnerid">
+          <cell name="ppdev_learnername" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ppdev_communitylearner">
+          <attribute name="ppdev_communitylearnerid" />
+          <attribute name="ppdev_learnername" />
+          <attribute name="createdon" />
+          <order attribute="ppdev_learnername" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Community learner Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

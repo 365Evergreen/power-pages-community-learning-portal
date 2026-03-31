@@ -1,0 +1,53 @@
+{
+  "name": "Workshop Management Hub",
+  "description": "Trainers and learners use this app to create workshops, enroll, tailor content, and provide feedback for community sessions.",
+  "typesOfUsers": [
+    "Trainer",
+    "Learner"
+  ],
+  "tableSchemaNames": [
+    "ppdev_Communitytrainer",
+    "ppdev_Communitylearner",
+    "ppdev_Communityworkshop",
+    "ppdev_Communitytrainingenrolment",
+    "ppdev_Communitymemberfeedback"
+  ],
+  "userStories": [
+    {
+      "id": "us01",
+      "description": "Create and publish workshop sessions so that learners can register and participate.",
+      "userType": "Trainer"
+    },
+    {
+      "id": "us02",
+      "description": "Tailor workshop content to address specific community needs so that sessions are relevant and impactful.",
+      "userType": "Trainer"
+    },
+    {
+      "id": "us03",
+      "description": "View participant enrollment lists so that I can prepare materials accordingly.",
+      "userType": "Trainer"
+    },
+    {
+      "id": "us04",
+      "description": "Collect feedback from learners after sessions so that I can improve future workshops.",
+      "userType": "Trainer"
+    },
+    {
+      "id": "us05",
+      "description": "Browse available workshops so that I can find sessions that interest me.",
+      "userType": "Learner"
+    },
+    {
+      "id": "us06",
+      "description": "Enroll in workshops so that I can develop new skills and knowledge.",
+      "userType": "Learner"
+    },
+    {
+      "id": "us08",
+      "description": "Provide feedback about my learning experience so that programs can be improved.",
+      "userType": "Learner"
+    }
+  ],
+  "version": 1
+}

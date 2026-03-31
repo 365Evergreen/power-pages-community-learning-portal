@@ -1,0 +1,3162 @@
+{
+  "positionMap": {
+    "a08fccaa-f3f9-466a-a653-b57ece1d84c3": {
+      "x": 0,
+      "y": 30
+    },
+    "139ba07b-68ca-474b-bf05-420c54b4897f": {
+      "x": 420,
+      "y": 287
+    },
+    "a84f7dcf-21bd-4aff-a46c-46d16a3749ce": {
+      "x": 420,
+      "y": 31
+    },
+    "ce43572e-0f17-4076-aa66-f6305fac151f": {
+      "x": 850,
+      "y": 30
+    },
+    "66ab8747-8717-42fd-b208-92c1c7255b68": {
+      "x": 850,
+      "y": 286
+    }
+  },
+  "inMemoryTables": [
+    {
+      "entity": {
+        "MetadataId": "fa951de1-f32a-f111-88b4-002248e31a63",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitytrainer",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of trainers who create and deliver workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community trainers",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community trainer",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "969ad115-4eab-4335-bfdd-da5d1d00ff26",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_TrainerName",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Trainer Name",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "4724e50a-17d1-42c4-b40b-0e155d60d623",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Email",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Email",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Email"
+            },
+            "Format": "Email",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "8008181e-cb3d-4418-9590-bf65542aea1f",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Phone",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Phone",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Phone"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "position": {
+          "x": 0,
+          "y": 30
+        },
+        "existingEntityInfo": {
+          "LogicalName": "ppdev_communitytrainer",
+          "SchemaName": "ppdev_Communitytrainer",
+          "MetadataId": "fa951de1-f32a-f111-88b4-002248e31a63",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of trainers who create and deliver workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community trainers",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community trainer",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        }
+      },
+      "isExistingEntity": true,
+      "tableSourceType": "ExistingTable"
+    },
+    {
+      "entity": {
+        "MetadataId": "f5697dc9-f42a-f111-88b4-002248e31a63",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitylearner",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of community members who enroll in workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community learners",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community learner",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "d1282321-0f54-4407-8955-07a8a1964985",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_LearnerName",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Learner Name",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "7eb19364-4aef-4c16-8bf6-ce4138421f8e",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Email",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Email",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Email"
+            },
+            "Format": "Email",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "6cdf9741-3051-40cc-aa02-cfb67d447c5f",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Phone",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Phone",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Phone"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "position": {
+          "x": 420,
+          "y": 287
+        },
+        "existingEntityInfo": {
+          "LogicalName": "ppdev_communitylearner",
+          "SchemaName": "ppdev_Communitylearner",
+          "MetadataId": "f5697dc9-f42a-f111-88b4-002248e31a63",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of community members who enroll in workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community learners",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community learner",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        }
+      },
+      "isExistingEntity": true,
+      "tableSourceType": "ExistingTable"
+    },
+    {
+      "entity": {
+        "MetadataId": "0728ae1c-c526-f111-88b4-6045bd3cd047",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communityworkshop",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of workshop sessions available for enrollment.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community workshops",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community workshop",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "f8b1468f-b1c0-4b4c-8215-fe84d34dda64",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_WorkshopTitle",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Workshop Title",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "a78e304b-6a8d-4a76-b6fc-94e04546e8ba",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Description",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Description",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+          },
+          {
+            "MetadataId": "410381ae-53ec-493d-b891-76e5fe65c4f1",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_ScheduledDate",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Scheduled Date",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "ImeMode": "Auto",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata"
+          },
+          {
+            "MetadataId": "1f80d68f-90b2-464c-a04a-64ad614b2fa1",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Trainer",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Trainer",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communitytrainer"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "d49582f7-1248-4ef8-92d5-9bfbb14f9e4e",
+            "SchemaName": "ppdev_communityworkshop_ppdev_trainer_ppdev_communitytrainer",
+            "ReferencingAttribute": "ppdev_trainer",
+            "ReferencedEntity": "ppdev_communitytrainer",
+            "ReferencingEntity": "ppdev_communityworkshop",
+            "ReferencedAttribute": "ppdev_communitytrainerid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Trainer",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "position": {
+          "x": 420,
+          "y": 31
+        },
+        "existingEntityInfo": {
+          "LogicalName": "ppdev_communityworkshop",
+          "SchemaName": "ppdev_Communityworkshop",
+          "MetadataId": "0728ae1c-c526-f111-88b4-6045bd3cd047",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of workshop sessions available for enrollment.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community workshops",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community workshop",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        }
+      },
+      "isExistingEntity": true,
+      "tableSourceType": "ExistingTable"
+    },
+    {
+      "entity": {
+        "MetadataId": "316cc1d4-c426-f111-88b4-6045bd3cd047",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitytrainingenrolment",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of learner enrollments in workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community training enrolments",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community training enrolment",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "9d98d84b-793d-4742-b14e-5dac2232aa57",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_EnrollmentReference",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Enrollment Reference",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "cc054899-0f45-4cf8-8c35-65e25d81db24",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Learner",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Learner",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communitylearner"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "b371feab-7228-491d-8c53-e3745dcbac4d",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Workshop",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Workshop",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communityworkshop"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "603e165b-c2df-4ff5-ae8d-d13b00abe524",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_EnrollmentDate",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Enrollment Date",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "ImeMode": "Auto",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "e7464a6c-8204-45fc-b7ad-7baee846e657",
+            "SchemaName": "ppdev_communitytrainingenrolment_ppdev_learner_ppdev_communitylearner",
+            "ReferencingAttribute": "ppdev_learner",
+            "ReferencedEntity": "ppdev_communitylearner",
+            "ReferencingEntity": "ppdev_communitytrainingenrolment",
+            "ReferencedAttribute": "ppdev_communitylearnerid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Learner",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "dbb86c20-f501-4538-a15f-d3ffcc0a52c2",
+            "SchemaName": "ppdev_communitytrainingenrolment_ppdev_workshop_ppdev_communityworkshop",
+            "ReferencingAttribute": "ppdev_workshop",
+            "ReferencedEntity": "ppdev_communityworkshop",
+            "ReferencingEntity": "ppdev_communitytrainingenrolment",
+            "ReferencedAttribute": "ppdev_communityworkshopid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Workshop",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "position": {
+          "x": 850,
+          "y": 30
+        },
+        "existingEntityInfo": {
+          "LogicalName": "ppdev_communitytrainingenrolment",
+          "SchemaName": "ppdev_Communitytrainingenrolment",
+          "MetadataId": "316cc1d4-c426-f111-88b4-6045bd3cd047",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of learner enrollments in workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community training enrolments",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community training enrolment",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        }
+      },
+      "isExistingEntity": true,
+      "tableSourceType": "ExistingTable"
+    },
+    {
+      "entity": {
+        "MetadataId": "65168ab7-f42a-f111-88b4-002248e31a63",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitymemberfeedback",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of feedback provided by learners for workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community member feedback",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community member feedback",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "483c39d1-6e05-4166-9bfb-763bd986afd3",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_FeedbackSummary",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Feedback Summary",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "5847ff63-c092-4c39-b7a0-372a50d654eb",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Learner",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Learner",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communitylearner"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "de922a8d-6620-4c21-ab5c-b53976833d1c",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Workshop",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Workshop",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communityworkshop"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "5653dd79-62cb-4d5e-8e15-ba67191df01f",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Rating",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Rating",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Integer",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            },
+            "MaxValue": 2147483647,
+            "MinValue": -2147483648,
+            "Format": "None",
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata"
+          },
+          {
+            "MetadataId": "ddf239ed-0858-49c3-b9b8-346df907f0d1",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Comments",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Comments",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "66420abf-4dff-439f-809d-f9eb6b327ae6",
+            "SchemaName": "ppdev_communitymemberfeedback_ppdev_learner_ppdev_communitylearner",
+            "ReferencingAttribute": "ppdev_learner",
+            "ReferencedEntity": "ppdev_communitylearner",
+            "ReferencingEntity": "ppdev_communitymemberfeedback",
+            "ReferencedAttribute": "ppdev_communitylearnerid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Learner",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "b7e1f9c6-013b-4916-8842-2f88c9fafd69",
+            "SchemaName": "ppdev_communitymemberfeedback_ppdev_workshop_ppdev_communityworkshop",
+            "ReferencingAttribute": "ppdev_workshop",
+            "ReferencedEntity": "ppdev_communityworkshop",
+            "ReferencingEntity": "ppdev_communitymemberfeedback",
+            "ReferencedAttribute": "ppdev_communityworkshopid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Workshop",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "position": {
+          "x": 850,
+          "y": 286
+        },
+        "existingEntityInfo": {
+          "LogicalName": "ppdev_communitymemberfeedback",
+          "SchemaName": "ppdev_Communitymemberfeedback",
+          "MetadataId": "65168ab7-f42a-f111-88b4-002248e31a63",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of feedback provided by learners for workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community member feedback",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community member feedback",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        }
+      },
+      "isExistingEntity": true,
+      "tableSourceType": "ExistingTable"
+    }
+  ],
+  "dataModelContext": {
+    "useSingleDataModelProposal": true,
+    "tables": [
+      {
+        "data": [
+          {
+            "ppdev_communitytrainerid": "7cc5c603-171b-4a82-aa65-66d626685ae9",
+            "ppdev_trainername": "Alice Smith",
+            "ppdev_email": "alice.smith@example.com",
+            "ppdev_phone": "+1 555-0101"
+          },
+          {
+            "ppdev_communitytrainerid": "578a3f85-dcac-4a8b-9c46-a78c78ac160a",
+            "ppdev_trainername": "Bob Johnson",
+            "ppdev_email": "bob.johnson@example.com",
+            "ppdev_phone": "+1 555-0102"
+          },
+          {
+            "ppdev_communitytrainerid": "ef19dec7-c729-4aea-ad88-209a2d7eeced",
+            "ppdev_trainername": "Carol Lee",
+            "ppdev_email": "carol.lee@example.com",
+            "ppdev_phone": "+1 555-0103"
+          },
+          {
+            "ppdev_communitytrainerid": "1547dd8c-f58f-43d7-9c5f-f64443f8bde9",
+            "ppdev_trainername": "David Brown",
+            "ppdev_email": "david.brown@example.com",
+            "ppdev_phone": "+1 555-0104"
+          },
+          {
+            "ppdev_communitytrainerid": "f8356601-dcbf-41b4-8a74-b3d67db3882d",
+            "ppdev_trainername": "Eva Davis",
+            "ppdev_email": "eva.davis@example.com",
+            "ppdev_phone": "+1 555-0105"
+          }
+        ],
+        "entity": {
+          "MetadataId": "a08fccaa-f3f9-466a-a653-b57ece1d84c3",
+          "Attributes": [
+            {
+              "MetadataId": "969ad115-4eab-4335-bfdd-da5d1d00ff26",
+              "IsPrimaryName": true,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_TrainerName",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Trainer Name",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "ApplicationRequired"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 850,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "4724e50a-17d1-42c4-b40b-0e155d60d623",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Email",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Email",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 100,
+              "FormatName": {
+                "Value": "Email"
+              },
+              "Format": "Email",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "8008181e-cb3d-4418-9590-bf65542aea1f",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Phone",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Phone",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 100,
+              "FormatName": {
+                "Value": "Phone"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            }
+          ],
+          "OwnershipType": "UserOwned",
+          "PrimaryNameAttribute": "",
+          "SchemaName": "ppdev_Communitytrainer",
+          "HasNotes": false,
+          "HasActivities": false,
+          "IsAvailableOffline": false,
+          "IsActivity": false,
+          "ActivityTypeMask": 0,
+          "IsSolutionAware": false,
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of trainers who create and deliver workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community trainers",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community trainer",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "IsAuditEnabled": {
+            "Value": false
+          },
+          "IsValidForQueue": {
+            "Value": false
+          },
+          "IsConnectionsEnabled": {
+            "Value": false
+          },
+          "IsDuplicateDetectionEnabled": {
+            "Value": true
+          },
+          "IsDocumentManagementEnabled": false,
+          "EntityColor": null,
+          "IsRetentionEnabled": false,
+          "SyncToExternalSearchIndex": false,
+          "AutoRouteToOwnerQueue": false,
+          "IsSLAEnabled": false,
+          "IsQuickCreateEnabled": false,
+          "IsActivityParty": false,
+          "HasFeedback": false,
+          "AutoCreateAccessTeams": false,
+          "ChangeTrackingEnabled": false,
+          "IsKnowledgeManagementEnabled": false,
+          "EntityHelpUrlEnabled": false,
+          "EntityHelpUrl": null,
+          "IsMailMergeEnabled": {
+            "Value": true
+          },
+          "IsOfflineInMobileClient": {
+            "Value": false
+          },
+          "ManyToOneRelationships": [],
+          "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata"
+        },
+        "dataPayloadFormat": "Dataverse",
+        "additionalMetadata": {
+          "position": {
+            "x": 0,
+            "y": 30
+          }
+        },
+        "tableSourceType": "DataModelProposal",
+        "updatedByCopilotSessionId": "ac7e52c4-098f-446a-b344-e235fc2be1a2"
+      },
+      {
+        "data": [
+          {
+            "ppdev_communitylearnerid": "25495f14-d2f8-49fa-8a5b-39c707b1ebe3",
+            "ppdev_learnername": "John Miller",
+            "ppdev_email": "john.miller@example.com",
+            "ppdev_phone": "+1 555-0201"
+          },
+          {
+            "ppdev_communitylearnerid": "01786fdf-3c53-469c-a997-5eadebbd2e88",
+            "ppdev_learnername": "Maria Garcia",
+            "ppdev_email": "maria.garcia@example.com",
+            "ppdev_phone": "+1 555-0202"
+          },
+          {
+            "ppdev_communitylearnerid": "a00c7e87-1f09-4463-b968-117fefb9e502",
+            "ppdev_learnername": "James Wilson",
+            "ppdev_email": "james.wilson@example.com",
+            "ppdev_phone": "+1 555-0203"
+          },
+          {
+            "ppdev_communitylearnerid": "b6d987f0-5125-4381-9c8b-ce2f2397b8fa",
+            "ppdev_learnername": "Linda Martinez",
+            "ppdev_email": "linda.martinez@example.com",
+            "ppdev_phone": "+1 555-0204"
+          },
+          {
+            "ppdev_communitylearnerid": "d87ecc2a-8f25-486d-b05f-e006f579ac71",
+            "ppdev_learnername": "Michael Anderson",
+            "ppdev_email": "michael.anderson@example.com",
+            "ppdev_phone": "+1 555-0205"
+          }
+        ],
+        "entity": {
+          "MetadataId": "139ba07b-68ca-474b-bf05-420c54b4897f",
+          "Attributes": [
+            {
+              "MetadataId": "d1282321-0f54-4407-8955-07a8a1964985",
+              "IsPrimaryName": true,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_LearnerName",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Learner Name",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "ApplicationRequired"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 850,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "7eb19364-4aef-4c16-8bf6-ce4138421f8e",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Email",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Email",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 100,
+              "FormatName": {
+                "Value": "Email"
+              },
+              "Format": "Email",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "6cdf9741-3051-40cc-aa02-cfb67d447c5f",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Phone",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Phone",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 100,
+              "FormatName": {
+                "Value": "Phone"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            }
+          ],
+          "OwnershipType": "UserOwned",
+          "PrimaryNameAttribute": "",
+          "SchemaName": "ppdev_Communitylearner",
+          "HasNotes": false,
+          "HasActivities": false,
+          "IsAvailableOffline": false,
+          "IsActivity": false,
+          "ActivityTypeMask": 0,
+          "IsSolutionAware": false,
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of community members who enroll in workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community learners",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community learner",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "IsAuditEnabled": {
+            "Value": false
+          },
+          "IsValidForQueue": {
+            "Value": false
+          },
+          "IsConnectionsEnabled": {
+            "Value": false
+          },
+          "IsDuplicateDetectionEnabled": {
+            "Value": true
+          },
+          "IsDocumentManagementEnabled": false,
+          "EntityColor": null,
+          "IsRetentionEnabled": false,
+          "SyncToExternalSearchIndex": false,
+          "AutoRouteToOwnerQueue": false,
+          "IsSLAEnabled": false,
+          "IsQuickCreateEnabled": false,
+          "IsActivityParty": false,
+          "HasFeedback": false,
+          "AutoCreateAccessTeams": false,
+          "ChangeTrackingEnabled": false,
+          "IsKnowledgeManagementEnabled": false,
+          "EntityHelpUrlEnabled": false,
+          "EntityHelpUrl": null,
+          "IsMailMergeEnabled": {
+            "Value": true
+          },
+          "IsOfflineInMobileClient": {
+            "Value": false
+          },
+          "ManyToOneRelationships": [],
+          "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata"
+        },
+        "dataPayloadFormat": "Dataverse",
+        "additionalMetadata": {
+          "position": {
+            "x": 420,
+            "y": 287
+          }
+        },
+        "tableSourceType": "DataModelProposal",
+        "updatedByCopilotSessionId": "ac7e52c4-098f-446a-b344-e235fc2be1a2"
+      },
+      {
+        "data": [
+          {
+            "ppdev_communityworkshopid": "6d027f9e-252a-460e-a214-48d2a0b23fa7",
+            "ppdev_workshoptitle": "Intro to Digital Literacy",
+            "ppdev_description": "Basics of computer and internet use",
+            "ppdev_scheduleddate": "2026-03-14T14:00:00.000Z",
+            "ppdev_Trainer@odata.bind": "/ppdev_communitytrainers(7cc5c603-171b-4a82-aa65-66d626685ae9)"
+          },
+          {
+            "ppdev_communityworkshopid": "45d0f638-b1f5-4691-96a2-ec7ead60a337",
+            "ppdev_workshoptitle": "Financial Planning 101",
+            "ppdev_description": "Managing personal finances effectively",
+            "ppdev_scheduleddate": "2026-04-09T14:00:00.000Z",
+            "ppdev_Trainer@odata.bind": "/ppdev_communitytrainers(578a3f85-dcac-4a8b-9c46-a78c78ac160a)"
+          },
+          {
+            "ppdev_communityworkshopid": "878f16ca-67e4-48f2-8618-28719d49b197",
+            "ppdev_workshoptitle": "Creative Writing",
+            "ppdev_description": "Techniques for storytelling and expression",
+            "ppdev_scheduleddate": "2026-05-04T14:00:00.000Z",
+            "ppdev_Trainer@odata.bind": "/ppdev_communitytrainers(ef19dec7-c729-4aea-ad88-209a2d7eeced)"
+          },
+          {
+            "ppdev_communityworkshopid": "7c4d263c-1590-4ee2-bb9e-48bb6241c0e1",
+            "ppdev_workshoptitle": "Health and Wellness",
+            "ppdev_description": "Promoting physical and mental health",
+            "ppdev_scheduleddate": "2026-06-19T14:00:00.000Z",
+            "ppdev_Trainer@odata.bind": "/ppdev_communitytrainers(1547dd8c-f58f-43d7-9c5f-f64443f8bde9)"
+          },
+          {
+            "ppdev_communityworkshopid": "24e11f09-f594-4cf9-b108-f5da47037322",
+            "ppdev_workshoptitle": "Community Leadership",
+            "ppdev_description": "Building leadership skills for community impact",
+            "ppdev_scheduleddate": "2026-07-14T14:00:00.000Z",
+            "ppdev_Trainer@odata.bind": "/ppdev_communitytrainers(f8356601-dcbf-41b4-8a74-b3d67db3882d)"
+          }
+        ],
+        "entity": {
+          "MetadataId": "a84f7dcf-21bd-4aff-a46c-46d16a3749ce",
+          "Attributes": [
+            {
+              "MetadataId": "f8b1468f-b1c0-4b4c-8215-fe84d34dda64",
+              "IsPrimaryName": true,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_WorkshopTitle",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Workshop Title",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "ApplicationRequired"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 850,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "a78e304b-6a8d-4a76-b6fc-94e04546e8ba",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Description",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Description",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Memo",
+              "AttributeTypeName": {
+                "Value": "MemoType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 2000,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+            },
+            {
+              "MetadataId": "410381ae-53ec-493d-b891-76e5fe65c4f1",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_ScheduledDate",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Scheduled Date",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "DateTime",
+              "AttributeTypeName": {
+                "Value": "DateTimeType"
+              },
+              "ImeMode": "Auto",
+              "Format": "DateOnly",
+              "DateTimeBehavior": {
+                "Value": "UserLocal"
+              },
+              "CanChangeDateTimeBehavior": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "canmodifybehavior"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata"
+            },
+            {
+              "MetadataId": "1f80d68f-90b2-464c-a04a-64ad614b2fa1",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Trainer",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Trainer",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Lookup",
+              "AttributeTypeName": {
+                "Value": "LookupType"
+              },
+              "Targets": [
+                "ppdev_communitytrainer"
+              ],
+              "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+            }
+          ],
+          "OwnershipType": "UserOwned",
+          "PrimaryNameAttribute": "",
+          "SchemaName": "ppdev_Communityworkshop",
+          "HasNotes": false,
+          "HasActivities": false,
+          "IsAvailableOffline": false,
+          "IsActivity": false,
+          "ActivityTypeMask": 0,
+          "IsSolutionAware": false,
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of workshop sessions available for enrollment.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community workshops",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community workshop",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "IsAuditEnabled": {
+            "Value": false
+          },
+          "IsValidForQueue": {
+            "Value": false
+          },
+          "IsConnectionsEnabled": {
+            "Value": false
+          },
+          "IsDuplicateDetectionEnabled": {
+            "Value": true
+          },
+          "IsDocumentManagementEnabled": false,
+          "EntityColor": null,
+          "IsRetentionEnabled": false,
+          "SyncToExternalSearchIndex": false,
+          "AutoRouteToOwnerQueue": false,
+          "IsSLAEnabled": false,
+          "IsQuickCreateEnabled": false,
+          "IsActivityParty": false,
+          "HasFeedback": false,
+          "AutoCreateAccessTeams": false,
+          "ChangeTrackingEnabled": false,
+          "IsKnowledgeManagementEnabled": false,
+          "EntityHelpUrlEnabled": false,
+          "EntityHelpUrl": null,
+          "IsMailMergeEnabled": {
+            "Value": true
+          },
+          "IsOfflineInMobileClient": {
+            "Value": false
+          },
+          "ManyToOneRelationships": [
+            {
+              "MetadataId": "d49582f7-1248-4ef8-92d5-9bfbb14f9e4e",
+              "SchemaName": "ppdev_communityworkshop_ppdev_trainer_ppdev_communitytrainer",
+              "ReferencingAttribute": "ppdev_trainer",
+              "ReferencedEntity": "ppdev_communitytrainer",
+              "ReferencingEntity": "ppdev_communityworkshop",
+              "ReferencedAttribute": "ppdev_communitytrainerid",
+              "ReferencingEntityNavigationPropertyName": "ppdev_Trainer",
+              "RelationshipType": "OneToManyRelationship",
+              "IsCustomRelationship": true,
+              "IsValidForAdvancedFind": true,
+              "IsCustomizable": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "iscustomizable"
+              },
+              "CascadeConfiguration": {
+                "Assign": "NoCascade",
+                "Delete": "RemoveLink",
+                "Merge": "NoCascade",
+                "Reparent": "NoCascade",
+                "Share": "NoCascade",
+                "Unshare": "NoCascade",
+                "RollupView": "NoCascade",
+                "Archive": "RemoveLink"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+            }
+          ],
+          "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata"
+        },
+        "dataPayloadFormat": "Dataverse",
+        "additionalMetadata": {
+          "position": {
+            "x": 420,
+            "y": 31
+          }
+        },
+        "tableSourceType": "DataModelProposal",
+        "updatedByCopilotSessionId": "ac7e52c4-098f-446a-b344-e235fc2be1a2"
+      },
+      {
+        "data": [
+          {
+            "ppdev_communitytrainingenrolmentid": "3be4035d-020c-4885-b667-9b9dc0155358",
+            "ppdev_enrollmentreference": "Enroll_001",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(25495f14-d2f8-49fa-8a5b-39c707b1ebe3)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(6d027f9e-252a-460e-a214-48d2a0b23fa7)",
+            "ppdev_enrollmentdate": "2026-02-19T14:00:00.000Z"
+          },
+          {
+            "ppdev_communitytrainingenrolmentid": "ce16156c-3e4c-435e-a2bc-d6335f8f2ff5",
+            "ppdev_enrollmentreference": "Enroll_002",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(01786fdf-3c53-469c-a997-5eadebbd2e88)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(45d0f638-b1f5-4691-96a2-ec7ead60a337)",
+            "ppdev_enrollmentdate": "2026-02-28T14:00:00.000Z"
+          },
+          {
+            "ppdev_communitytrainingenrolmentid": "05a33b47-f3c4-4bd0-a72b-b5bb071886fa",
+            "ppdev_enrollmentreference": "Enroll_003",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(a00c7e87-1f09-4463-b968-117fefb9e502)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(878f16ca-67e4-48f2-8618-28719d49b197)",
+            "ppdev_enrollmentdate": "2026-04-14T14:00:00.000Z"
+          },
+          {
+            "ppdev_communitytrainingenrolmentid": "032dbb2d-9fed-4caa-ac68-158400d14807",
+            "ppdev_enrollmentreference": "Enroll_004",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(b6d987f0-5125-4381-9c8b-ce2f2397b8fa)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(7c4d263c-1590-4ee2-bb9e-48bb6241c0e1)",
+            "ppdev_enrollmentdate": "2026-05-09T14:00:00.000Z"
+          },
+          {
+            "ppdev_communitytrainingenrolmentid": "6e4498a7-fa76-40b7-a9ea-7823d1d6ca05",
+            "ppdev_enrollmentreference": "Enroll_005",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(d87ecc2a-8f25-486d-b05f-e006f579ac71)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(24e11f09-f594-4cf9-b108-f5da47037322)",
+            "ppdev_enrollmentdate": "2026-05-31T14:00:00.000Z"
+          }
+        ],
+        "entity": {
+          "MetadataId": "ce43572e-0f17-4076-aa66-f6305fac151f",
+          "Attributes": [
+            {
+              "MetadataId": "9d98d84b-793d-4742-b14e-5dac2232aa57",
+              "IsPrimaryName": true,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_EnrollmentReference",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Enrollment Reference",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "ApplicationRequired"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 850,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "cc054899-0f45-4cf8-8c35-65e25d81db24",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Learner",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Learner",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Lookup",
+              "AttributeTypeName": {
+                "Value": "LookupType"
+              },
+              "Targets": [
+                "ppdev_communitylearner"
+              ],
+              "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+            },
+            {
+              "MetadataId": "b371feab-7228-491d-8c53-e3745dcbac4d",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Workshop",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Workshop",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Lookup",
+              "AttributeTypeName": {
+                "Value": "LookupType"
+              },
+              "Targets": [
+                "ppdev_communityworkshop"
+              ],
+              "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+            },
+            {
+              "MetadataId": "603e165b-c2df-4ff5-ae8d-d13b00abe524",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_EnrollmentDate",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Enrollment Date",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "DateTime",
+              "AttributeTypeName": {
+                "Value": "DateTimeType"
+              },
+              "ImeMode": "Auto",
+              "Format": "DateOnly",
+              "DateTimeBehavior": {
+                "Value": "UserLocal"
+              },
+              "CanChangeDateTimeBehavior": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "canmodifybehavior"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata"
+            }
+          ],
+          "OwnershipType": "UserOwned",
+          "PrimaryNameAttribute": "",
+          "SchemaName": "ppdev_Communitytrainingenrolment",
+          "HasNotes": false,
+          "HasActivities": false,
+          "IsAvailableOffline": false,
+          "IsActivity": false,
+          "ActivityTypeMask": 0,
+          "IsSolutionAware": false,
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of learner enrollments in workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community training enrolments",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community training enrolment",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "IsAuditEnabled": {
+            "Value": false
+          },
+          "IsValidForQueue": {
+            "Value": false
+          },
+          "IsConnectionsEnabled": {
+            "Value": false
+          },
+          "IsDuplicateDetectionEnabled": {
+            "Value": true
+          },
+          "IsDocumentManagementEnabled": false,
+          "EntityColor": null,
+          "IsRetentionEnabled": false,
+          "SyncToExternalSearchIndex": false,
+          "AutoRouteToOwnerQueue": false,
+          "IsSLAEnabled": false,
+          "IsQuickCreateEnabled": false,
+          "IsActivityParty": false,
+          "HasFeedback": false,
+          "AutoCreateAccessTeams": false,
+          "ChangeTrackingEnabled": false,
+          "IsKnowledgeManagementEnabled": false,
+          "EntityHelpUrlEnabled": false,
+          "EntityHelpUrl": null,
+          "IsMailMergeEnabled": {
+            "Value": true
+          },
+          "IsOfflineInMobileClient": {
+            "Value": false
+          },
+          "ManyToOneRelationships": [
+            {
+              "MetadataId": "e7464a6c-8204-45fc-b7ad-7baee846e657",
+              "SchemaName": "ppdev_communitytrainingenrolment_ppdev_learner_ppdev_communitylearner",
+              "ReferencingAttribute": "ppdev_learner",
+              "ReferencedEntity": "ppdev_communitylearner",
+              "ReferencingEntity": "ppdev_communitytrainingenrolment",
+              "ReferencedAttribute": "ppdev_communitylearnerid",
+              "ReferencingEntityNavigationPropertyName": "ppdev_Learner",
+              "RelationshipType": "OneToManyRelationship",
+              "IsCustomRelationship": true,
+              "IsValidForAdvancedFind": true,
+              "IsCustomizable": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "iscustomizable"
+              },
+              "CascadeConfiguration": {
+                "Assign": "NoCascade",
+                "Delete": "RemoveLink",
+                "Merge": "NoCascade",
+                "Reparent": "NoCascade",
+                "Share": "NoCascade",
+                "Unshare": "NoCascade",
+                "RollupView": "NoCascade",
+                "Archive": "RemoveLink"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+            },
+            {
+              "MetadataId": "dbb86c20-f501-4538-a15f-d3ffcc0a52c2",
+              "SchemaName": "ppdev_communitytrainingenrolment_ppdev_workshop_ppdev_communityworkshop",
+              "ReferencingAttribute": "ppdev_workshop",
+              "ReferencedEntity": "ppdev_communityworkshop",
+              "ReferencingEntity": "ppdev_communitytrainingenrolment",
+              "ReferencedAttribute": "ppdev_communityworkshopid",
+              "ReferencingEntityNavigationPropertyName": "ppdev_Workshop",
+              "RelationshipType": "OneToManyRelationship",
+              "IsCustomRelationship": true,
+              "IsValidForAdvancedFind": true,
+              "IsCustomizable": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "iscustomizable"
+              },
+              "CascadeConfiguration": {
+                "Assign": "NoCascade",
+                "Delete": "RemoveLink",
+                "Merge": "NoCascade",
+                "Reparent": "NoCascade",
+                "Share": "NoCascade",
+                "Unshare": "NoCascade",
+                "RollupView": "NoCascade",
+                "Archive": "RemoveLink"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+            }
+          ],
+          "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata"
+        },
+        "dataPayloadFormat": "Dataverse",
+        "additionalMetadata": {
+          "position": {
+            "x": 850,
+            "y": 30
+          }
+        },
+        "tableSourceType": "DataModelProposal",
+        "updatedByCopilotSessionId": "ac7e52c4-098f-446a-b344-e235fc2be1a2"
+      },
+      {
+        "data": [
+          {
+            "ppdev_communitymemberfeedbackid": "758b910d-5b80-48ae-95cd-cab737ec232a",
+            "ppdev_feedbacksummary": "Great intro session",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(25495f14-d2f8-49fa-8a5b-39c707b1ebe3)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(6d027f9e-252a-460e-a214-48d2a0b23fa7)",
+            "ppdev_rating": 5,
+            "ppdev_comments": "Very helpful and clear."
+          },
+          {
+            "ppdev_communitymemberfeedbackid": "28005702-589a-451a-9639-fd71954eebef",
+            "ppdev_feedbacksummary": "Useful financial tips",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(01786fdf-3c53-469c-a997-5eadebbd2e88)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(45d0f638-b1f5-4691-96a2-ec7ead60a337)",
+            "ppdev_rating": 4,
+            "ppdev_comments": "Good content but a bit fast."
+          },
+          {
+            "ppdev_communitymemberfeedbackid": "d71c18a1-3955-425d-9a97-12179649036a",
+            "ppdev_feedbacksummary": "Loved the writing exercises",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(a00c7e87-1f09-4463-b968-117fefb9e502)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(878f16ca-67e4-48f2-8618-28719d49b197)",
+            "ppdev_rating": 5,
+            "ppdev_comments": "Engaging and inspiring."
+          },
+          {
+            "ppdev_communitymemberfeedbackid": "e14b364b-ef47-4fbe-9d00-f1f34867eb1b",
+            "ppdev_feedbacksummary": "Informative wellness talk",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(b6d987f0-5125-4381-9c8b-ce2f2397b8fa)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(7c4d263c-1590-4ee2-bb9e-48bb6241c0e1)",
+            "ppdev_rating": 4,
+            "ppdev_comments": "Helpful but could use more examples."
+          },
+          {
+            "ppdev_communitymemberfeedbackid": "09a2b64b-447e-4083-9e02-59c7ed9f738e",
+            "ppdev_feedbacksummary": "Empowering leadership skills",
+            "ppdev_Learner@odata.bind": "/ppdev_communitylearners(d87ecc2a-8f25-486d-b05f-e006f579ac71)",
+            "ppdev_Workshop@odata.bind": "/ppdev_communityworkshops(24e11f09-f594-4cf9-b108-f5da47037322)",
+            "ppdev_rating": 5,
+            "ppdev_comments": "Motivating and practical."
+          }
+        ],
+        "entity": {
+          "MetadataId": "66ab8747-8717-42fd-b208-92c1c7255b68",
+          "Attributes": [
+            {
+              "MetadataId": "483c39d1-6e05-4166-9bfb-763bd986afd3",
+              "IsPrimaryName": true,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_FeedbackSummary",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Feedback Summary",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "ApplicationRequired"
+              },
+              "AttributeType": "String",
+              "AttributeTypeName": {
+                "Value": "StringType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 850,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+            },
+            {
+              "MetadataId": "5847ff63-c092-4c39-b7a0-372a50d654eb",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Learner",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Learner",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Lookup",
+              "AttributeTypeName": {
+                "Value": "LookupType"
+              },
+              "Targets": [
+                "ppdev_communitylearner"
+              ],
+              "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+            },
+            {
+              "MetadataId": "de922a8d-6620-4c21-ab5c-b53976833d1c",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Workshop",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Workshop",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Lookup",
+              "AttributeTypeName": {
+                "Value": "LookupType"
+              },
+              "Targets": [
+                "ppdev_communityworkshop"
+              ],
+              "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+            },
+            {
+              "MetadataId": "5653dd79-62cb-4d5e-8e15-ba67191df01f",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Rating",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Rating",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Integer",
+              "AttributeTypeName": {
+                "Value": "IntegerType"
+              },
+              "MaxValue": 2147483647,
+              "MinValue": -2147483648,
+              "Format": "None",
+              "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata"
+            },
+            {
+              "MetadataId": "ddf239ed-0858-49c3-b9b8-346df907f0d1",
+              "IsPrimaryName": false,
+              "IsSecured": false,
+              "IsValidForUpdate": true,
+              "IsValidForRead": true,
+              "SchemaName": "ppdev_Comments",
+              "SourceType": 0,
+              "ExternalName": null,
+              "Description": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "DisplayName": {
+                "LocalizedLabels": [
+                  {
+                    "Label": "Comments",
+                    "LanguageCode": 1033
+                  }
+                ]
+              },
+              "RequiredLevel": {
+                "Value": "None"
+              },
+              "AttributeType": "Memo",
+              "AttributeTypeName": {
+                "Value": "MemoType"
+              },
+              "ImeMode": "Auto",
+              "MaxLength": 2000,
+              "FormatName": {
+                "Value": "Text"
+              },
+              "Format": "Text",
+              "AutoNumberFormat": null,
+              "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+            }
+          ],
+          "OwnershipType": "UserOwned",
+          "PrimaryNameAttribute": "",
+          "SchemaName": "ppdev_Communitymemberfeedback",
+          "HasNotes": false,
+          "HasActivities": false,
+          "IsAvailableOffline": false,
+          "IsActivity": false,
+          "ActivityTypeMask": 0,
+          "IsSolutionAware": false,
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "This table contains records of feedback provided by learners for workshops.",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community member feedback",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Community member feedback",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "IsAuditEnabled": {
+            "Value": false
+          },
+          "IsValidForQueue": {
+            "Value": false
+          },
+          "IsConnectionsEnabled": {
+            "Value": false
+          },
+          "IsDuplicateDetectionEnabled": {
+            "Value": true
+          },
+          "IsDocumentManagementEnabled": false,
+          "EntityColor": null,
+          "IsRetentionEnabled": false,
+          "SyncToExternalSearchIndex": false,
+          "AutoRouteToOwnerQueue": false,
+          "IsSLAEnabled": false,
+          "IsQuickCreateEnabled": false,
+          "IsActivityParty": false,
+          "HasFeedback": false,
+          "AutoCreateAccessTeams": false,
+          "ChangeTrackingEnabled": false,
+          "IsKnowledgeManagementEnabled": false,
+          "EntityHelpUrlEnabled": false,
+          "EntityHelpUrl": null,
+          "IsMailMergeEnabled": {
+            "Value": true
+          },
+          "IsOfflineInMobileClient": {
+            "Value": false
+          },
+          "ManyToOneRelationships": [
+            {
+              "MetadataId": "66420abf-4dff-439f-809d-f9eb6b327ae6",
+              "SchemaName": "ppdev_communitymemberfeedback_ppdev_learner_ppdev_communitylearner",
+              "ReferencingAttribute": "ppdev_learner",
+              "ReferencedEntity": "ppdev_communitylearner",
+              "ReferencingEntity": "ppdev_communitymemberfeedback",
+              "ReferencedAttribute": "ppdev_communitylearnerid",
+              "ReferencingEntityNavigationPropertyName": "ppdev_Learner",
+              "RelationshipType": "OneToManyRelationship",
+              "IsCustomRelationship": true,
+              "IsValidForAdvancedFind": true,
+              "IsCustomizable": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "iscustomizable"
+              },
+              "CascadeConfiguration": {
+                "Assign": "NoCascade",
+                "Delete": "RemoveLink",
+                "Merge": "NoCascade",
+                "Reparent": "NoCascade",
+                "Share": "NoCascade",
+                "Unshare": "NoCascade",
+                "RollupView": "NoCascade",
+                "Archive": "RemoveLink"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+            },
+            {
+              "MetadataId": "b7e1f9c6-013b-4916-8842-2f88c9fafd69",
+              "SchemaName": "ppdev_communitymemberfeedback_ppdev_workshop_ppdev_communityworkshop",
+              "ReferencingAttribute": "ppdev_workshop",
+              "ReferencedEntity": "ppdev_communityworkshop",
+              "ReferencingEntity": "ppdev_communitymemberfeedback",
+              "ReferencedAttribute": "ppdev_communityworkshopid",
+              "ReferencingEntityNavigationPropertyName": "ppdev_Workshop",
+              "RelationshipType": "OneToManyRelationship",
+              "IsCustomRelationship": true,
+              "IsValidForAdvancedFind": true,
+              "IsCustomizable": {
+                "Value": true,
+                "CanBeChanged": true,
+                "ManagedPropertyLogicalName": "iscustomizable"
+              },
+              "CascadeConfiguration": {
+                "Assign": "NoCascade",
+                "Delete": "RemoveLink",
+                "Merge": "NoCascade",
+                "Reparent": "NoCascade",
+                "Share": "NoCascade",
+                "Unshare": "NoCascade",
+                "RollupView": "NoCascade",
+                "Archive": "RemoveLink"
+              },
+              "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+            }
+          ],
+          "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata"
+        },
+        "dataPayloadFormat": "Dataverse",
+        "additionalMetadata": {
+          "position": {
+            "x": 850,
+            "y": 286
+          }
+        },
+        "tableSourceType": "DataModelProposal",
+        "updatedByCopilotSessionId": "ac7e52c4-098f-446a-b344-e235fc2be1a2"
+      }
+    ],
+    "intermediateSolution": {
+      "businessProblem": "Community Learning Hub connects non-profit trainers with eager learners through accessible workshops and training programs. We support participant enrolment and tailor sessions to meet diverse community needs.",
+      "userRoles": {
+        "Trainer": "Person responsible for creating and delivering workshops and training programs.",
+        "Learner": "Community member who enrolls in and attends workshops.",
+        "Program coordinator": "Person who manages events, participant enrollment, and aligns programs with community needs."
+      },
+      "userStories": [
+        [
+          "us01",
+          "Create and publish workshop sessions so that learners can register and participate.",
+          "Trainer"
+        ],
+        [
+          "us02",
+          "Tailor workshop content to address specific community needs so that sessions are relevant and impactful.",
+          "Trainer"
+        ],
+        [
+          "us03",
+          "View participant enrollment lists so that I can prepare materials accordingly.",
+          "Trainer"
+        ],
+        [
+          "us04",
+          "Collect feedback from learners after sessions so that I can improve future workshops.",
+          "Trainer"
+        ],
+        [
+          "us05",
+          "Browse available workshops so that I can find sessions that interest me.",
+          "Learner"
+        ],
+        [
+          "us06",
+          "Enroll in workshops so that I can develop new skills and knowledge.",
+          "Learner"
+        ],
+        [
+          "us07",
+          "Receive reminders and updates about sessions so that I stay informed.",
+          "Learner"
+        ],
+        [
+          "us08",
+          "Provide feedback about my learning experience so that programs can be improved.",
+          "Learner"
+        ],
+        [
+          "us09",
+          "Monitor enrollment numbers across workshops so that I can ensure sessions meet demand.",
+          "Program coordinator"
+        ],
+        [
+          "us10",
+          "Assign trainers to appropriate workshops so that sessions have qualified facilitators.",
+          "Program coordinator"
+        ],
+        [
+          "us11",
+          "Analyze feedback and participation data so that I can adjust program offerings to better serve the community.",
+          "Program coordinator"
+        ],
+        [
+          "us12",
+          "Send communications to trainers and learners so that everyone stays informed about program changes.",
+          "Program coordinator"
+        ]
+      ]
+    },
+    "tableToUserStoryMapping": {
+      "a08fccaa-f3f9-466a-a653-b57ece1d84c3": [
+        "us01",
+        "us02",
+        "us03",
+        "us04",
+        "us10",
+        "us12"
+      ],
+      "139ba07b-68ca-474b-bf05-420c54b4897f": [
+        "us05",
+        "us06",
+        "us07",
+        "us08",
+        "us12"
+      ],
+      "a84f7dcf-21bd-4aff-a46c-46d16a3749ce": [
+        "us01",
+        "us02",
+        "us05",
+        "us09",
+        "us10",
+        "us11"
+      ],
+      "ce43572e-0f17-4076-aa66-f6305fac151f": [
+        "us03",
+        "us06",
+        "us07",
+        "us09",
+        "us12"
+      ],
+      "66ab8747-8717-42fd-b208-92c1c7255b68": [
+        "us04",
+        "us08",
+        "us11"
+      ]
+    },
+    "imageAttachmentContext": []
+  },
+  "viewPort": {
+    "x": 75.5,
+    "y": 135.5,
+    "zoom": 1
+  }
+}

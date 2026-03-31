@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{958b6e62-05eb-4778-9a2a-2ad986103551}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="958b6e62-05eb-4778-9a2a-2ad986103551" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="57de29c5-b358-4c92-9af6-2ac9d3df6595" labelid="2b02fc07-6803-4dee-9a24-90150059dc1e">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="f3a9aa66-98ec-4e1f-bdfa-099f4998073e" labelid="2eeb90c7-2cb8-4428-84fd-2e1ea8aa4e57">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_description" classid="67e601ed-77eb-4198-961c-ad389a47e5da" datafieldname="ppdev_description" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="4bd2cfea-573c-4110-aa80-cfadbb413ca6" labelid="5ced3437-6cc1-40dd-bce8-b6a309f6ab4c">
+                        <labels>
+                          <label description="Scheduled Date" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_scheduleddate" classid="c17af1b4-6191-4abf-a69f-c2722d8b5a7e" datafieldname="ppdev_scheduleddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="e516bca5-ab11-4863-b969-10050881aebf" labelid="d7bf393f-ae6b-4b68-9a14-e5470c32c327">
+                        <labels>
+                          <label description="Trainer" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_trainer" classid="c1aa3cb3-ea8e-42f0-aec9-8c70e36a6998" datafieldname="ppdev_trainer" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="28151bb3-7f96-48a5-970f-e2c6c3fc4380" labelid="65e333cf-ede8-41c6-8553-b0b06ccf7ea5">
+                        <labels>
+                          <label description="ppdev_trainername" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_trainername" classid="ba2dcc22-4e65-41d7-ae25-f436d9e225a8" datafieldname="ppdev_trainername" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="a001e499-8831-4ff0-bddd-91659daae599" labelid="51d07380-1d3f-47aa-8872-7b803067f153">
+                        <labels>
+                          <label description="Workshop Title" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_workshoptitle" classid="263f2507-83dc-45e6-9458-2fc736b672fd" datafieldname="ppdev_workshoptitle" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="0906c6d0-4628-46c8-865d-07c4d22c0b90" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="9ec892e6-7ddf-43e5-94e9-75ba24bef03d" showlabel="false" labelid="ef7f5bae-7aa9-4407-91f1-bd772f187802">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="aef2797c-120d-474a-820b-d1808c7b4e49" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="bbf85de5-b898-44fc-a2bc-0b405d0c55d1" showlabel="false" labelid="279c6e9a-90db-4d91-b55a-b12828a6b3ca">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="264f3f8d-61e8-44b4-8791-8fc402f2ab06" />
+        <Role Id="75bdee79-cfe8-4938-a374-e8a786145419" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Community workshop" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

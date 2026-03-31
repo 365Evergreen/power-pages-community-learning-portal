@@ -1,0 +1,13 @@
+<msdyn_planartifact msdyn_planartifactid="7c7a48b9-f52c-f111-88b4-000d3a7a035d">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_artifactmetadata mimetype="application/octet-stream">content</msdyn_artifactmetadata>
+  <msdyn_artifactmetadataschemaversion>1.0</msdyn_artifactmetadataschemaversion>
+  <msdyn_artifactstatus>419550001</msdyn_artifactstatus>
+  <msdyn_description>Program coordinators monitor enrollments, assign trainers, analyze data, and communicate with trainers and learners.</msdyn_description>
+  <msdyn_name>Program Coordinator Console</msdyn_name>
+  <msdyn_proposal mimetype="application/octet-stream">content</msdyn_proposal>
+  <msdyn_proposalschemaversion>1.0</msdyn_proposalschemaversion>
+  <msdyn_type>PowerAppsModelApp</msdyn_type>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_planartifact>

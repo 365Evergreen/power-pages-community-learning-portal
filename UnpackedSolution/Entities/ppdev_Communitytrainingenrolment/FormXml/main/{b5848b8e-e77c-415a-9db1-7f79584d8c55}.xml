@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b5848b8e-e77c-415a-9db1-7f79584d8c55}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="b5848b8e-e77c-415a-9db1-7f79584d8c55" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="be9bffba-40f8-4043-ae0f-f8ecadc89f17" labelid="2192d678-4a3d-4ff7-a950-41bc4ed2434f">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="78113474-3da4-4d8f-916c-69693e15960e" labelid="93b44998-c1b9-46ed-83cb-3dcd95a62730">
+                        <labels>
+                          <label description="Enrollment Date" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_enrollmentdate" classid="9aae9be9-9d7f-42f8-8f3a-84efb2966984" datafieldname="ppdev_enrollmentdate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="769d8dac-3d54-4d67-a4c5-e2471cae1eb0" labelid="c09166d5-211f-425d-a84b-3ece181fe587">
+                        <labels>
+                          <label description="Enrollment Reference" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_enrollmentreference" classid="b7116262-cb3c-4172-8118-402ff80c7ccc" datafieldname="ppdev_enrollmentreference" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="64d066e2-412c-4040-9822-8e69bfd57466" labelid="5fa36773-47be-4ab6-b685-dcbc500fdfd1">
+                        <labels>
+                          <label description="Learner" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_learner" classid="c2e952cf-c888-4d45-b680-172c88bb7c43" datafieldname="ppdev_learner" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="25f2775a-c120-465f-9175-3c791d822f14" labelid="5c1f876a-48fc-42f9-a254-aa693f4ab8d5">
+                        <labels>
+                          <label description="ppdev_learnername" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_learnername" classid="91c87eda-bb04-42d9-8b6a-ff1f2211972c" datafieldname="ppdev_learnername" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="c3aae5c3-8147-447c-9c79-871acb13feab" labelid="3b51dcf4-c4d7-432c-999c-76159f2cb5f6">
+                        <labels>
+                          <label description="Workshop" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_workshop" classid="b60f307d-2891-4225-9c04-2bd8910b3817" datafieldname="ppdev_workshop" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="9a1083e4-a85f-4b99-8096-b81ca9d67148" labelid="89d57132-7bbd-48d7-9c84-b5e6f31f4e1c">
+                        <labels>
+                          <label description="ppdev_workshopname" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_workshopname" classid="7503c228-c383-48ef-8766-c5e00e5da682" datafieldname="ppdev_workshopname" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="1a90421e-72c7-4104-a6e2-07de56ee743e" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="4cb9c2ab-98ac-4666-820c-09518541e60c" showlabel="false" labelid="6ccc880c-285b-4c62-b282-c22d55390a1f">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="1679dcf5-04d6-47b8-872a-5d32331d4d80" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="b7dd3271-d1cf-4314-b2fc-a8b1163c8366" showlabel="false" labelid="f249a3ea-05e3-428d-9aee-b506f8416afe">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="a099f102-48aa-4608-88bb-8f951ca9c443" />
+        <Role Id="4bd0fa21-3ad0-440c-8712-9731359b0239" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Community training enrolment" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

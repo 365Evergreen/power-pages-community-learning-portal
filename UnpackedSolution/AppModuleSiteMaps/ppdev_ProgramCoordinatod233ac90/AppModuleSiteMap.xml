@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>ppdev_ProgramCoordinatod233ac90</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>True</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_bcfb8382" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Area1" />
+      </Titles>
+      <Group Id="group_04205724" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Group1" />
+        </Titles>
+        <SubArea Id="subarea_5187f4fa" VectorIcon="/_imgs/TableIconsFluentV9/briefcase.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ppdev_communitytrainer" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_75555c0e" VectorIcon="/_imgs/TableIconsFluentV9/person.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ppdev_communitylearner" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_9333a44e" VectorIcon="/_imgs/TableIconsFluentV9/calendar_icon.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ppdev_communityworkshop" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_f70931c9" VectorIcon="/_imgs/TableIconsFluentV9/people.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ppdev_communitytrainingenrolment" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_6a4b5da1" VectorIcon="/_imgs/TableIconsFluentV9/thumb_like.svg" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="ppdev_communitymemberfeedback" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="Program Coordinator Console" languagecode="1033" />
+  </LocalizedNames>
+</AppModuleSiteMap>

@@ -1,0 +1,25 @@
+{
+  "name": "Workshop Participation Insights",
+  "description": "Program coordinators analyze feedback and participation data to optimize offerings and track demand.",
+  "typesOfUsers": [
+    "Program coordinator"
+  ],
+  "tableSchemaNames": [
+    "ppdev_Communityworkshop",
+    "ppdev_Communitytrainingenrolment",
+    "ppdev_Communitymemberfeedback"
+  ],
+  "userStories": [
+    {
+      "id": "us09",
+      "description": "Monitor enrollment numbers across workshops so that I can ensure sessions meet demand.",
+      "userType": "Program coordinator"
+    },
+    {
+      "id": "us11",
+      "description": "Analyze feedback and participation data so that I can adjust program offerings to better serve the community.",
+      "userType": "Program coordinator"
+    }
+  ],
+  "version": 1
+}

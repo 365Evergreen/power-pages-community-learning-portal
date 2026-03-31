@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{fef52342-3b15-4d39-ab03-835e4f9aec73}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{780217dd-93f1-4549-860a-fe44db6e4dcf}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{12a02e76-b856-4a95-956a-ae049f52c065}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{38cc3332-d76e-446a-9e62-98e36c688f27}">
+                        <labels>
+                          <label description="Feedback Summary" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_feedbacksummary" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_feedbacksummary" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ae411cc6-67db-4c88-b593-92ee598b0bae}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{38442d83-e2e2-4c99-a157-3d3c179542e7}">
+                        <labels>
+                          <label description="Learner" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_learner" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ppdev_learner" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b88c9645-c864-4f9c-85ea-404631a45183}">
+                        <labels>
+                          <label description="Workshop" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_workshop" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ppdev_workshop" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bcd3c1c0-90a4-4562-9f46-b95e93ebf0fa}">
+                        <labels>
+                          <label description="Rating" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_rating" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="ppdev_rating" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{529d4aa1-aaf6-4760-8a32-67acacfdf4cd}">
+                        <labels>
+                          <label description="Comments" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_comments" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="ppdev_comments" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

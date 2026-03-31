@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{46b82f26-dca9-4ba7-bb84-c51a34425db9}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ppdev_workshoptitle" select="1" icon="1" preview="1">
+        <row name="result" id="ppdev_communityworkshopid">
+          <cell name="ppdev_workshoptitle" width="300" />
+          <cell name="ppdev_description" width="150" />
+          <cell name="ppdev_scheduleddate" width="150" />
+          <cell name="ppdev_trainer" width="150" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ppdev_communityworkshop">
+          <attribute name="ppdev_communityworkshopid" />
+          <attribute name="ppdev_workshoptitle" />
+          <attribute name="createdon" />
+          <order attribute="ppdev_workshoptitle" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ppdev_description" />
+          <attribute name="ppdev_scheduleddate" />
+          <attribute name="ppdev_trainer" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Community workshops" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

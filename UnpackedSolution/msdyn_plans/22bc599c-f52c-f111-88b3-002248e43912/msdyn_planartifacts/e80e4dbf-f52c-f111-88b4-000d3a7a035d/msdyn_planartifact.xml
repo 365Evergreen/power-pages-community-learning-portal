@@ -1,0 +1,12 @@
+<msdyn_planartifact msdyn_planartifactid="e80e4dbf-f52c-f111-88b4-000d3a7a035d">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_artifactmetadataschemaversion>1.0</msdyn_artifactmetadataschemaversion>
+  <msdyn_artifactstatus>419550000</msdyn_artifactstatus>
+  <msdyn_description>Learners browse workshops, enroll, and provide feedback with conversational AI support for an engaging experience.</msdyn_description>
+  <msdyn_name>Learner Support Agent</msdyn_name>
+  <msdyn_proposal mimetype="application/octet-stream">content</msdyn_proposal>
+  <msdyn_proposalschemaversion>1.0</msdyn_proposalschemaversion>
+  <msdyn_type>CopilotStudioAgent</msdyn_type>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_planartifact>

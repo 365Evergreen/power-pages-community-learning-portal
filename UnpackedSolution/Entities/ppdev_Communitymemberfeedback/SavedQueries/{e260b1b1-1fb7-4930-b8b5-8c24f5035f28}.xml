@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{e260b1b1-1fb7-4930-b8b5-8c24f5035f28}</savedqueryid>
+    <layoutxml>
+      <grid name="ppdev_communitymemberfeedbacks" jump="ppdev_feedbacksummary" select="1" icon="1" preview="0">
+        <row name="ppdev_communitymemberfeedback" id="ppdev_communitymemberfeedbackid">
+          <cell name="ppdev_feedbacksummary" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ppdev_communitymemberfeedback">
+          <attribute name="ppdev_communitymemberfeedbackid" />
+          <attribute name="ppdev_feedbacksummary" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Community member feedback Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

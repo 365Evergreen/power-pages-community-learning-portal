@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{74f57a26-f5f6-40c6-8676-0b4816f21d99}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{90c65f40-8643-4c11-a0ce-20ff7b0a6153}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{8d61c544-9a9f-4c4d-a48e-0488799517e7}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d1e15d1c-d724-469e-a0ad-e9057b944487}">
+                        <labels>
+                          <label description="Enrollment Reference" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_enrollmentreference" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ppdev_enrollmentreference" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0f0a6236-98df-4a1a-9eaa-47733f5c1ba9}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b1bdf647-7dd7-4b6e-98dc-2af3d0e117a5}">
+                        <labels>
+                          <label description="Learner" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_learner" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ppdev_learner" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{26ae8595-6bf6-46cc-91eb-fb5d6567ad66}">
+                        <labels>
+                          <label description="Workshop" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_workshop" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ppdev_workshop" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2582af32-9a3d-4ed9-8a47-136f0305ea17}">
+                        <labels>
+                          <label description="Enrollment Date" languagecode="1033" />
+                        </labels>
+                        <control id="ppdev_enrollmentdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="ppdev_enrollmentdate" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,3442 @@
+{
+  "personasAndUserStories": [
+    {
+      "user": {
+        "id": "Trainer",
+        "name": "Trainer",
+        "description": "Person responsible for creating and delivering workshops and training programs.",
+        "image": "https://content.powerapps.com/resource/makerx/static/media/PersonLightning.42f126d5.svg"
+      },
+      "userStories": [
+        {
+          "id": "us01",
+          "description": "Create and publish workshop sessions so that learners can register and participate.",
+          "userType": "Trainer"
+        },
+        {
+          "id": "us02",
+          "description": "Tailor workshop content to address specific community needs so that sessions are relevant and impactful.",
+          "userType": "Trainer"
+        },
+        {
+          "id": "us03",
+          "description": "View participant enrollment lists so that I can prepare materials accordingly.",
+          "userType": "Trainer"
+        },
+        {
+          "id": "us04",
+          "description": "Collect feedback from learners after sessions so that I can improve future workshops.",
+          "userType": "Trainer"
+        }
+      ]
+    },
+    {
+      "user": {
+        "id": "Learner",
+        "name": "Learner",
+        "description": "Community member who enrolls in and attends workshops.",
+        "image": "https://content.powerapps.com/resource/makerx/static/media/PersonAccounts.bd1e9daf.svg"
+      },
+      "userStories": [
+        {
+          "id": "us05",
+          "description": "Browse available workshops so that I can find sessions that interest me.",
+          "userType": "Learner"
+        },
+        {
+          "id": "us06",
+          "description": "Enroll in workshops so that I can develop new skills and knowledge.",
+          "userType": "Learner"
+        },
+        {
+          "id": "us07",
+          "description": "Receive reminders and updates about sessions so that I stay informed.",
+          "userType": "Learner"
+        },
+        {
+          "id": "us08",
+          "description": "Provide feedback about my learning experience so that programs can be improved.",
+          "userType": "Learner"
+        }
+      ]
+    },
+    {
+      "user": {
+        "id": "Program coordinator",
+        "name": "Program coordinator",
+        "description": "Person who manages events, participant enrollment, and aligns programs with community needs.",
+        "image": "https://content.powerapps.com/resource/makerx/static/media/PersonNote.bac78e19.svg"
+      },
+      "userStories": [
+        {
+          "id": "us09",
+          "description": "Monitor enrollment numbers across workshops so that I can ensure sessions meet demand.",
+          "userType": "Program coordinator"
+        },
+        {
+          "id": "us10",
+          "description": "Assign trainers to appropriate workshops so that sessions have qualified facilitators.",
+          "userType": "Program coordinator"
+        },
+        {
+          "id": "us11",
+          "description": "Analyze feedback and participation data so that I can adjust program offerings to better serve the community.",
+          "userType": "Program coordinator"
+        },
+        {
+          "id": "us12",
+          "description": "Send communications to trainers and learners so that everyone stays informed about program changes.",
+          "userType": "Program coordinator"
+        }
+      ]
+    }
+  ],
+  "entitiesAndRelationships": {
+    "entities": [
+      {
+        "entityMetadataId": "a08fccaa-f3f9-466a-a653-b57ece1d84c3",
+        "entityName": "Community trainer",
+        "description": "This table contains records of trainers who create and deliver workshops.",
+        "columns": [
+          "Trainer Name",
+          "Email",
+          "Phone"
+        ],
+        "userStories": [
+          "us01",
+          "us02",
+          "us03",
+          "us04",
+          "us10",
+          "us12"
+        ],
+        "userConfirmed": false,
+        "generated": true
+      },
+      {
+        "entityMetadataId": "139ba07b-68ca-474b-bf05-420c54b4897f",
+        "entityName": "Community learner",
+        "description": "This table contains records of community members who enroll in workshops.",
+        "columns": [
+          "Learner Name",
+          "Email",
+          "Phone"
+        ],
+        "userStories": [
+          "us05",
+          "us06",
+          "us07",
+          "us08",
+          "us12"
+        ],
+        "userConfirmed": false,
+        "generated": true
+      },
+      {
+        "entityMetadataId": "a84f7dcf-21bd-4aff-a46c-46d16a3749ce",
+        "entityName": "Community workshop",
+        "description": "This table contains records of workshop sessions available for enrollment.",
+        "columns": [
+          "Workshop Title",
+          "Description",
+          "Scheduled Date",
+          "Trainer"
+        ],
+        "userStories": [
+          "us01",
+          "us02",
+          "us05",
+          "us09",
+          "us10",
+          "us11"
+        ],
+        "userConfirmed": false,
+        "generated": true
+      },
+      {
+        "entityMetadataId": "ce43572e-0f17-4076-aa66-f6305fac151f",
+        "entityName": "Community training enrolment",
+        "description": "This table contains records of learner enrollments in workshops.",
+        "columns": [
+          "Enrollment Reference",
+          "Learner",
+          "Workshop",
+          "Enrollment Date"
+        ],
+        "userStories": [
+          "us03",
+          "us06",
+          "us07",
+          "us09",
+          "us12"
+        ],
+        "userConfirmed": false,
+        "generated": true
+      },
+      {
+        "entityMetadataId": "66ab8747-8717-42fd-b208-92c1c7255b68",
+        "entityName": "Community member feedback",
+        "description": "This table contains records of feedback provided by learners for workshops.",
+        "columns": [
+          "Feedback Summary",
+          "Learner",
+          "Workshop",
+          "Rating",
+          "Comments"
+        ],
+        "userStories": [
+          "us04",
+          "us08",
+          "us11"
+        ],
+        "userConfirmed": false,
+        "generated": true
+      }
+    ],
+    "relationships": [],
+    "isFinalResult": true
+  },
+  "entitiesCollection": [
+    {
+      "EntityDefinition": {
+        "MetadataId": "fa951de1-f32a-f111-88b4-002248e31a63",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitytrainer",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of trainers who create and deliver workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community trainers",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community trainer",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "969ad115-4eab-4335-bfdd-da5d1d00ff26",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_TrainerName",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Trainer Name",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "4724e50a-17d1-42c4-b40b-0e155d60d623",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Email",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Email",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Email"
+            },
+            "Format": "Email",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "8008181e-cb3d-4418-9590-bf65542aea1f",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Phone",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Phone",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Phone"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "SampleData": []
+    },
+    {
+      "EntityDefinition": {
+        "MetadataId": "f5697dc9-f42a-f111-88b4-002248e31a63",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitylearner",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of community members who enroll in workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community learners",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community learner",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "d1282321-0f54-4407-8955-07a8a1964985",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_LearnerName",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Learner Name",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "7eb19364-4aef-4c16-8bf6-ce4138421f8e",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Email",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Email",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Email"
+            },
+            "Format": "Email",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "6cdf9741-3051-40cc-aa02-cfb67d447c5f",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Phone",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Phone",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 100,
+            "FormatName": {
+              "Value": "Phone"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "SampleData": []
+    },
+    {
+      "EntityDefinition": {
+        "MetadataId": "0728ae1c-c526-f111-88b4-6045bd3cd047",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communityworkshop",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of workshop sessions available for enrollment.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community workshops",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community workshop",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "f8b1468f-b1c0-4b4c-8215-fe84d34dda64",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_WorkshopTitle",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Workshop Title",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "a78e304b-6a8d-4a76-b6fc-94e04546e8ba",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Description",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Description",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+          },
+          {
+            "MetadataId": "410381ae-53ec-493d-b891-76e5fe65c4f1",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_ScheduledDate",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Scheduled Date",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "ImeMode": "Auto",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata"
+          },
+          {
+            "MetadataId": "1f80d68f-90b2-464c-a04a-64ad614b2fa1",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Trainer",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Trainer",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communitytrainer"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "d49582f7-1248-4ef8-92d5-9bfbb14f9e4e",
+            "SchemaName": "ppdev_communityworkshop_ppdev_trainer_ppdev_communitytrainer",
+            "ReferencingAttribute": "ppdev_trainer",
+            "ReferencedEntity": "ppdev_communitytrainer",
+            "ReferencingEntity": "ppdev_communityworkshop",
+            "ReferencedAttribute": "ppdev_communitytrainerid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Trainer",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "SampleData": []
+    },
+    {
+      "EntityDefinition": {
+        "MetadataId": "316cc1d4-c426-f111-88b4-6045bd3cd047",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitytrainingenrolment",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of learner enrollments in workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community training enrolments",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community training enrolment",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "9d98d84b-793d-4742-b14e-5dac2232aa57",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_EnrollmentReference",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Enrollment Reference",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "cc054899-0f45-4cf8-8c35-65e25d81db24",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Learner",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Learner",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communitylearner"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "b371feab-7228-491d-8c53-e3745dcbac4d",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Workshop",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Workshop",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communityworkshop"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "603e165b-c2df-4ff5-ae8d-d13b00abe524",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_EnrollmentDate",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Enrollment Date",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "ImeMode": "Auto",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "e7464a6c-8204-45fc-b7ad-7baee846e657",
+            "SchemaName": "ppdev_communitytrainingenrolment_ppdev_learner_ppdev_communitylearner",
+            "ReferencingAttribute": "ppdev_learner",
+            "ReferencedEntity": "ppdev_communitylearner",
+            "ReferencingEntity": "ppdev_communitytrainingenrolment",
+            "ReferencedAttribute": "ppdev_communitylearnerid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Learner",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "dbb86c20-f501-4538-a15f-d3ffcc0a52c2",
+            "SchemaName": "ppdev_communitytrainingenrolment_ppdev_workshop_ppdev_communityworkshop",
+            "ReferencingAttribute": "ppdev_workshop",
+            "ReferencedEntity": "ppdev_communityworkshop",
+            "ReferencingEntity": "ppdev_communitytrainingenrolment",
+            "ReferencedAttribute": "ppdev_communityworkshopid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Workshop",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "SampleData": []
+    },
+    {
+      "EntityDefinition": {
+        "MetadataId": "65168ab7-f42a-f111-88b4-002248e31a63",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "",
+        "SchemaName": "ppdev_Communitymemberfeedback",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "This table contains records of feedback provided by learners for workshops.",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community member feedback",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Community member feedback",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "483c39d1-6e05-4166-9bfb-763bd986afd3",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_FeedbackSummary",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Feedback Summary",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "5847ff63-c092-4c39-b7a0-372a50d654eb",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Learner",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Learner",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communitylearner"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "de922a8d-6620-4c21-ab5c-b53976833d1c",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Workshop",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Workshop",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "Targets": [
+              "ppdev_communityworkshop"
+            ],
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata"
+          },
+          {
+            "MetadataId": "5653dd79-62cb-4d5e-8e15-ba67191df01f",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Rating",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Rating",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Integer",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            },
+            "MaxValue": 2147483647,
+            "MinValue": -2147483648,
+            "Format": "None",
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata"
+          },
+          {
+            "MetadataId": "ddf239ed-0858-49c3-b9b8-346df907f0d1",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "ppdev_Comments",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Comments",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None"
+            },
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "66420abf-4dff-439f-809d-f9eb6b327ae6",
+            "SchemaName": "ppdev_communitymemberfeedback_ppdev_learner_ppdev_communitylearner",
+            "ReferencingAttribute": "ppdev_learner",
+            "ReferencedEntity": "ppdev_communitylearner",
+            "ReferencingEntity": "ppdev_communitymemberfeedback",
+            "ReferencedAttribute": "ppdev_communitylearnerid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Learner",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "b7e1f9c6-013b-4916-8842-2f88c9fafd69",
+            "SchemaName": "ppdev_communitymemberfeedback_ppdev_workshop_ppdev_communityworkshop",
+            "ReferencingAttribute": "ppdev_workshop",
+            "ReferencedEntity": "ppdev_communityworkshop",
+            "ReferencingEntity": "ppdev_communitymemberfeedback",
+            "ReferencedAttribute": "ppdev_communityworkshopid",
+            "ReferencingEntityNavigationPropertyName": "ppdev_Workshop",
+            "RelationshipType": "OneToManyRelationship",
+            "IsCustomRelationship": true,
+            "IsValidForAdvancedFind": true,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "RemoveLink",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade",
+              "Archive": "RemoveLink"
+            },
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "SampleData": []
+    }
+  ],
+  "artifactIds": [
+    "fb45c3bc-f52c-f111-88b3-002248e43912",
+    "7c7a48b9-f52c-f111-88b4-000d3a7a035d",
+    "79221abe-f52c-f111-88b4-000d3a7a02f6",
+    "ff45c3bc-f52c-f111-88b3-002248e43912",
+    "e80e4dbf-f52c-f111-88b4-000d3a7a035d",
+    "0246c3bc-f52c-f111-88b3-002248e43912"
+  ],
+  "solutionUniqueName": "CommunityLearningHub",
+  "planProcessDiagrams": [
+    {
+      "name": "Workshop Creation and Customization",
+      "description": "This process covers the creation, customization, and publishing of workshop sessions by trainers, ensuring that offerings are relevant to community needs and ready for learner enrollment.",
+      "userStoryIds": [
+        "us01",
+        "us02",
+        "us10"
+      ],
+      "nodes": [
+        {
+          "id": "9257510f-3791-4ca6-a4e4-cdc69373222b",
+          "position": {
+            "x": 362,
+            "y": 8
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Trainer initiates new workshop creation or Program coordinator assigns trainer to workshop",
+            "userStoryId": "",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "9257510f-3791-4ca6-a4e4-cdc69373222b",
+            "label": "Trainer initiates new workshop creation or Program coordinator assigns trainer to workshop",
+            "resources": {},
+            "traceability": {},
+            "type": "Start"
+          }
+        },
+        {
+          "id": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+          "position": {
+            "x": 410,
+            "y": 118
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Determine process trigger",
+            "userStoryId": "",
+            "processName": "Workshop Creation and Customization",
+            "subtype": "Exclusive"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+            "label": "Determine process trigger",
+            "resources": {},
+            "traceability": {},
+            "isSplit": true,
+            "type": "DecisionStep",
+            "isMutuallyExclusive": true
+          }
+        },
+        {
+          "id": "cd584f6f-02dc-487f-bf85-0221cb16b103",
+          "position": {
+            "x": 8,
+            "y": 308
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer creates workshop session",
+            "userStoryId": "us01",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "cd584f6f-02dc-487f-bf85-0221cb16b103",
+            "label": "Trainer creates workshop session",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us01"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "d7559dd3-9eaa-4286-b254-829ddf8bfbae",
+          "position": {
+            "x": 8,
+            "y": 488
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer tailors workshop content to address specific community needs",
+            "userStoryId": "us02",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "d7559dd3-9eaa-4286-b254-829ddf8bfbae",
+            "label": "Trainer tailors workshop content to address specific community needs",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us02"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "b5221ece-e982-4981-ad00-63f3d0b562fc",
+          "position": {
+            "x": 8,
+            "y": 668
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System saves workshop draft",
+            "userStoryId": "us01",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "b5221ece-e982-4981-ad00-63f3d0b562fc",
+            "label": "System saves workshop draft",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us01",
+                "us02"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a",
+          "position": {
+            "x": 8,
+            "y": 848
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer publishes workshop session for learner registration",
+            "userStoryId": "us01",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a",
+            "label": "Trainer publishes workshop session for learner registration",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us01"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "52543817-dee2-4f8e-9f11-903344feec1b",
+          "position": {
+            "x": 112,
+            "y": 1028
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Workshop published and open for learner enrollment",
+            "userStoryId": "",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "52543817-dee2-4f8e-9f11-903344feec1b",
+            "label": "Workshop published and open for learner enrollment",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        },
+        {
+          "id": "02dd804f-fce9-439f-974a-bbaed65a2641",
+          "position": {
+            "x": 508,
+            "y": 308
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator assigns trainer to appropriate workshop",
+            "userStoryId": "us10",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "02dd804f-fce9-439f-974a-bbaed65a2641",
+            "label": "Program coordinator assigns trainer to appropriate workshop",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us10"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "d161e154-9b6b-4d0d-8454-b0affb246869",
+          "position": {
+            "x": 508,
+            "y": 488
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer tailors workshop content to address specific community needs",
+            "userStoryId": "us02",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "d161e154-9b6b-4d0d-8454-b0affb246869",
+            "label": "Trainer tailors workshop content to address specific community needs",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us02"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "dbc17005-57a9-42a0-a00e-e769f922e64e",
+          "position": {
+            "x": 508,
+            "y": 668
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System saves customized workshop draft",
+            "userStoryId": "us02",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "dbc17005-57a9-42a0-a00e-e769f922e64e",
+            "label": "System saves customized workshop draft",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us02",
+                "us10"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "98291c77-d7bd-4873-8ce8-a407439b302a",
+          "position": {
+            "x": 508,
+            "y": 848
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer publishes workshop session for learner registration",
+            "userStoryId": "us01",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "98291c77-d7bd-4873-8ce8-a407439b302a",
+            "label": "Trainer publishes workshop session for learner registration",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us01"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "a20c2562-6155-4ff4-8761-1039d636dff4",
+          "position": {
+            "x": 612,
+            "y": 1028
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Workshop published and open for learner enrollment",
+            "userStoryId": "",
+            "processName": "Workshop Creation and Customization",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "a20c2562-6155-4ff4-8761-1039d636dff4",
+            "label": "Workshop published and open for learner enrollment",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "cd584f6f-02dc-487f-bf85-0221cb16b103-d7559dd3-9eaa-4286-b254-829ddf8bfbae-0",
+          "sourceNodeId": "cd584f6f-02dc-487f-bf85-0221cb16b103",
+          "targetNodeId": "d7559dd3-9eaa-4286-b254-829ddf8bfbae",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "cd584f6f-02dc-487f-bf85-0221cb16b103",
+            "target": "d7559dd3-9eaa-4286-b254-829ddf8bfbae",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "d7559dd3-9eaa-4286-b254-829ddf8bfbae-b5221ece-e982-4981-ad00-63f3d0b562fc-1",
+          "sourceNodeId": "d7559dd3-9eaa-4286-b254-829ddf8bfbae",
+          "targetNodeId": "b5221ece-e982-4981-ad00-63f3d0b562fc",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "d7559dd3-9eaa-4286-b254-829ddf8bfbae",
+            "target": "b5221ece-e982-4981-ad00-63f3d0b562fc",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "b5221ece-e982-4981-ad00-63f3d0b562fc-02ccfd22-ec6c-415b-a1de-a54b32e8ed5a-2",
+          "sourceNodeId": "b5221ece-e982-4981-ad00-63f3d0b562fc",
+          "targetNodeId": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "b5221ece-e982-4981-ad00-63f3d0b562fc",
+            "target": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a-52543817-dee2-4f8e-9f11-903344feec1b-3",
+          "sourceNodeId": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a",
+          "targetNodeId": "52543817-dee2-4f8e-9f11-903344feec1b",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "02ccfd22-ec6c-415b-a1de-a54b32e8ed5a",
+            "target": "52543817-dee2-4f8e-9f11-903344feec1b",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "4e3b1588-b97a-43fc-a8fa-e612c140c5af-cd584f6f-02dc-487f-bf85-0221cb16b103-4",
+          "sourceNodeId": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+          "targetNodeId": "cd584f6f-02dc-487f-bf85-0221cb16b103",
+          "data": {
+            "label": "Trainer initiates new workshop creation",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "Trainer initiates new workshop creation",
+            "source": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+            "target": "cd584f6f-02dc-487f-bf85-0221cb16b103",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "02dd804f-fce9-439f-974a-bbaed65a2641-d161e154-9b6b-4d0d-8454-b0affb246869-5",
+          "sourceNodeId": "02dd804f-fce9-439f-974a-bbaed65a2641",
+          "targetNodeId": "d161e154-9b6b-4d0d-8454-b0affb246869",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "02dd804f-fce9-439f-974a-bbaed65a2641",
+            "target": "d161e154-9b6b-4d0d-8454-b0affb246869",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "d161e154-9b6b-4d0d-8454-b0affb246869-dbc17005-57a9-42a0-a00e-e769f922e64e-6",
+          "sourceNodeId": "d161e154-9b6b-4d0d-8454-b0affb246869",
+          "targetNodeId": "dbc17005-57a9-42a0-a00e-e769f922e64e",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "d161e154-9b6b-4d0d-8454-b0affb246869",
+            "target": "dbc17005-57a9-42a0-a00e-e769f922e64e",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "dbc17005-57a9-42a0-a00e-e769f922e64e-98291c77-d7bd-4873-8ce8-a407439b302a-7",
+          "sourceNodeId": "dbc17005-57a9-42a0-a00e-e769f922e64e",
+          "targetNodeId": "98291c77-d7bd-4873-8ce8-a407439b302a",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "dbc17005-57a9-42a0-a00e-e769f922e64e",
+            "target": "98291c77-d7bd-4873-8ce8-a407439b302a",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "98291c77-d7bd-4873-8ce8-a407439b302a-a20c2562-6155-4ff4-8761-1039d636dff4-8",
+          "sourceNodeId": "98291c77-d7bd-4873-8ce8-a407439b302a",
+          "targetNodeId": "a20c2562-6155-4ff4-8761-1039d636dff4",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "98291c77-d7bd-4873-8ce8-a407439b302a",
+            "target": "a20c2562-6155-4ff4-8761-1039d636dff4",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "4e3b1588-b97a-43fc-a8fa-e612c140c5af-02dd804f-fce9-439f-974a-bbaed65a2641-9",
+          "sourceNodeId": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+          "targetNodeId": "02dd804f-fce9-439f-974a-bbaed65a2641",
+          "data": {
+            "label": "Program coordinator assigns trainer to workshop",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "Program coordinator assigns trainer to workshop",
+            "source": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+            "target": "02dd804f-fce9-439f-974a-bbaed65a2641",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "9257510f-3791-4ca6-a4e4-cdc69373222b-4e3b1588-b97a-43fc-a8fa-e612c140c5af-10",
+          "sourceNodeId": "9257510f-3791-4ca6-a4e4-cdc69373222b",
+          "targetNodeId": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+          "data": {
+            "label": "",
+            "processName": "Workshop Creation and Customization"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "9257510f-3791-4ca6-a4e4-cdc69373222b",
+            "target": "4e3b1588-b97a-43fc-a8fa-e612c140c5af",
+            "type": "SequenceFlow"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Participant Enrollment and Engagement",
+      "description": "This process encompasses learners browsing available workshops, enrolling, receiving updates, and engaging with sessions. It also includes trainers preparing for sessions based on enrollment and program coordinators monitoring participation.",
+      "userStoryIds": [
+        "us03",
+        "us05",
+        "us06",
+        "us07",
+        "us09",
+        "us12"
+      ],
+      "nodes": [
+        {
+          "id": "22914f86-35c4-49e2-8be2-13da36394e11",
+          "position": {
+            "x": 862,
+            "y": 8
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Learner visits Community Learning Hub OR Program coordinator initiates session monitoring",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "22914f86-35c4-49e2-8be2-13da36394e11",
+            "label": "Learner visits Community Learning Hub OR Program coordinator initiates session monitoring",
+            "resources": {},
+            "traceability": {},
+            "type": "Start"
+          }
+        },
+        {
+          "id": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+          "position": {
+            "x": 910,
+            "y": 118
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Determine process trigger",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": "Exclusive"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+            "label": "Determine process trigger",
+            "resources": {},
+            "traceability": {},
+            "isSplit": true,
+            "type": "DecisionStep",
+            "isMutuallyExclusive": true
+          }
+        },
+        {
+          "id": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b",
+          "position": {
+            "x": 258,
+            "y": 308
+          },
+          "data": {
+            "actor": "Learner",
+            "actionName": "Learner browses available workshops",
+            "userStoryId": "us05",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b",
+            "label": "Learner browses available workshops",
+            "resources": {
+              "actor": "Learner"
+            },
+            "traceability": {
+              "userStories": [
+                "us05"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "39d928f3-67eb-46f5-a6d3-f90bc18d839f",
+          "position": {
+            "x": 258,
+            "y": 493
+          },
+          "data": {
+            "actor": "Learner",
+            "actionName": "Learner enrolls in workshops",
+            "userStoryId": "us06",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "39d928f3-67eb-46f5-a6d3-f90bc18d839f",
+            "label": "Learner enrolls in workshops",
+            "resources": {
+              "actor": "Learner"
+            },
+            "traceability": {
+              "userStories": [
+                "us06"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db",
+          "position": {
+            "x": 258,
+            "y": 678
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System updates enrollment records",
+            "userStoryId": "us06",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db",
+            "label": "System updates enrollment records",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us06"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "position": {
+            "x": 410,
+            "y": 858
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Engage enrolled learners and inform trainers",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": "Parallel"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "label": "Engage enrolled learners and inform trainers",
+            "resources": {},
+            "traceability": {},
+            "isSplit": true,
+            "type": "ParallelExecutionStep"
+          }
+        },
+        {
+          "id": "55f7ab27-d1df-42d4-bc35-be7c830e44fe",
+          "position": {
+            "x": 8,
+            "y": 1228
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System sends reminders and session updates to learners",
+            "userStoryId": "us07",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "55f7ab27-d1df-42d4-bc35-be7c830e44fe",
+            "label": "System sends reminders and session updates to learners",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us07"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "91912b7d-57f6-4278-9b8e-0951eeb43ae6",
+          "position": {
+            "x": 508,
+            "y": 1048
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System generates participant enrollment lists for trainers",
+            "userStoryId": "us03",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "91912b7d-57f6-4278-9b8e-0951eeb43ae6",
+            "label": "System generates participant enrollment lists for trainers",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us03"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "c80f4b3c-34fa-431e-89fc-4970d95f1383",
+          "position": {
+            "x": 508,
+            "y": 1228
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer views participant enrollment lists",
+            "userStoryId": "us03",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "c80f4b3c-34fa-431e-89fc-4970d95f1383",
+            "label": "Trainer views participant enrollment lists",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us03"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "position": {
+            "x": 410,
+            "y": 1408
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Engage enrolled learners and inform trainers",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": "Parallel"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "label": "Engage enrolled learners and inform trainers",
+            "resources": {},
+            "traceability": {},
+            "isSplit": false,
+            "type": "ParallelExecutionStep"
+          }
+        },
+        {
+          "id": "719bf457-7b36-4018-9e66-8deab809aa43",
+          "position": {
+            "x": 258,
+            "y": 1598
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System notifies program coordinator of updated enrollment numbers",
+            "userStoryId": "us09",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "719bf457-7b36-4018-9e66-8deab809aa43",
+            "label": "System notifies program coordinator of updated enrollment numbers",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us09"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "18aba28c-594a-4a83-9e5e-bba62553eb3d",
+          "position": {
+            "x": 258,
+            "y": 1778
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator monitors enrollment numbers",
+            "userStoryId": "us09",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "18aba28c-594a-4a83-9e5e-bba62553eb3d",
+            "label": "Program coordinator monitors enrollment numbers",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us09"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+          "position": {
+            "x": 410,
+            "y": 1958
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Check for program changes or session adjustments",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": "Exclusive"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+            "label": "Check for program changes or session adjustments",
+            "resources": {},
+            "traceability": {},
+            "isSplit": true,
+            "type": "DecisionStep",
+            "isMutuallyExclusive": true
+          }
+        },
+        {
+          "id": "e4e4cea6-79f0-48a2-927a-d25149ecc66e",
+          "position": {
+            "x": 8,
+            "y": 2148
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator sends communications to trainers and learners",
+            "userStoryId": "us12",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "e4e4cea6-79f0-48a2-927a-d25149ecc66e",
+            "label": "Program coordinator sends communications to trainers and learners",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us12"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea",
+          "position": {
+            "x": 8,
+            "y": 2328
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System delivers communications to trainers and learners",
+            "userStoryId": "us12",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea",
+            "label": "System delivers communications to trainers and learners",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us12"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "54741577-5911-4d6c-91b1-f40ea1268e1b",
+          "position": {
+            "x": 112,
+            "y": 2508
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "All participants and trainers informed of changes",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "54741577-5911-4d6c-91b1-f40ea1268e1b",
+            "label": "All participants and trainers informed of changes",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        },
+        {
+          "id": "4e3d8741-a712-4cf8-be76-5bb30e7b5a42",
+          "position": {
+            "x": 612,
+            "y": 2183
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Enrollment and engagement completed for learner",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "4e3d8741-a712-4cf8-be76-5bb30e7b5a42",
+            "label": "Enrollment and engagement completed for learner",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        },
+        {
+          "id": "1c3d0bf1-715e-4060-87b5-97ee193b19d1",
+          "position": {
+            "x": 1258,
+            "y": 308
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator monitors enrollment numbers",
+            "userStoryId": "us09",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "1c3d0bf1-715e-4060-87b5-97ee193b19d1",
+            "label": "Program coordinator monitors enrollment numbers",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us09"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+          "position": {
+            "x": 1410,
+            "y": 488
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Check for program changes or session adjustments",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": "Exclusive"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+            "label": "Check for program changes or session adjustments",
+            "resources": {},
+            "traceability": {},
+            "isSplit": true,
+            "type": "DecisionStep",
+            "isMutuallyExclusive": true
+          }
+        },
+        {
+          "id": "c63aeced-2014-43ed-aff7-de2ce60a5fbc",
+          "position": {
+            "x": 1008,
+            "y": 678
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator sends communications to trainers and learners",
+            "userStoryId": "us12",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "c63aeced-2014-43ed-aff7-de2ce60a5fbc",
+            "label": "Program coordinator sends communications to trainers and learners",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us12"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "cbb4186d-550f-4f60-baa7-9d49e42d33e2",
+          "position": {
+            "x": 1008,
+            "y": 863
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System delivers communications to trainers and learners",
+            "userStoryId": "us12",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "cbb4186d-550f-4f60-baa7-9d49e42d33e2",
+            "label": "System delivers communications to trainers and learners",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us12"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "f22b7d68-4233-4239-831a-71311fa97686",
+          "position": {
+            "x": 1112,
+            "y": 1083
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "All participants and trainers informed of changes",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "f22b7d68-4233-4239-831a-71311fa97686",
+            "label": "All participants and trainers informed of changes",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        },
+        {
+          "id": "0adbc028-4f22-41ab-9afb-cfec55a4b799",
+          "position": {
+            "x": 1612,
+            "y": 713
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Session monitoring completed",
+            "userStoryId": "",
+            "processName": "Participant Enrollment and Engagement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "0adbc028-4f22-41ab-9afb-cfec55a4b799",
+            "label": "Session monitoring completed",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "4c0ccaf1-ce12-4e91-b12a-7d6115667715-55f7ab27-d1df-42d4-bc35-be7c830e44fe-0",
+          "sourceNodeId": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "targetNodeId": "55f7ab27-d1df-42d4-bc35-be7c830e44fe",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "target": "55f7ab27-d1df-42d4-bc35-be7c830e44fe",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "91912b7d-57f6-4278-9b8e-0951eeb43ae6-c80f4b3c-34fa-431e-89fc-4970d95f1383-1",
+          "sourceNodeId": "91912b7d-57f6-4278-9b8e-0951eeb43ae6",
+          "targetNodeId": "c80f4b3c-34fa-431e-89fc-4970d95f1383",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "91912b7d-57f6-4278-9b8e-0951eeb43ae6",
+            "target": "c80f4b3c-34fa-431e-89fc-4970d95f1383",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "4c0ccaf1-ce12-4e91-b12a-7d6115667715-91912b7d-57f6-4278-9b8e-0951eeb43ae6-2",
+          "sourceNodeId": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "targetNodeId": "91912b7d-57f6-4278-9b8e-0951eeb43ae6",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "target": "91912b7d-57f6-4278-9b8e-0951eeb43ae6",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "55f7ab27-d1df-42d4-bc35-be7c830e44fe-Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715-3",
+          "sourceNodeId": "55f7ab27-d1df-42d4-bc35-be7c830e44fe",
+          "targetNodeId": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "55f7ab27-d1df-42d4-bc35-be7c830e44fe",
+            "target": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "c80f4b3c-34fa-431e-89fc-4970d95f1383-Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715-4",
+          "sourceNodeId": "c80f4b3c-34fa-431e-89fc-4970d95f1383",
+          "targetNodeId": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "c80f4b3c-34fa-431e-89fc-4970d95f1383",
+            "target": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "e4e4cea6-79f0-48a2-927a-d25149ecc66e-c64ba281-826d-4a6d-b62b-61cf4fd6fbea-5",
+          "sourceNodeId": "e4e4cea6-79f0-48a2-927a-d25149ecc66e",
+          "targetNodeId": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "e4e4cea6-79f0-48a2-927a-d25149ecc66e",
+            "target": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea-54741577-5911-4d6c-91b1-f40ea1268e1b-6",
+          "sourceNodeId": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea",
+          "targetNodeId": "54741577-5911-4d6c-91b1-f40ea1268e1b",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "c64ba281-826d-4a6d-b62b-61cf4fd6fbea",
+            "target": "54741577-5911-4d6c-91b1-f40ea1268e1b",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "564a9977-02f0-4ca1-9b9c-46809513e5fd-e4e4cea6-79f0-48a2-927a-d25149ecc66e-7",
+          "sourceNodeId": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+          "targetNodeId": "e4e4cea6-79f0-48a2-927a-d25149ecc66e",
+          "data": {
+            "label": "Program changes or session adjustments required",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "Program changes or session adjustments required",
+            "source": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+            "target": "e4e4cea6-79f0-48a2-927a-d25149ecc66e",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "564a9977-02f0-4ca1-9b9c-46809513e5fd-4e3d8741-a712-4cf8-be76-5bb30e7b5a42-8",
+          "sourceNodeId": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+          "targetNodeId": "4e3d8741-a712-4cf8-be76-5bb30e7b5a42",
+          "data": {
+            "label": "No changes required",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "No changes required",
+            "source": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+            "target": "4e3d8741-a712-4cf8-be76-5bb30e7b5a42",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b-39d928f3-67eb-46f5-a6d3-f90bc18d839f-9",
+          "sourceNodeId": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b",
+          "targetNodeId": "39d928f3-67eb-46f5-a6d3-f90bc18d839f",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b",
+            "target": "39d928f3-67eb-46f5-a6d3-f90bc18d839f",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "39d928f3-67eb-46f5-a6d3-f90bc18d839f-4e40a86b-fd33-4c12-9ad2-7ff24a52d7db-10",
+          "sourceNodeId": "39d928f3-67eb-46f5-a6d3-f90bc18d839f",
+          "targetNodeId": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "39d928f3-67eb-46f5-a6d3-f90bc18d839f",
+            "target": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db-4c0ccaf1-ce12-4e91-b12a-7d6115667715-11",
+          "sourceNodeId": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db",
+          "targetNodeId": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "4e40a86b-fd33-4c12-9ad2-7ff24a52d7db",
+            "target": "4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715-719bf457-7b36-4018-9e66-8deab809aa43-12",
+          "sourceNodeId": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+          "targetNodeId": "719bf457-7b36-4018-9e66-8deab809aa43",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "Merge_4c0ccaf1-ce12-4e91-b12a-7d6115667715",
+            "target": "719bf457-7b36-4018-9e66-8deab809aa43",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "719bf457-7b36-4018-9e66-8deab809aa43-18aba28c-594a-4a83-9e5e-bba62553eb3d-13",
+          "sourceNodeId": "719bf457-7b36-4018-9e66-8deab809aa43",
+          "targetNodeId": "18aba28c-594a-4a83-9e5e-bba62553eb3d",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "719bf457-7b36-4018-9e66-8deab809aa43",
+            "target": "18aba28c-594a-4a83-9e5e-bba62553eb3d",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "18aba28c-594a-4a83-9e5e-bba62553eb3d-564a9977-02f0-4ca1-9b9c-46809513e5fd-14",
+          "sourceNodeId": "18aba28c-594a-4a83-9e5e-bba62553eb3d",
+          "targetNodeId": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "18aba28c-594a-4a83-9e5e-bba62553eb3d",
+            "target": "564a9977-02f0-4ca1-9b9c-46809513e5fd",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "4823b381-d2d0-4b1d-8ac3-1412db8d6402-30c356b8-efb1-4b0d-bab7-79a2c9be6e0b-15",
+          "sourceNodeId": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+          "targetNodeId": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b",
+          "data": {
+            "label": "Learner visits Community Learning Hub",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "Learner visits Community Learning Hub",
+            "source": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+            "target": "30c356b8-efb1-4b0d-bab7-79a2c9be6e0b",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "c63aeced-2014-43ed-aff7-de2ce60a5fbc-cbb4186d-550f-4f60-baa7-9d49e42d33e2-16",
+          "sourceNodeId": "c63aeced-2014-43ed-aff7-de2ce60a5fbc",
+          "targetNodeId": "cbb4186d-550f-4f60-baa7-9d49e42d33e2",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "c63aeced-2014-43ed-aff7-de2ce60a5fbc",
+            "target": "cbb4186d-550f-4f60-baa7-9d49e42d33e2",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "cbb4186d-550f-4f60-baa7-9d49e42d33e2-f22b7d68-4233-4239-831a-71311fa97686-17",
+          "sourceNodeId": "cbb4186d-550f-4f60-baa7-9d49e42d33e2",
+          "targetNodeId": "f22b7d68-4233-4239-831a-71311fa97686",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "cbb4186d-550f-4f60-baa7-9d49e42d33e2",
+            "target": "f22b7d68-4233-4239-831a-71311fa97686",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "7f6b6a18-4792-4b18-972f-c9d65210f4b3-c63aeced-2014-43ed-aff7-de2ce60a5fbc-18",
+          "sourceNodeId": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+          "targetNodeId": "c63aeced-2014-43ed-aff7-de2ce60a5fbc",
+          "data": {
+            "label": "Program changes or session adjustments required",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "Program changes or session adjustments required",
+            "source": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+            "target": "c63aeced-2014-43ed-aff7-de2ce60a5fbc",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "7f6b6a18-4792-4b18-972f-c9d65210f4b3-0adbc028-4f22-41ab-9afb-cfec55a4b799-19",
+          "sourceNodeId": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+          "targetNodeId": "0adbc028-4f22-41ab-9afb-cfec55a4b799",
+          "data": {
+            "label": "No changes required",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "No changes required",
+            "source": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+            "target": "0adbc028-4f22-41ab-9afb-cfec55a4b799",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "1c3d0bf1-715e-4060-87b5-97ee193b19d1-7f6b6a18-4792-4b18-972f-c9d65210f4b3-20",
+          "sourceNodeId": "1c3d0bf1-715e-4060-87b5-97ee193b19d1",
+          "targetNodeId": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "1c3d0bf1-715e-4060-87b5-97ee193b19d1",
+            "target": "7f6b6a18-4792-4b18-972f-c9d65210f4b3",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "4823b381-d2d0-4b1d-8ac3-1412db8d6402-1c3d0bf1-715e-4060-87b5-97ee193b19d1-21",
+          "sourceNodeId": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+          "targetNodeId": "1c3d0bf1-715e-4060-87b5-97ee193b19d1",
+          "data": {
+            "label": "Program coordinator initiates session monitoring",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "Program coordinator initiates session monitoring",
+            "source": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+            "target": "1c3d0bf1-715e-4060-87b5-97ee193b19d1",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "22914f86-35c4-49e2-8be2-13da36394e11-4823b381-d2d0-4b1d-8ac3-1412db8d6402-22",
+          "sourceNodeId": "22914f86-35c4-49e2-8be2-13da36394e11",
+          "targetNodeId": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+          "data": {
+            "label": "",
+            "processName": "Participant Enrollment and Engagement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "22914f86-35c4-49e2-8be2-13da36394e11",
+            "target": "4823b381-d2d0-4b1d-8ac3-1412db8d6402",
+            "type": "SequenceFlow"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Feedback Collection and Program Improvement",
+      "description": "This process involves collecting feedback from learners and trainers, analyzing participation and feedback data, and using insights to improve future workshops and program offerings.",
+      "userStoryIds": [
+        "us04",
+        "us08",
+        "us11"
+      ],
+      "nodes": [
+        {
+          "id": "075e6486-bf15-419e-9929-38028323be86",
+          "position": {
+            "x": 362,
+            "y": 8
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Workshop session concludes or periodic program review initiated",
+            "userStoryId": "",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "075e6486-bf15-419e-9929-38028323be86",
+            "label": "Workshop session concludes or periodic program review initiated",
+            "resources": {},
+            "traceability": {},
+            "type": "Start"
+          }
+        },
+        {
+          "id": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+          "position": {
+            "x": 410,
+            "y": 118
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Determine feedback collection trigger",
+            "userStoryId": "",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": "Exclusive"
+          },
+          "type": "gateway",
+          "cfgNode": {
+            "id": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+            "label": "Determine feedback collection trigger",
+            "resources": {},
+            "traceability": {},
+            "isSplit": true,
+            "type": "DecisionStep",
+            "isMutuallyExclusive": true
+          }
+        },
+        {
+          "id": "2507e916-5559-4db9-9468-1ecbb1dc58f4",
+          "position": {
+            "x": 8,
+            "y": 308
+          },
+          "data": {
+            "actor": "Trainer",
+            "actionName": "Trainer collects feedback from learners",
+            "userStoryId": "us04",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "2507e916-5559-4db9-9468-1ecbb1dc58f4",
+            "label": "Trainer collects feedback from learners",
+            "resources": {
+              "actor": "Trainer"
+            },
+            "traceability": {
+              "userStories": [
+                "us04"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "22e2e27f-36db-4bf5-a622-bc8a85f8c246",
+          "position": {
+            "x": 8,
+            "y": 488
+          },
+          "data": {
+            "actor": "Learner",
+            "actionName": "Learner provides feedback about learning experience",
+            "userStoryId": "us08",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "22e2e27f-36db-4bf5-a622-bc8a85f8c246",
+            "label": "Learner provides feedback about learning experience",
+            "resources": {
+              "actor": "Learner"
+            },
+            "traceability": {
+              "userStories": [
+                "us08"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "9f0dd89b-8ad3-4b28-88a7-946720f90777",
+          "position": {
+            "x": 8,
+            "y": 668
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System aggregates feedback and participation data from session",
+            "userStoryId": "us04",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "9f0dd89b-8ad3-4b28-88a7-946720f90777",
+            "label": "System aggregates feedback and participation data from session",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us04",
+                "us08"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "e157da59-d7df-472f-af10-fe5ae2973a0b",
+          "position": {
+            "x": 8,
+            "y": 848
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator analyzes feedback and participation data",
+            "userStoryId": "us11",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "e157da59-d7df-472f-af10-fe5ae2973a0b",
+            "label": "Program coordinator analyzes feedback and participation data",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us11"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425",
+          "position": {
+            "x": 8,
+            "y": 1028
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System updates program offerings based on insights",
+            "userStoryId": "us11",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425",
+            "label": "System updates program offerings based on insights",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us11"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "f095b2ce-b808-40fc-9438-c3dcbf9a5817",
+          "position": {
+            "x": 112,
+            "y": 1208
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Session feedback collected and program improved",
+            "userStoryId": "",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "f095b2ce-b808-40fc-9438-c3dcbf9a5817",
+            "label": "Session feedback collected and program improved",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        },
+        {
+          "id": "a3c68d27-3767-4e27-a0cf-ef72cf7db312",
+          "position": {
+            "x": 508,
+            "y": 308
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System retrieves recent feedback and participation data",
+            "userStoryId": "us11",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "a3c68d27-3767-4e27-a0cf-ef72cf7db312",
+            "label": "System retrieves recent feedback and participation data",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us11"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "97f05551-d0c9-41b7-a787-663734ecbfef",
+          "position": {
+            "x": 508,
+            "y": 488
+          },
+          "data": {
+            "actor": "Program coordinator",
+            "actionName": "Program coordinator analyzes feedback and participation data",
+            "userStoryId": "us11",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "97f05551-d0c9-41b7-a787-663734ecbfef",
+            "label": "Program coordinator analyzes feedback and participation data",
+            "resources": {
+              "actor": "Program coordinator"
+            },
+            "traceability": {
+              "userStories": [
+                "us11"
+              ]
+            },
+            "type": "UserTask"
+          }
+        },
+        {
+          "id": "51eec714-425d-48ed-9648-f9cc94638635",
+          "position": {
+            "x": 508,
+            "y": 668
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "System updates program offerings based on insights",
+            "userStoryId": "us11",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "activity",
+          "cfgNode": {
+            "id": "51eec714-425d-48ed-9648-f9cc94638635",
+            "label": "System updates program offerings based on insights",
+            "resources": {
+              "actor": "System"
+            },
+            "traceability": {
+              "userStories": [
+                "us11"
+              ]
+            },
+            "type": "ServiceTask"
+          }
+        },
+        {
+          "id": "f4d2f45b-e644-41dd-8613-c3ac59578791",
+          "position": {
+            "x": 612,
+            "y": 883
+          },
+          "data": {
+            "actor": "System",
+            "actionName": "Periodic review completed and program improved",
+            "userStoryId": "",
+            "processName": "Feedback Collection and Program Improvement",
+            "subtype": ""
+          },
+          "type": "event",
+          "cfgNode": {
+            "id": "f4d2f45b-e644-41dd-8613-c3ac59578791",
+            "label": "Periodic review completed and program improved",
+            "resources": {},
+            "traceability": {},
+            "type": "End"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "2507e916-5559-4db9-9468-1ecbb1dc58f4-22e2e27f-36db-4bf5-a622-bc8a85f8c246-0",
+          "sourceNodeId": "2507e916-5559-4db9-9468-1ecbb1dc58f4",
+          "targetNodeId": "22e2e27f-36db-4bf5-a622-bc8a85f8c246",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "2507e916-5559-4db9-9468-1ecbb1dc58f4",
+            "target": "22e2e27f-36db-4bf5-a622-bc8a85f8c246",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "22e2e27f-36db-4bf5-a622-bc8a85f8c246-9f0dd89b-8ad3-4b28-88a7-946720f90777-1",
+          "sourceNodeId": "22e2e27f-36db-4bf5-a622-bc8a85f8c246",
+          "targetNodeId": "9f0dd89b-8ad3-4b28-88a7-946720f90777",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "22e2e27f-36db-4bf5-a622-bc8a85f8c246",
+            "target": "9f0dd89b-8ad3-4b28-88a7-946720f90777",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "9f0dd89b-8ad3-4b28-88a7-946720f90777-e157da59-d7df-472f-af10-fe5ae2973a0b-2",
+          "sourceNodeId": "9f0dd89b-8ad3-4b28-88a7-946720f90777",
+          "targetNodeId": "e157da59-d7df-472f-af10-fe5ae2973a0b",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "9f0dd89b-8ad3-4b28-88a7-946720f90777",
+            "target": "e157da59-d7df-472f-af10-fe5ae2973a0b",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "e157da59-d7df-472f-af10-fe5ae2973a0b-3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425-3",
+          "sourceNodeId": "e157da59-d7df-472f-af10-fe5ae2973a0b",
+          "targetNodeId": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "e157da59-d7df-472f-af10-fe5ae2973a0b",
+            "target": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425-f095b2ce-b808-40fc-9438-c3dcbf9a5817-4",
+          "sourceNodeId": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425",
+          "targetNodeId": "f095b2ce-b808-40fc-9438-c3dcbf9a5817",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "3457ac14-8cf7-4c5a-87e8-c8bf3fd8f425",
+            "target": "f095b2ce-b808-40fc-9438-c3dcbf9a5817",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "7954f7b2-b38e-4c39-be75-301c463b5f20-2507e916-5559-4db9-9468-1ecbb1dc58f4-5",
+          "sourceNodeId": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+          "targetNodeId": "2507e916-5559-4db9-9468-1ecbb1dc58f4",
+          "data": {
+            "label": "Workshop session just concluded",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "Workshop session just concluded",
+            "source": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+            "target": "2507e916-5559-4db9-9468-1ecbb1dc58f4",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "a3c68d27-3767-4e27-a0cf-ef72cf7db312-97f05551-d0c9-41b7-a787-663734ecbfef-6",
+          "sourceNodeId": "a3c68d27-3767-4e27-a0cf-ef72cf7db312",
+          "targetNodeId": "97f05551-d0c9-41b7-a787-663734ecbfef",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "a3c68d27-3767-4e27-a0cf-ef72cf7db312",
+            "target": "97f05551-d0c9-41b7-a787-663734ecbfef",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "97f05551-d0c9-41b7-a787-663734ecbfef-51eec714-425d-48ed-9648-f9cc94638635-7",
+          "sourceNodeId": "97f05551-d0c9-41b7-a787-663734ecbfef",
+          "targetNodeId": "51eec714-425d-48ed-9648-f9cc94638635",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "97f05551-d0c9-41b7-a787-663734ecbfef",
+            "target": "51eec714-425d-48ed-9648-f9cc94638635",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "51eec714-425d-48ed-9648-f9cc94638635-f4d2f45b-e644-41dd-8613-c3ac59578791-8",
+          "sourceNodeId": "51eec714-425d-48ed-9648-f9cc94638635",
+          "targetNodeId": "f4d2f45b-e644-41dd-8613-c3ac59578791",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "51eec714-425d-48ed-9648-f9cc94638635",
+            "target": "f4d2f45b-e644-41dd-8613-c3ac59578791",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "7954f7b2-b38e-4c39-be75-301c463b5f20-a3c68d27-3767-4e27-a0cf-ef72cf7db312-9",
+          "sourceNodeId": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+          "targetNodeId": "a3c68d27-3767-4e27-a0cf-ef72cf7db312",
+          "data": {
+            "label": "Periodic program review initiated",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "Periodic program review initiated",
+            "source": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+            "target": "a3c68d27-3767-4e27-a0cf-ef72cf7db312",
+            "type": "SequenceFlow"
+          }
+        },
+        {
+          "id": "075e6486-bf15-419e-9929-38028323be86-7954f7b2-b38e-4c39-be75-301c463b5f20-10",
+          "sourceNodeId": "075e6486-bf15-419e-9929-38028323be86",
+          "targetNodeId": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+          "data": {
+            "label": "",
+            "processName": "Feedback Collection and Program Improvement"
+          },
+          "cfgEdge": {
+            "label": "",
+            "source": "075e6486-bf15-419e-9929-38028323be86",
+            "target": "7954f7b2-b38e-4c39-be75-301c463b5f20",
+            "type": "SequenceFlow"
+          }
+        }
+      ]
+    }
+  ],
+  "securityRoles": []
+}

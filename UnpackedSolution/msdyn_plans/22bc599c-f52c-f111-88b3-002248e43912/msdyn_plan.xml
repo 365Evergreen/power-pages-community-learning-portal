@@ -1,0 +1,11 @@
+<msdyn_plan msdyn_planid="22bc599c-f52c-f111-88b3-002248e43912">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_content mimetype="application/octet-stream">content</msdyn_content>
+  <msdyn_contentschemaversion>1.1</msdyn_contentschemaversion>
+  <msdyn_description>This solution helps trainers, learners, and coordinators efficiently manage and participate in community-focused learning programs.</msdyn_description>
+  <msdyn_languagecode>1033</msdyn_languagecode>
+  <msdyn_name>Community Learning Hub</msdyn_name>
+  <msdyn_prompt>Community Learning Hub connects non-profit trainers with eager learners through accessible workshops and training programs. We support participant enrolment and tailor sessions to meet diverse community needs.</msdyn_prompt>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_plan>

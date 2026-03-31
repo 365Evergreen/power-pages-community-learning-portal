@@ -1,0 +1,12 @@
+<msdyn_planartifact msdyn_planartifactid="79221abe-f52c-f111-88b4-000d3a7a02f6">
+  <iscustomizable>1</iscustomizable>
+  <msdyn_artifactmetadataschemaversion>1.0</msdyn_artifactmetadataschemaversion>
+  <msdyn_artifactstatus>419550000</msdyn_artifactstatus>
+  <msdyn_description>Learners receive automatic reminders and updates for upcoming workshops to stay informed and engaged.</msdyn_description>
+  <msdyn_name>Session Reminder Flow</msdyn_name>
+  <msdyn_proposal mimetype="application/octet-stream">content</msdyn_proposal>
+  <msdyn_proposalschemaversion>1.0</msdyn_proposalschemaversion>
+  <msdyn_type>PowerAutomateFlow</msdyn_type>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_planartifact>

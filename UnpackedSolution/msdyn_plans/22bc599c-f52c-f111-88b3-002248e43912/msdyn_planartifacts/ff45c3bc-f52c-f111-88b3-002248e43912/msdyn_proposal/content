@@ -1,0 +1,25 @@
+{
+  "name": "Trainer Guidance Agent",
+  "description": "Trainers get AI support to tailor content and collect feedback, helping make workshops relevant and impactful.",
+  "typesOfUsers": [
+    "Trainer"
+  ],
+  "tableSchemaNames": [
+    "ppdev_Communitytrainer",
+    "ppdev_Communityworkshop",
+    "ppdev_Communitymemberfeedback"
+  ],
+  "userStories": [
+    {
+      "id": "us02",
+      "description": "Tailor workshop content to address specific community needs so that sessions are relevant and impactful.",
+      "userType": "Trainer"
+    },
+    {
+      "id": "us04",
+      "description": "Collect feedback from learners after sessions so that I can improve future workshops.",
+      "userType": "Trainer"
+    }
+  ],
+  "version": 1
+}

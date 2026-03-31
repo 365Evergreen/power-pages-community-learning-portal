@@ -1,0 +1,31 @@
+{
+  "name": "Learner Support Agent",
+  "description": "Learners browse workshops, enroll, and provide feedback with conversational AI support for an engaging experience.",
+  "typesOfUsers": [
+    "Learner"
+  ],
+  "tableSchemaNames": [
+    "ppdev_Communitylearner",
+    "ppdev_Communityworkshop",
+    "ppdev_Communitytrainingenrolment",
+    "ppdev_Communitymemberfeedback"
+  ],
+  "userStories": [
+    {
+      "id": "us05",
+      "description": "Browse available workshops so that I can find sessions that interest me.",
+      "userType": "Learner"
+    },
+    {
+      "id": "us06",
+      "description": "Enroll in workshops so that I can develop new skills and knowledge.",
+      "userType": "Learner"
+    },
+    {
+      "id": "us08",
+      "description": "Provide feedback about my learning experience so that programs can be improved.",
+      "userType": "Learner"
+    }
+  ],
+  "version": 1
+}

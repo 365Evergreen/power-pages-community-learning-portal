@@ -1,0 +1,19 @@
+{
+  "name": "Session Reminder Flow",
+  "description": "Learners receive automatic reminders and updates for upcoming workshops to stay informed and engaged.",
+  "typesOfUsers": [
+    "Learner"
+  ],
+  "tableSchemaNames": [
+    "ppdev_Communitylearner",
+    "ppdev_Communitytrainingenrolment"
+  ],
+  "userStories": [
+    {
+      "id": "us07",
+      "description": "Receive reminders and updates about sessions so that I stay informed.",
+      "userType": "Learner"
+    }
+  ],
+  "version": 1
+}
