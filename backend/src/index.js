@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import workshopsRouter from './routes/workshops.js';
+import entitiesRouter from './routes/entities.js';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.get('/.well-known/appspecific/com.chrome.devtools.json', (req, res) => {
 });
 
 app.use('/api/workshops', workshopsRouter);
+app.use('/api/entities', entitiesRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
