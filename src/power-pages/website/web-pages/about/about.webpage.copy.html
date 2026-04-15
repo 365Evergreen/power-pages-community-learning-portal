@@ -1,0 +1,108 @@
+<div class="clh-container">
+  <header class="clh-page-header">
+    <h1 class="clh-page-header__title">About the Community Learning Hub</h1>
+    <p class="clh-page-header__subtitle">
+      Empowering communities through accessible learning opportunities.
+    </p>
+  </header>
+
+  <!-- Mission -->
+  <section class="clh-section" aria-labelledby="mission-heading">
+    <div class="clh-two-col">
+      <div class="clh-two-col__content">
+        <h2 id="mission-heading">Our Mission</h2>
+        <p>
+          The Community Learning Hub connects non-profit trainers with eager learners through
+          accessible workshops and training programs. We believe that learning should be
+          available to everyone, regardless of background, ability, or location.
+        </p>
+        <p>
+          We partner with non-profit organisations to deliver high-quality, community-focused
+          training that addresses real needs—from digital literacy and financial wellbeing to
+          health, employment, and beyond.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Trainers -->
+  <section class="clh-section clh-section--alt" aria-labelledby="trainers-heading">
+    <div class="clh-container">
+      <h2 id="trainers-heading" class="clh-section__title">Meet Our Trainers</h2>
+      <p class="clh-section__subtitle">
+        Our trainers are passionate non-profit professionals dedicated to sharing their expertise.
+      </p>
+
+      {% fetchxml trainersQuery %}
+      <fetch distinct="false">
+        <entity name="clh_trainer">
+          <attribute name="clh_trainerid" />
+          <attribute name="clh_name" />
+          <attribute name="clh_organization" />
+          <attribute name="clh_specialization" />
+          <attribute name="clh_bio" />
+          <attribute name="clh_profilepicture" />
+          <filter>
+            <condition attribute="clh_publishtoportal" operator="eq" value="true" />
+            <condition attribute="clh_isactive" operator="eq" value="true" />
+          </filter>
+          <order attribute="clh_name" descending="false" />
+        </entity>
+      </fetch>
+      {% endfetchxml %}
+
+      {% if trainersQuery.results.entities.size > 0 %}
+      <div class="clh-trainer-grid" role="list">
+        {% for trainer in trainersQuery.results.entities %}
+        <div class="clh-trainer-card" role="listitem">
+          <div class="clh-trainer-card__avatar">
+            {% if trainer.clh_profilepicture %}
+            <img src="{{ trainer.clh_profilepicture | escape }}"
+              alt="Photo of {{ trainer.clh_name | escape }}"
+              class="clh-trainer-card__photo"
+              loading="lazy" />
+            {% else %}
+            <span class="clh-trainer-card__initials" aria-hidden="true">
+              {{ trainer.clh_name | slice: 0 }}
+            </span>
+            {% endif %}
+          </div>
+          <div class="clh-trainer-card__info">
+            <h3 class="clh-trainer-card__name">{{ trainer.clh_name }}</h3>
+            <p class="clh-trainer-card__org">{{ trainer.clh_organization }}</p>
+            {% if trainer.clh_specialization %}
+            <p class="clh-trainer-card__specialization">{{ trainer.clh_specialization }}</p>
+            {% endif %}
+            {% if trainer.clh_bio %}
+            <p class="clh-trainer-card__bio">{{ trainer.clh_bio | truncate: 200 }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="clh-empty-state__message">Trainer profiles coming soon.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="clh-section" aria-labelledby="contact-heading">
+    <div class="clh-container clh-container--narrow">
+      <h2 id="contact-heading" class="clh-section__title">Get in Touch</h2>
+      <p>
+        Have a question? Want to deliver a workshop through the Community Learning Hub?
+        We'd love to hear from you.
+      </p>
+      <div class="clh-contact-info">
+        <p>
+          <span class="clh-icon clh-icon--email" aria-hidden="true"></span>
+          <a href="mailto:{% snippet ContactEmail %}{% endsnippet %}">
+            {%- snippet ContactEmail -%}hello@communitylearninghub.org{%- endsnippet -%}
+          </a>
+        </p>
+      </div>
+      <a href="/workshops" class="clh-btn clh-btn--primary">Browse Workshops</a>
+    </div>
+  </section>
+</div>

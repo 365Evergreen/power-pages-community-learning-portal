@@ -1,0 +1,199 @@
+<div class="clh-container">
+  <!-- Page Header -->
+  <header class="clh-page-header">
+    <h1 class="clh-page-header__title">Workshops &amp; Training Programs</h1>
+    <p class="clh-page-header__subtitle">
+      Find a workshop that fits your goals. All programs are delivered by non-profit trainers
+      committed to making learning accessible for everyone.
+    </p>
+  </header>
+
+  <!-- Filters -->
+  <section class="clh-filters" aria-label="Workshop filters">
+    <form id="workshopFilterForm" method="get" action="/workshops" class="clh-filters__form">
+      <div class="clh-filters__group">
+        <label for="filterCategory" class="clh-filters__label">Category</label>
+        <select id="filterCategory" name="category" class="clh-filters__select">
+          <option value="">All Categories</option>
+          <option value="100000000" {% if request.params['category'] == '100000000' %}selected{% endif %}>Digital Skills</option>
+          <option value="100000001" {% if request.params['category'] == '100000001' %}selected{% endif %}>Financial Literacy</option>
+          <option value="100000002" {% if request.params['category'] == '100000002' %}selected{% endif %}>Health &amp; Wellbeing</option>
+          <option value="100000003" {% if request.params['category'] == '100000003' %}selected{% endif %}>Employment &amp; Careers</option>
+          <option value="100000004" {% if request.params['category'] == '100000004' %}selected{% endif %}>Community Development</option>
+          <option value="100000005" {% if request.params['category'] == '100000005' %}selected{% endif %}>Language &amp; Literacy</option>
+          <option value="100000006" {% if request.params['category'] == '100000006' %}selected{% endif %}>Arts &amp; Culture</option>
+          <option value="100000007" {% if request.params['category'] == '100000007' %}selected{% endif %}>Environment &amp; Sustainability</option>
+          <option value="100000008" {% if request.params['category'] == '100000008' %}selected{% endif %}>Other</option>
+        </select>
+      </div>
+      <div class="clh-filters__group">
+        <label for="filterFormat" class="clh-filters__label">Format</label>
+        <select id="filterFormat" name="format" class="clh-filters__select">
+          <option value="">All Formats</option>
+          <option value="100000000" {% if request.params['format'] == '100000000' %}selected{% endif %}>In-Person</option>
+          <option value="100000001" {% if request.params['format'] == '100000001' %}selected{% endif %}>Online (Live)</option>
+          <option value="100000002" {% if request.params['format'] == '100000002' %}selected{% endif %}>Hybrid</option>
+          <option value="100000003" {% if request.params['format'] == '100000003' %}selected{% endif %}>Self-Paced Online</option>
+        </select>
+      </div>
+      <div class="clh-filters__group">
+        <label for="filterFree" class="clh-filters__label">Cost</label>
+        <select id="filterFree" name="free" class="clh-filters__select">
+          <option value="">Any Cost</option>
+          <option value="true" {% if request.params['free'] == 'true' %}selected{% endif %}>Free Only</option>
+        </select>
+      </div>
+      <div class="clh-filters__group clh-filters__group--search">
+        <label for="filterSearch" class="clh-filters__label">Search</label>
+        <input type="search" id="filterSearch" name="q" class="clh-filters__input"
+          placeholder="Search workshops..." value="{{ request.params['q'] | escape }}" />
+      </div>
+      <div class="clh-filters__actions">
+        <button type="submit" class="clh-btn clh-btn--primary">Apply Filters</button>
+        <a href="/workshops" class="clh-btn clh-btn--ghost">Clear</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- Workshop Listings -->
+  {% assign cat_filter = request.params['category'] %}
+  {% assign fmt_filter = request.params['format'] %}
+  {% assign free_filter = request.params['free'] %}
+  {% assign q_filter = request.params['q'] %}
+
+  {% fetchxml workshopsQuery %}
+  <fetch distinct="false">
+    <entity name="clh_workshop">
+      <attribute name="clh_workshopid" />
+      <attribute name="clh_name" />
+      <attribute name="clh_shortdescription" />
+      <attribute name="clh_startdate" />
+      <attribute name="clh_enddate" />
+      <attribute name="clh_location" />
+      <attribute name="clh_deliveryformat" />
+      <attribute name="clh_category" />
+      <attribute name="clh_imageurl" />
+      <attribute name="clh_isfree" />
+      <attribute name="clh_cost" />
+      <attribute name="clh_maxparticipants" />
+      <attribute name="clh_currentenrollments" />
+      <attribute name="clh_accessibilitynotes" />
+      <link-entity name="clh_trainer" from="clh_trainerid" to="clh_trainer" alias="trainer">
+        <attribute name="clh_name" alias="trainername" />
+        <attribute name="clh_organization" alias="trainerorg" />
+      </link-entity>
+      <filter type="and">
+        <condition attribute="clh_publishtoportal" operator="eq" value="true" />
+        <condition attribute="clh_status" operator="eq" value="100000001" />
+        {% if cat_filter != "" and cat_filter != nil %}
+        <condition attribute="clh_category" operator="eq" value="{{ cat_filter }}" />
+        {% endif %}
+        {% if fmt_filter != "" and fmt_filter != nil %}
+        <condition attribute="clh_deliveryformat" operator="eq" value="{{ fmt_filter }}" />
+        {% endif %}
+        {% if free_filter == "true" %}
+        <condition attribute="clh_isfree" operator="eq" value="true" />
+        {% endif %}
+        {% if q_filter != "" and q_filter != nil %}
+        <condition attribute="clh_name" operator="like" value="%{{ q_filter }}%" />
+        {% endif %}
+      </filter>
+      <order attribute="clh_startdate" descending="false" />
+    </entity>
+  </fetch>
+  {% endfetchxml %}
+
+  <main id="main-content">
+    {% if workshopsQuery.results.entities.size > 0 %}
+    <p class="clh-results-count" role="status" aria-live="polite">
+      Showing {{ workshopsQuery.results.entities.size }} workshop{% if workshopsQuery.results.entities.size != 1 %}s{% endif %}
+    </p>
+    <div class="clh-workshop-grid" role="list">
+      {% for workshop in workshopsQuery.results.entities %}
+      <article class="clh-workshop-card" role="listitem">
+        {% if workshop.clh_imageurl %}
+        <div class="clh-workshop-card__image">
+          <img src="{{ workshop.clh_imageurl | escape }}" alt="{{ workshop.clh_name | escape }} banner" loading="lazy" />
+        </div>
+        {% else %}
+        <div class="clh-workshop-card__image clh-workshop-card__image--placeholder" aria-hidden="true"></div>
+        {% endif %}
+        <div class="clh-workshop-card__body">
+          <div class="clh-workshop-card__meta">
+            <span class="clh-badge clh-badge--category">{{ workshop.clh_category_label }}</span>
+            {% if workshop.clh_isfree %}
+            <span class="clh-badge clh-badge--free">Free</span>
+            {% endif %}
+            <span class="clh-badge clh-badge--format">{{ workshop.clh_deliveryformat_label }}</span>
+          </div>
+          <h2 class="clh-workshop-card__title">
+            <a href="/workshops/{{ workshop.clh_workshopid }}">{{ workshop.clh_name }}</a>
+          </h2>
+          <p class="clh-workshop-card__trainer">
+            {{ workshop.trainername }}{% if workshop.trainerorg %} &mdash; {{ workshop.trainerorg }}{% endif %}
+          </p>
+          {% if workshop.clh_shortdescription %}
+          <p class="clh-workshop-card__description">{{ workshop.clh_shortdescription }}</p>
+          {% endif %}
+          <ul class="clh-workshop-card__details" aria-label="Workshop details">
+            <li>
+              <span class="clh-icon clh-icon--calendar" aria-hidden="true"></span>
+              <time datetime="{{ workshop.clh_startdate | date: '%Y-%m-%dT%H:%M' }}">
+                {{ workshop.clh_startdate | date: '%d %B %Y, %I:%M %p' }}
+              </time>
+            </li>
+            {% if workshop.clh_location %}
+            <li>
+              <span class="clh-icon clh-icon--location" aria-hidden="true"></span>
+              {{ workshop.clh_location | escape }}
+            </li>
+            {% endif %}
+            {% if workshop.clh_accessibilitynotes %}
+            <li>
+              <span class="clh-icon clh-icon--accessible" aria-hidden="true"></span>
+              Accessibility info available
+            </li>
+            {% endif %}
+          </ul>
+          <div class="clh-workshop-card__footer">
+            {% assign spots_left = workshop.clh_maxparticipants | minus: workshop.clh_currentenrollments %}
+            {% if spots_left <= 5 and spots_left > 0 %}
+            <span class="clh-workshop-card__spots clh-workshop-card__spots--low" role="status">
+              Only {{ spots_left }} spot{% if spots_left != 1 %}s{% endif %} left
+            </span>
+            {% elsif spots_left <= 0 %}
+            <span class="clh-workshop-card__spots clh-workshop-card__spots--full" role="status">
+              Workshop Full
+            </span>
+            {% endif %}
+            <div class="clh-workshop-card__actions">
+              <a href="/workshops/{{ workshop.clh_workshopid }}" class="clh-btn clh-btn--secondary">View Details</a>
+              <a href="/enroll?workshopId={{ workshop.clh_workshopid }}"
+                class="clh-btn clh-btn--primary"
+                {% if spots_left <= 0 %}aria-label="Join waitlist for {{ workshop.clh_name | escape }}"{% else %}aria-label="Enrol in {{ workshop.clh_name | escape }}"{% endif %}>
+                {% if spots_left <= 0 %}Join Waitlist{% else %}Enrol Now{% endif %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="clh-empty-state" role="status">
+      <div class="clh-empty-state__icon" aria-hidden="true"></div>
+      <h2 class="clh-empty-state__title">No workshops found</h2>
+      <p class="clh-empty-state__message">
+        {% if cat_filter or fmt_filter or free_filter or q_filter %}
+          Try adjusting your filters to find more workshops.
+        {% else %}
+          There are no published workshops at the moment. Check back soon!
+        {% endif %}
+      </p>
+      {% if cat_filter or fmt_filter or free_filter or q_filter %}
+      <a href="/workshops" class="clh-btn clh-btn--secondary">Clear Filters</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </main>
+</div>

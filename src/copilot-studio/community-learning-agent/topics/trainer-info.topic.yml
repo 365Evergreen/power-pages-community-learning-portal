@@ -1,0 +1,55 @@
+id: trainer-info
+name: Trainer Information
+description: >
+  Provides information about trainers, their backgrounds and specialisations,
+  and how non-profit trainers can join the Community Learning Hub.
+triggerPhrases:
+  - who are the trainers
+  - meet the trainers
+  - trainer background
+  - become a trainer
+  - deliver a workshop
+  - join as trainer
+  - non-profit organisation
+  - partner with you
+nodes:
+  - id: ask-intent
+    type: question
+    questionType: choice
+    variable: trainerIntent
+    content: "Are you looking for information about our existing trainers, or are you interested in becoming a trainer?"
+    choices:
+      - label: "Learn about existing trainers"
+        value: about-trainers
+      - label: "Become a trainer / partner with us"
+        value: become-trainer
+
+    conditions:
+      - expression: "trainerIntent == 'about-trainers'"
+        nodes:
+          - id: about-trainers
+            type: message
+            content: >
+              Our trainers are qualified professionals from non-profit organisations
+              who are passionate about community learning. You can see their profiles,
+              organisations, and specialisations on our [About page](/about).
+
+              Each trainer's workshop listing shows their name and organisation,
+              so you always know who will be delivering your session.
+
+      - expression: "trainerIntent == 'become-trainer'"
+        nodes:
+          - id: become-trainer
+            type: message
+            content: >
+              We'd love to hear from you! The Community Learning Hub partners with
+              non-profit organisations to deliver workshops to the community.
+
+              To express your interest, please:
+              1. Email us at **hello@communitylearninghub.org**
+              2. Include a brief description of your organisation, the workshops you'd like to deliver,
+                 and the communities you serve.
+
+              Our team will get back to you within 5 business days.
+
+              Is there anything else I can help with?

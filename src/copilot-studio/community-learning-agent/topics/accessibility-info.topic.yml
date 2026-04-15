@@ -1,0 +1,75 @@
+id: accessibility-info
+name: Accessibility Information
+description: >
+  Provides information about accessibility features and how to communicate
+  accessibility needs when enrolling in a workshop.
+triggerPhrases:
+  - accessibility
+  - accessible workshops
+  - disability support
+  - hearing loop
+  - wheelchair access
+  - large print
+  - interpreter
+  - I have accessibility needs
+  - do you support
+nodes:
+  - id: intro
+    type: message
+    content: >
+      We are committed to making all our workshops as accessible as possible.
+      Here's how we support participants:
+
+      **At enrolment:** There's a dedicated field on the enrolment form for you to
+      describe any accessibility requirements — such as mobility aids, hearing loops,
+      large print materials, sign language interpretation, or dietary requirements
+      for in-person events.
+
+      **We'll follow up:** Once you submit your enrolment, the trainer and our team
+      will review your requirements and contact you to confirm how we can best
+      accommodate you.
+
+      **Online workshops:** Our online sessions are delivered via accessible platforms
+      and can include closed captions on request.
+
+  - id: ask-more
+    type: question
+    questionType: choice
+    variable: accessibilityNext
+    choices:
+      - label: "How do I request support when enrolling?"
+        value: how-to-request
+      - label: "What if my needs can't be met?"
+        value: cant-meet
+      - label: "That's all I needed, thank you"
+        value: done
+
+    conditions:
+      - expression: "accessibilityNext == 'how-to-request'"
+        nodes:
+          - id: how-to-request
+            type: message
+            content: >
+              When you fill in the enrolment form, look for the
+              **"Accessibility Requirements or Support Needs"** section.
+              Describe your requirements in as much detail as you like — there's no word limit.
+
+              Our team reviews every submission and will contact you before the workshop
+              to ensure everything is in place.
+
+      - expression: "accessibilityNext == 'cant-meet'"
+        nodes:
+          - id: cant-meet
+            type: message
+            content: >
+              In rare cases where we're unable to fully meet your needs for a particular
+              workshop, we'll let you know as early as possible and try to suggest
+              alternatives. Please contact us at hello@communitylearninghub.org to discuss
+              your situation and we'll do our best to help.
+
+      - expression: "accessibilityNext == 'done'"
+        nodes:
+          - id: done
+            type: message
+            content: >
+              You're welcome! Is there anything else I can help with?

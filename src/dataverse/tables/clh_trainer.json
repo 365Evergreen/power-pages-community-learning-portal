@@ -1,0 +1,100 @@
+{
+  "name": "clh_trainer",
+  "displayName": "Trainer",
+  "pluralDisplayName": "Trainers",
+  "description": "Non-profit trainers who deliver workshops and training programs.",
+  "ownershipType": "UserOwned",
+  "primaryNameAttribute": "clh_name",
+  "attributes": [
+    {
+      "name": "clh_trainerid",
+      "displayName": "Trainer",
+      "type": "Uniqueidentifier",
+      "isPrimaryId": true,
+      "requiredLevel": "SystemRequired"
+    },
+    {
+      "name": "clh_name",
+      "displayName": "Full Name",
+      "type": "String",
+      "maxLength": 200,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Full name of the trainer."
+    },
+    {
+      "name": "clh_email",
+      "displayName": "Email Address",
+      "type": "String",
+      "format": "Email",
+      "maxLength": 200,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Primary email address for the trainer."
+    },
+    {
+      "name": "clh_phone",
+      "displayName": "Phone Number",
+      "type": "String",
+      "format": "Phone",
+      "maxLength": 50,
+      "requiredLevel": "None",
+      "description": "Contact phone number."
+    },
+    {
+      "name": "clh_organization",
+      "displayName": "Organization",
+      "type": "String",
+      "maxLength": 200,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Non-profit organization the trainer represents."
+    },
+    {
+      "name": "clh_bio",
+      "displayName": "Biography",
+      "type": "Memo",
+      "maxLength": 4000,
+      "requiredLevel": "None",
+      "description": "Short biography and background of the trainer."
+    },
+    {
+      "name": "clh_specialization",
+      "displayName": "Specialization",
+      "type": "String",
+      "maxLength": 500,
+      "requiredLevel": "None",
+      "description": "Areas of expertise and subject matter specialization."
+    },
+    {
+      "name": "clh_profilepicture",
+      "displayName": "Profile Picture URL",
+      "type": "String",
+      "maxLength": 500,
+      "requiredLevel": "None",
+      "description": "URL of the trainer's profile photo."
+    },
+    {
+      "name": "clh_website",
+      "displayName": "Website",
+      "type": "String",
+      "format": "Url",
+      "maxLength": 500,
+      "requiredLevel": "None",
+      "description": "Trainer or organization website URL."
+    },
+    {
+      "name": "clh_isactive",
+      "displayName": "Is Active",
+      "type": "Boolean",
+      "defaultValue": true,
+      "requiredLevel": "ApplicationRequired",
+      "description": "Indicates whether the trainer is currently active."
+    },
+    {
+      "name": "clh_publishtoportal",
+      "displayName": "Publish to Portal",
+      "type": "Boolean",
+      "defaultValue": false,
+      "requiredLevel": "ApplicationRequired",
+      "description": "When true, the trainer profile is visible on the public-facing Power Pages portal."
+    }
+  ]
+}

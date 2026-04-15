@@ -1,0 +1,11 @@
+id: enrollment-api
+name: Enrollment API
+description: >
+  Anonymous-accessible API endpoint that accepts workshop enrolment submissions,
+  creates a clh_enrollment record in Dataverse, and triggers the Power Automate
+  enrollment confirmation flow via a webhook.
+type: WebTemplate
+partialUrl: /api/enrollment
+allowAnonymousAccess: true
+methods:
+  - POST

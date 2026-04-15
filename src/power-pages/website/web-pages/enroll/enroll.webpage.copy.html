@@ -1,0 +1,252 @@
+<div class="clh-container clh-container--narrow">
+
+  {% assign workshopId = request.params['workshopId'] %}
+
+  {% if workshopId == "" or workshopId == nil %}
+  <!-- No workshop selected -->
+  <div class="clh-alert clh-alert--warning" role="alert">
+    <p>No workshop was selected. Please <a href="/workshops">browse our workshops</a> and choose one to enrol in.</p>
+  </div>
+  {% else %}
+
+  <!-- Load workshop details -->
+  {% fetchxml workshopQuery %}
+  <fetch top="1">
+    <entity name="clh_workshop">
+      <attribute name="clh_workshopid" />
+      <attribute name="clh_name" />
+      <attribute name="clh_shortdescription" />
+      <attribute name="clh_startdate" />
+      <attribute name="clh_enddate" />
+      <attribute name="clh_location" />
+      <attribute name="clh_deliveryformat" />
+      <attribute name="clh_maxparticipants" />
+      <attribute name="clh_currentenrollments" />
+      <attribute name="clh_isfree" />
+      <attribute name="clh_cost" />
+      <attribute name="clh_accessibilitynotes" />
+      <attribute name="clh_prerequisites" />
+      <attribute name="clh_status" />
+      <link-entity name="clh_trainer" from="clh_trainerid" to="clh_trainer" alias="trainer">
+        <attribute name="clh_name" alias="trainername" />
+      </link-entity>
+      <filter>
+        <condition attribute="clh_workshopid" operator="eq" value="{{ workshopId }}" />
+        <condition attribute="clh_publishtoportal" operator="eq" value="true" />
+      </filter>
+    </entity>
+  </fetch>
+  {% endfetchxml %}
+
+  {% assign workshop = workshopQuery.results.entities[0] %}
+
+  {% if workshop == nil %}
+  <div class="clh-alert clh-alert--error" role="alert">
+    <p>The workshop you selected could not be found. Please <a href="/workshops">browse our workshops</a> and try again.</p>
+  </div>
+  {% else %}
+
+  {% assign spots_left = workshop.clh_maxparticipants | minus: workshop.clh_currentenrollments %}
+  {% assign is_full = false %}
+  {% if spots_left <= 0 %}{% assign is_full = true %}{% endif %}
+
+  <header class="clh-page-header">
+    <p class="clh-breadcrumb">
+      <a href="/workshops">Workshops</a> &rsaquo;
+      <a href="/workshops/{{ workshop.clh_workshopid }}">{{ workshop.clh_name }}</a> &rsaquo;
+      Enrol
+    </p>
+    <h1 class="clh-page-header__title">
+      {% if is_full %}Join the Waitlist{% else %}Enrol in Workshop{% endif %}
+    </h1>
+  </header>
+
+  <!-- Workshop Summary Card -->
+  <div class="clh-enroll-summary" aria-label="Workshop summary">
+    <div class="clh-enroll-summary__info">
+      <h2 class="clh-enroll-summary__name">{{ workshop.clh_name }}</h2>
+      <p class="clh-enroll-summary__trainer">Delivered by {{ workshop.trainername }}</p>
+      <ul class="clh-enroll-summary__details">
+        <li>
+          <span class="clh-icon clh-icon--calendar" aria-hidden="true"></span>
+          <time datetime="{{ workshop.clh_startdate | date: '%Y-%m-%dT%H:%M' }}">
+            {{ workshop.clh_startdate | date: '%d %B %Y, %I:%M %p' }}
+          </time>
+        </li>
+        {% if workshop.clh_location %}
+        <li>
+          <span class="clh-icon clh-icon--location" aria-hidden="true"></span>
+          {{ workshop.clh_location | escape }}
+        </li>
+        {% endif %}
+        <li>
+          <span class="clh-icon clh-icon--format" aria-hidden="true"></span>
+          {{ workshop.clh_deliveryformat_label }}
+        </li>
+        {% if workshop.clh_isfree %}
+        <li>
+          <span class="clh-icon clh-icon--price" aria-hidden="true"></span>
+          <strong>Free</strong>
+        </li>
+        {% endif %}
+      </ul>
+      {% if spots_left > 0 and spots_left <= 10 %}
+      <p class="clh-enroll-summary__availability clh-enroll-summary__availability--low" role="status">
+        Only {{ spots_left }} spot{% if spots_left != 1 %}s{% endif %} remaining!
+      </p>
+      {% elsif is_full %}
+      <p class="clh-enroll-summary__availability clh-enroll-summary__availability--full" role="status">
+        This workshop is full. You can join the waitlist and we'll contact you if a spot becomes available.
+      </p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Enrolment Form -->
+  <section class="clh-enroll-form-section" aria-labelledby="enroll-form-heading">
+    <h2 id="enroll-form-heading" class="clh-section__title">Your Details</h2>
+    <p class="clh-enroll-form-section__note">
+      No account needed. Fill in your details below and we'll send a confirmation to your email.
+      Fields marked <abbr title="required">*</abbr> are required.
+    </p>
+
+    <form id="enrollmentForm"
+      method="post"
+      action="/api/enrollment"
+      class="clh-form"
+      novalidate
+      aria-label="Enrolment form for {{ workshop.clh_name | escape }}">
+
+      <!-- CSRF token -->
+      <input type="hidden" name="__RequestVerificationToken" value="{{ request.antiforgery.token }}" />
+      <input type="hidden" name="workshopId" value="{{ workshop.clh_workshopid }}" />
+      <input type="hidden" name="isWaitlist" value="{{ is_full }}" />
+
+      <!-- Personal Details -->
+      <fieldset class="clh-form__fieldset">
+        <legend class="clh-form__legend">Personal Information</legend>
+
+        <div class="clh-form__row">
+          <div class="clh-form__group">
+            <label for="participantName" class="clh-form__label">
+              Full Name <abbr title="required" aria-hidden="true">*</abbr>
+            </label>
+            <input type="text"
+              id="participantName"
+              name="participantName"
+              class="clh-form__input"
+              autocomplete="name"
+              required
+              aria-required="true"
+              aria-describedby="participantNameError"
+              maxlength="200" />
+            <span id="participantNameError" class="clh-form__error" role="alert" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="clh-form__row clh-form__row--split">
+          <div class="clh-form__group">
+            <label for="participantEmail" class="clh-form__label">
+              Email Address <abbr title="required" aria-hidden="true">*</abbr>
+            </label>
+            <input type="email"
+              id="participantEmail"
+              name="participantEmail"
+              class="clh-form__input"
+              autocomplete="email"
+              required
+              aria-required="true"
+              aria-describedby="participantEmailHint participantEmailError"
+              maxlength="200" />
+            <span id="participantEmailHint" class="clh-form__hint">
+              We'll send your confirmation and reminders here.
+            </span>
+            <span id="participantEmailError" class="clh-form__error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="clh-form__group">
+            <label for="participantPhone" class="clh-form__label">Phone Number</label>
+            <input type="tel"
+              id="participantPhone"
+              name="participantPhone"
+              class="clh-form__input"
+              autocomplete="tel"
+              aria-describedby="participantPhoneHint"
+              maxlength="50" />
+            <span id="participantPhoneHint" class="clh-form__hint">Optional.</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Accessibility & Additional Needs -->
+      <fieldset class="clh-form__fieldset">
+        <legend class="clh-form__legend">Accessibility &amp; Support</legend>
+        <p class="clh-form__fieldset-description">
+          We are committed to making our workshops accessible to everyone. Please let us know of
+          any requirements so we can tailor the session for you.
+        </p>
+
+        <div class="clh-form__group">
+          <label for="accessibilityRequirements" class="clh-form__label">
+            Accessibility Requirements or Support Needs
+          </label>
+          <textarea id="accessibilityRequirements"
+            name="accessibilityRequirements"
+            class="clh-form__textarea"
+            rows="3"
+            aria-describedby="accessibilityHint"
+            maxlength="2000"></textarea>
+          <span id="accessibilityHint" class="clh-form__hint">
+            E.g. mobility aids, hearing loops, large print materials, dietary requirements for in-person events.
+          </span>
+        </div>
+
+        {% if workshop.clh_accessibilitynotes %}
+        <div class="clh-alert clh-alert--info" role="note">
+          <strong>Accessibility information for this workshop:</strong>
+          <p>{{ workshop.clh_accessibilitynotes }}</p>
+        </div>
+        {% endif %}
+      </fieldset>
+
+      <!-- Notes -->
+      <fieldset class="clh-form__fieldset">
+        <legend class="clh-form__legend">Additional Information</legend>
+
+        <div class="clh-form__group">
+          <label for="additionalNotes" class="clh-form__label">
+            Questions or Notes for the Trainer
+          </label>
+          <textarea id="additionalNotes"
+            name="additionalNotes"
+            class="clh-form__textarea"
+            rows="3"
+            maxlength="2000"></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Privacy Notice -->
+      <div class="clh-form__privacy">
+        <p>
+          Your information will be used to process your enrolment and send workshop communications.
+          We do not share your details with third parties. By submitting this form you agree to our
+          <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.
+        </p>
+      </div>
+
+      <!-- Submit -->
+      <div class="clh-form__actions">
+        <button type="submit" class="clh-btn clh-btn--primary clh-btn--lg" id="enrollSubmitBtn">
+          {% if is_full %}Join Waitlist{% else %}Submit Enrolment{% endif %}
+        </button>
+        <a href="/workshops/{{ workshop.clh_workshopid }}" class="clh-btn clh-btn--ghost">Cancel</a>
+      </div>
+
+      <!-- Status messages -->
+      <div id="formStatusMessage" class="clh-form__status" role="alert" aria-live="assertive" aria-atomic="true" hidden></div>
+    </form>
+  </section>
+
+  {% endif %} <!-- end workshop nil check -->
+  {% endif %} <!-- end workshopId nil check -->
+</div>

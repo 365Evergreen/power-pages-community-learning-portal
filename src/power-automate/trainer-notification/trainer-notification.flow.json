@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+  "metadata": {
+    "name": "CLH – Trainer New Enrollment Notification",
+    "description": "Triggered when an enrollment is confirmed (status changes to Confirmed). Notifies the assigned trainer that a new participant has enrolled in their workshop.",
+    "trigger": "Dataverse – When a row is modified",
+    "table": "clh_enrollments",
+    "environment": "Power Platform",
+    "version": "1.0.0"
+  },
+  "definition": {
+    "contentVersion": "1.0.0.0",
+    "triggers": {
+      "When_enrollment_status_changes": {
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "connectionName": "shared_commondataserviceforapps",
+            "operationId": "SubscribeWebhookTrigger"
+          },
+          "parameters": {
+            "subscriptionRequest/message": 3,
+            "subscriptionRequest/entityname": "clh_enrollment",
+            "subscriptionRequest/scope": 4,
+            "subscriptionRequest/filteringattributes": "clh_status"
+          }
+        }
+      }
+    },
+    "actions": {
+      "Condition_Status_Is_Confirmed": {
+        "runAfter": {},
+        "type": "If",
+        "expression": {
+          "equals": ["@triggerOutputs()?['body/clh_status']", 100000001]
+        },
+        "actions": {
+          "Get_Workshop_And_Trainer": {
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "shared_commondataserviceforapps",
+                "operationId": "GetItem"
+              },
+              "parameters": {
+                "entityName": "clh_workshops",
+                "recordId": "@triggerOutputs()?['body/_clh_workshop_value']",
+                "$expand": "clh_trainer($select=clh_name,clh_email)"
+              }
+            }
+          },
+          "Condition_Trainer_Has_Email": {
+            "runAfter": {
+              "Get_Workshop_And_Trainer": ["Succeeded"]
+            },
+            "type": "If",
+            "expression": {
+              "not": {
+                "equals": ["@outputs('Get_Workshop_And_Trainer')?['body/clh_trainer/clh_email']", ""]
+              }
+            },
+            "actions": {
+              "Send_Trainer_Notification": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_office365",
+                    "operationId": "SendEmailV2"
+                  },
+                  "parameters": {
+                    "emailMessage/To": "@outputs('Get_Workshop_And_Trainer')?['body/clh_trainer/clh_email']",
+                    "emailMessage/Subject": "@concat('New enrolment: ', triggerOutputs()?['body/clh_anonymousname'], ' – ', outputs('Get_Workshop_And_Trainer')?['body/clh_name'])",
+                    "emailMessage/Body": "<html><body style=\"font-family: Segoe UI, sans-serif; color: #1a1a1a; max-width: 600px; margin: 0 auto;\">\n  <div style=\"background: #1b5e99; padding: 24px 32px;\">\n    <h1 style=\"color: #fff; margin: 0; font-size: 22px;\">Community Learning Hub</h1>\n  </div>\n  <div style=\"padding: 32px;\">\n    <p>Hi @{outputs('Get_Workshop_And_Trainer')?['body/clh_trainer/clh_name']},</p>\n    <p>A new participant has enrolled in your workshop:</p>\n    <div style=\"background: #f4f7fb; border-radius: 8px; padding: 20px; margin: 20px 0;\">\n      <p><strong>Workshop:</strong> @{outputs('Get_Workshop_And_Trainer')?['body/clh_name']}</p>\n      <p><strong>Participant:</strong> @{triggerOutputs()?['body/clh_anonymousname']}</p>\n      <p><strong>Email:</strong> @{triggerOutputs()?['body/clh_anonymousemail']}</p>\n      @{if(empty(triggerOutputs()?['body/clh_anonymousphone']), '', concat('<p><strong>Phone:</strong> ', triggerOutputs()?['body/clh_anonymousphone'], '</p>'))}\n      @{if(empty(triggerOutputs()?['body/clh_accessibilityrequirements']), '', concat('<p><strong>Accessibility requirements:</strong> ', triggerOutputs()?['body/clh_accessibilityrequirements'], '</p>'))}\n    </div>\n    <p>You can view all enrollments in the Community Learning Hub admin portal.</p>\n    <p style=\"margin-top: 32px;\">Best regards,<br/><strong>Community Learning Hub</strong></p>\n  </div>\n</body></html>"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "connections": {
+    "shared_commondataserviceforapps": {
+      "connectionId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps/connections/shared_commondataserviceforapps",
+      "connectionName": "shared_commondataserviceforapps",
+      "id": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    },
+    "shared_office365": {
+      "connectionId": "/providers/Microsoft.PowerApps/apis/shared_office365/connections/shared_office365",
+      "connectionName": "shared_office365",
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+- name: ContactEmail
+  value: hello@communitylearninghub.org
+  description: Primary contact email address displayed on the About page and used in templates.
+
+- name: SiteTagline
+  value: "Connecting communities through learning"
+  description: Short tagline displayed in the site header.
+
+- name: FooterText
+  value: "© 2024 Community Learning Hub. All rights reserved."
+  description: Footer copyright text.
+
+- name: HeroTitle
+  value: "Welcome to the Community Learning Hub"
+  description: Main hero heading on the home page.
+
+- name: HeroSubtitle
+  value: "Connecting passionate non-profit trainers with eager learners through accessible workshops tailored to your community's needs."
+  description: Hero subtitle on the home page.
+
+- name: PrivacyPolicyUrl
+  value: "/privacy-policy"
+  description: URL of the site's privacy policy page.

@@ -1,0 +1,10 @@
+id: workshops
+name: Workshops
+title: Browse Workshops | Community Learning Hub
+partialUrl: /workshops
+pageTemplate: Full Width
+publishingState: Published
+displayOrder: 2
+navigation:
+  displayInNavigation: true
+  navigationLabel: Workshops
